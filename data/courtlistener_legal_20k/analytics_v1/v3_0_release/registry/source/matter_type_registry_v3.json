@@ -1,0 +1,974 @@
+{
+  "version": "3.2.0",
+  "layer": "matter_type",
+  "question": "What concrete kind of underlying dispute or proceeding is this?",
+  "selection_rule": "Matter type describes the underlying matter and does not require the current court to decide it.",
+  "entries": [
+    {
+      "canonical_id": "apa_review",
+      "preferred_label": "Apa Review",
+      "practice_area": "administrative_law",
+      "status": "active",
+      "identification_method": "K_or_K_to_L",
+      "aliases": []
+    },
+    {
+      "canonical_id": "final_agency_action",
+      "preferred_label": "Final Agency Action",
+      "practice_area": "administrative_law",
+      "status": "active",
+      "identification_method": "K_or_K_to_L",
+      "aliases": []
+    },
+    {
+      "canonical_id": "exhaustion_or_timeliness",
+      "preferred_label": "Exhaustion Or Timeliness",
+      "practice_area": "administrative_law",
+      "status": "active",
+      "identification_method": "K_or_K_to_L",
+      "aliases": []
+    },
+    {
+      "canonical_id": "benefits_review",
+      "preferred_label": "Benefits Review",
+      "practice_area": "administrative_law",
+      "status": "active",
+      "identification_method": "K_or_K_to_L",
+      "aliases": [
+        "social_security_benefits_review"
+      ]
+    },
+    {
+      "canonical_id": "seaman_personal_injury",
+      "preferred_label": "Seaman Personal Injury",
+      "practice_area": "admiralty_maritime_law",
+      "status": "active",
+      "identification_method": "K_or_K_to_L",
+      "aliases": []
+    },
+    {
+      "canonical_id": "maintenance_and_cure",
+      "preferred_label": "Maintenance And Cure",
+      "practice_area": "admiralty_maritime_law",
+      "status": "active",
+      "identification_method": "K_or_K_to_L",
+      "aliases": []
+    },
+    {
+      "canonical_id": "maritime_lien",
+      "preferred_label": "Maritime Lien",
+      "practice_area": "admiralty_maritime_law",
+      "status": "active",
+      "identification_method": "K_or_K_to_L",
+      "aliases": []
+    },
+    {
+      "canonical_id": "cargo_loss",
+      "preferred_label": "Cargo Loss",
+      "practice_area": "admiralty_maritime_law",
+      "status": "active",
+      "identification_method": "K_or_K_to_L",
+      "aliases": []
+    },
+    {
+      "canonical_id": "vessel_collision",
+      "preferred_label": "Vessel Collision",
+      "practice_area": "admiralty_maritime_law",
+      "status": "active",
+      "identification_method": "K_or_K_to_L",
+      "aliases": []
+    },
+    {
+      "canonical_id": "limitation_of_liability",
+      "preferred_label": "Limitation Of Liability",
+      "practice_area": "admiralty_maritime_law",
+      "status": "active",
+      "identification_method": "K_or_K_to_L",
+      "aliases": []
+    },
+    {
+      "canonical_id": "maritime_salvage",
+      "preferred_label": "Maritime Salvage",
+      "practice_area": "admiralty_maritime_law",
+      "status": "active",
+      "identification_method": "K_or_K_to_L",
+      "aliases": []
+    },
+    {
+      "canonical_id": "monopolization",
+      "preferred_label": "Monopolization",
+      "practice_area": "antitrust_competition_law",
+      "status": "active",
+      "identification_method": "K_or_K_to_L",
+      "aliases": []
+    },
+    {
+      "canonical_id": "price_fixing",
+      "preferred_label": "Price Fixing",
+      "practice_area": "antitrust_competition_law",
+      "status": "active",
+      "identification_method": "K_or_K_to_L",
+      "aliases": []
+    },
+    {
+      "canonical_id": "market_allocation",
+      "preferred_label": "Market Allocation",
+      "practice_area": "antitrust_competition_law",
+      "status": "active",
+      "identification_method": "K_or_K_to_L",
+      "aliases": []
+    },
+    {
+      "canonical_id": "tying_exclusive_dealing",
+      "preferred_label": "Tying Exclusive Dealing",
+      "practice_area": "antitrust_competition_law",
+      "status": "active",
+      "identification_method": "K_or_K_to_L",
+      "aliases": []
+    },
+    {
+      "canonical_id": "merger_challenge",
+      "preferred_label": "Merger Challenge",
+      "practice_area": "antitrust_competition_law",
+      "status": "active",
+      "identification_method": "K_or_K_to_L",
+      "aliases": []
+    },
+    {
+      "canonical_id": "chapter_identification",
+      "preferred_label": "Chapter Identification",
+      "practice_area": "bankruptcy_law",
+      "status": "active",
+      "identification_method": "K_or_K_to_L",
+      "aliases": []
+    },
+    {
+      "canonical_id": "automatic_stay_issue",
+      "preferred_label": "Automatic Stay Issue",
+      "practice_area": "bankruptcy_law",
+      "status": "active",
+      "identification_method": "K_or_K_to_L",
+      "aliases": []
+    },
+    {
+      "canonical_id": "dischargeability_issue",
+      "preferred_label": "Dischargeability Issue",
+      "practice_area": "bankruptcy_law",
+      "status": "active",
+      "identification_method": "K_or_K_to_L",
+      "aliases": []
+    },
+    {
+      "canonical_id": "avoidance_action",
+      "preferred_label": "Avoidance Action",
+      "practice_area": "bankruptcy_law",
+      "status": "active",
+      "identification_method": "K_or_K_to_L",
+      "aliases": []
+    },
+    {
+      "canonical_id": "plan_confirmation",
+      "preferred_label": "Plan Confirmation",
+      "practice_area": "bankruptcy_law",
+      "status": "active",
+      "identification_method": "K_or_K_to_L",
+      "aliases": []
+    },
+    {
+      "canonical_id": "section_1983_claim",
+      "preferred_label": "Section 1983 Claim",
+      "practice_area": "civil_rights_law",
+      "status": "active",
+      "identification_method": "K_or_K_to_L",
+      "aliases": []
+    },
+    {
+      "canonical_id": "qualified_immunity",
+      "preferred_label": "Qualified Immunity",
+      "practice_area": "civil_rights_law",
+      "status": "active",
+      "identification_method": "K_or_K_to_L",
+      "aliases": []
+    },
+    {
+      "canonical_id": "monell_liability",
+      "preferred_label": "Monell Liability",
+      "practice_area": "civil_rights_law",
+      "status": "active",
+      "identification_method": "K_or_K_to_L",
+      "aliases": []
+    },
+    {
+      "canonical_id": "attorney_fee_civil_rights",
+      "preferred_label": "Attorney Fee Civil Rights",
+      "practice_area": "civil_rights_law",
+      "status": "active",
+      "identification_method": "K_or_K_to_L",
+      "aliases": []
+    },
+    {
+      "canonical_id": "police_misconduct",
+      "preferred_label": "Police Misconduct",
+      "practice_area": "civil_rights_law",
+      "status": "active",
+      "identification_method": "K_or_K_to_L",
+      "aliases": []
+    },
+    {
+      "canonical_id": "prisoner_rights",
+      "preferred_label": "Prisoner Rights",
+      "practice_area": "civil_rights_law",
+      "status": "active",
+      "identification_method": "K_or_K_to_L",
+      "aliases": []
+    },
+    {
+      "canonical_id": "conditions_of_confinement",
+      "preferred_label": "Conditions Of Confinement",
+      "practice_area": "civil_rights_law",
+      "status": "active",
+      "identification_method": "K_or_K_to_L",
+      "aliases": []
+    },
+    {
+      "canonical_id": "ucc_sales",
+      "preferred_label": "Ucc Sales",
+      "practice_area": "commercial_law",
+      "status": "active",
+      "identification_method": "K_or_K_to_L",
+      "aliases": []
+    },
+    {
+      "canonical_id": "negotiable_instrument",
+      "preferred_label": "Negotiable Instrument",
+      "practice_area": "commercial_law",
+      "status": "active",
+      "identification_method": "K_or_K_to_L",
+      "aliases": []
+    },
+    {
+      "canonical_id": "secured_transaction",
+      "preferred_label": "Secured Transaction",
+      "practice_area": "commercial_law",
+      "status": "active",
+      "identification_method": "K_or_K_to_L",
+      "aliases": []
+    },
+    {
+      "canonical_id": "corporate_governance_dispute",
+      "preferred_label": "Corporate Governance Dispute",
+      "practice_area": "commercial_law",
+      "status": "active",
+      "identification_method": "K_or_K_to_L",
+      "aliases": []
+    },
+    {
+      "canonical_id": "shareholder_derivative_action",
+      "preferred_label": "Shareholder Derivative Action",
+      "practice_area": "commercial_law",
+      "status": "active",
+      "identification_method": "K_or_K_to_L",
+      "aliases": []
+    },
+    {
+      "canonical_id": "business_entity_dissolution",
+      "preferred_label": "Business Entity Dissolution",
+      "practice_area": "commercial_law",
+      "status": "active",
+      "identification_method": "K_or_K_to_L",
+      "aliases": []
+    },
+    {
+      "canonical_id": "consumer_debt_collection",
+      "preferred_label": "Consumer Debt Collection",
+      "practice_area": "consumer_law",
+      "status": "active",
+      "identification_method": "K_or_K_to_L",
+      "aliases": []
+    },
+    {
+      "canonical_id": "consumer_credit_reporting",
+      "preferred_label": "Consumer Credit Reporting",
+      "practice_area": "consumer_law",
+      "status": "active",
+      "identification_method": "K_or_K_to_L",
+      "aliases": []
+    },
+    {
+      "canonical_id": "consumer_lending",
+      "preferred_label": "Consumer Lending",
+      "practice_area": "consumer_law",
+      "status": "active",
+      "identification_method": "K_or_K_to_L",
+      "aliases": []
+    },
+    {
+      "canonical_id": "mortgage_servicing",
+      "preferred_label": "Mortgage Servicing",
+      "practice_area": "consumer_law",
+      "status": "active",
+      "identification_method": "K_or_K_to_L",
+      "aliases": []
+    },
+    {
+      "canonical_id": "consumer_warranty",
+      "preferred_label": "Consumer Warranty",
+      "practice_area": "consumer_law",
+      "status": "active",
+      "identification_method": "K_or_K_to_L",
+      "aliases": []
+    },
+    {
+      "canonical_id": "deceptive_consumer_practices",
+      "preferred_label": "Deceptive Consumer Practices",
+      "practice_area": "consumer_law",
+      "status": "active",
+      "identification_method": "K_or_K_to_L",
+      "aliases": []
+    },
+    {
+      "canonical_id": "breach_of_contract",
+      "preferred_label": "Breach Of Contract",
+      "practice_area": "contract_law",
+      "status": "active",
+      "identification_method": "K_or_K_to_L",
+      "aliases": []
+    },
+    {
+      "canonical_id": "arbitration_clause_dispute",
+      "preferred_label": "Arbitration Clause Dispute",
+      "practice_area": "contract_law",
+      "status": "active",
+      "identification_method": "K_or_K_to_L",
+      "aliases": []
+    },
+    {
+      "canonical_id": "guaranty_indemnity",
+      "preferred_label": "Guaranty Indemnity",
+      "practice_area": "contract_law",
+      "status": "active",
+      "identification_method": "K_or_K_to_L",
+      "aliases": []
+    },
+    {
+      "canonical_id": "excuse_of_performance",
+      "preferred_label": "Excuse Of Performance",
+      "practice_area": "contract_law",
+      "status": "active",
+      "identification_method": "K_or_K_to_L",
+      "aliases": []
+    },
+    {
+      "canonical_id": "drug_offense",
+      "preferred_label": "Drug Offense",
+      "practice_area": "criminal_law",
+      "status": "active",
+      "identification_method": "K_or_K_to_L",
+      "aliases": []
+    },
+    {
+      "canonical_id": "firearm_offense",
+      "preferred_label": "Firearm Offense",
+      "practice_area": "criminal_law",
+      "status": "active",
+      "identification_method": "K_or_K_to_L",
+      "aliases": []
+    },
+    {
+      "canonical_id": "custodial_interrogation",
+      "preferred_label": "Custodial Interrogation",
+      "practice_area": "criminal_law",
+      "status": "active",
+      "identification_method": "K_or_K_to_L",
+      "aliases": []
+    },
+    {
+      "canonical_id": "sentencing_guideline_dispute",
+      "preferred_label": "Sentencing Guideline Dispute",
+      "practice_area": "criminal_law",
+      "status": "active",
+      "identification_method": "K_or_K_to_L",
+      "aliases": []
+    },
+    {
+      "canonical_id": "special_education_idea",
+      "preferred_label": "Special Education Idea",
+      "practice_area": "education_law",
+      "status": "active",
+      "identification_method": "K_or_K_to_L",
+      "aliases": []
+    },
+    {
+      "canonical_id": "student_discipline",
+      "preferred_label": "Student Discipline",
+      "practice_area": "education_law",
+      "status": "active",
+      "identification_method": "K_or_K_to_L",
+      "aliases": []
+    },
+    {
+      "canonical_id": "education_access_rights",
+      "preferred_label": "Education Access Rights",
+      "practice_area": "education_law",
+      "status": "active",
+      "identification_method": "K_or_K_to_L",
+      "aliases": []
+    },
+    {
+      "canonical_id": "school_governance",
+      "preferred_label": "School Governance",
+      "practice_area": "education_law",
+      "status": "active",
+      "identification_method": "K_or_K_to_L",
+      "aliases": []
+    },
+    {
+      "canonical_id": "education_regulatory_dispute",
+      "preferred_label": "Education Regulatory Dispute",
+      "practice_area": "education_law",
+      "status": "active",
+      "identification_method": "K_or_K_to_L",
+      "aliases": []
+    },
+    {
+      "canonical_id": "environmental_review_nepa",
+      "preferred_label": "Environmental Review Nepa",
+      "practice_area": "environmental_law",
+      "status": "active",
+      "identification_method": "K_or_K_to_L",
+      "aliases": []
+    },
+    {
+      "canonical_id": "air_pollution_regulation",
+      "preferred_label": "Air Pollution Regulation",
+      "practice_area": "environmental_law",
+      "status": "active",
+      "identification_method": "K_or_K_to_L",
+      "aliases": []
+    },
+    {
+      "canonical_id": "water_pollution_regulation",
+      "preferred_label": "Water Pollution Regulation",
+      "practice_area": "environmental_law",
+      "status": "active",
+      "identification_method": "K_or_K_to_L",
+      "aliases": []
+    },
+    {
+      "canonical_id": "hazardous_waste_rcra",
+      "preferred_label": "Hazardous Waste Rcra",
+      "practice_area": "environmental_law",
+      "status": "active",
+      "identification_method": "K_or_K_to_L",
+      "aliases": []
+    },
+    {
+      "canonical_id": "environmental_cleanup_cercla",
+      "preferred_label": "Environmental Cleanup Cercla",
+      "practice_area": "environmental_law",
+      "status": "active",
+      "identification_method": "K_or_K_to_L",
+      "aliases": []
+    },
+    {
+      "canonical_id": "species_habitat_protection",
+      "preferred_label": "Species Habitat Protection",
+      "practice_area": "environmental_law",
+      "status": "active",
+      "identification_method": "K_or_K_to_L",
+      "aliases": []
+    },
+    {
+      "canonical_id": "custody_visitation",
+      "preferred_label": "Custody Visitation",
+      "practice_area": "family_law",
+      "status": "active",
+      "identification_method": "K_or_K_to_L",
+      "aliases": []
+    },
+    {
+      "canonical_id": "support_obligation",
+      "preferred_label": "Support Obligation",
+      "practice_area": "family_law",
+      "status": "active",
+      "identification_method": "K_or_K_to_L",
+      "aliases": []
+    },
+    {
+      "canonical_id": "parentage_adoption",
+      "preferred_label": "Parentage Adoption",
+      "practice_area": "family_law",
+      "status": "active",
+      "identification_method": "K_or_K_to_L",
+      "aliases": []
+    },
+    {
+      "canonical_id": "protection_order_family",
+      "preferred_label": "Protection Order Family",
+      "practice_area": "family_law",
+      "status": "active",
+      "identification_method": "K_or_K_to_L",
+      "aliases": []
+    },
+    {
+      "canonical_id": "termination_of_parental_rights",
+      "preferred_label": "Termination Of Parental Rights",
+      "practice_area": "family_law",
+      "status": "candidate_counting",
+      "identification_method": "K_or_K_to_L",
+      "aliases": [
+        "termination_of_parental_rights"
+      ]
+    },
+    {
+      "canonical_id": "medicare_medicaid",
+      "preferred_label": "Medicare Medicaid",
+      "practice_area": "health_law",
+      "status": "active",
+      "identification_method": "K_or_K_to_L",
+      "aliases": []
+    },
+    {
+      "canonical_id": "provider_reimbursement",
+      "preferred_label": "Provider Reimbursement",
+      "practice_area": "health_law",
+      "status": "active",
+      "identification_method": "K_or_K_to_L",
+      "aliases": []
+    },
+    {
+      "canonical_id": "health_professions_licensing",
+      "preferred_label": "Health Professions Licensing",
+      "practice_area": "health_law",
+      "status": "active",
+      "identification_method": "K_or_K_to_L",
+      "aliases": []
+    },
+    {
+      "canonical_id": "emtala_emergency_care",
+      "preferred_label": "Emtala Emergency Care",
+      "practice_area": "health_law",
+      "status": "active",
+      "identification_method": "K_or_K_to_L",
+      "aliases": []
+    },
+    {
+      "canonical_id": "health_information_privacy",
+      "preferred_label": "Health Information Privacy",
+      "practice_area": "health_law",
+      "status": "active",
+      "identification_method": "K_or_K_to_L",
+      "aliases": []
+    },
+    {
+      "canonical_id": "healthcare_fraud_abuse",
+      "preferred_label": "Healthcare Fraud Abuse",
+      "practice_area": "health_law",
+      "status": "active",
+      "identification_method": "K_or_K_to_L",
+      "aliases": []
+    },
+    {
+      "canonical_id": "public_health_regulation",
+      "preferred_label": "Public Health Regulation",
+      "practice_area": "health_law",
+      "status": "active",
+      "identification_method": "K_or_K_to_L",
+      "aliases": []
+    },
+    {
+      "canonical_id": "asylum_protection",
+      "preferred_label": "Asylum Protection",
+      "practice_area": "immigration_law",
+      "status": "active",
+      "identification_method": "K_or_K_to_L",
+      "aliases": []
+    },
+    {
+      "canonical_id": "removability_ground",
+      "preferred_label": "Removability Ground",
+      "practice_area": "immigration_law",
+      "status": "active",
+      "identification_method": "K_or_K_to_L",
+      "aliases": []
+    },
+    {
+      "canonical_id": "detention_bond",
+      "preferred_label": "Detention Bond",
+      "practice_area": "immigration_law",
+      "status": "active",
+      "identification_method": "K_or_K_to_L",
+      "aliases": []
+    },
+    {
+      "canonical_id": "naturalization_citizenship",
+      "preferred_label": "Naturalization Citizenship",
+      "practice_area": "immigration_law",
+      "status": "active",
+      "identification_method": "K_or_K_to_L",
+      "aliases": []
+    },
+    {
+      "canonical_id": "liability_insurance_coverage",
+      "preferred_label": "Liability Insurance Coverage",
+      "practice_area": "insurance_law",
+      "status": "active",
+      "identification_method": "K_or_K_to_L",
+      "aliases": []
+    },
+    {
+      "canonical_id": "property_insurance_coverage",
+      "preferred_label": "Property Insurance Coverage",
+      "practice_area": "insurance_law",
+      "status": "active",
+      "identification_method": "K_or_K_to_L",
+      "aliases": []
+    },
+    {
+      "canonical_id": "auto_insurance_coverage",
+      "preferred_label": "Auto Insurance Coverage",
+      "practice_area": "insurance_law",
+      "status": "active",
+      "identification_method": "K_or_K_to_L",
+      "aliases": []
+    },
+    {
+      "canonical_id": "life_insurance_benefits",
+      "preferred_label": "Life Insurance Benefits",
+      "practice_area": "insurance_law",
+      "status": "active",
+      "identification_method": "K_or_K_to_L",
+      "aliases": []
+    },
+    {
+      "canonical_id": "health_disability_insurance",
+      "preferred_label": "Health Disability Insurance",
+      "practice_area": "insurance_law",
+      "status": "active",
+      "identification_method": "K_or_K_to_L",
+      "aliases": []
+    },
+    {
+      "canonical_id": "duty_to_defend_indemnify",
+      "preferred_label": "Duty To Defend Indemnify",
+      "practice_area": "insurance_law",
+      "status": "active",
+      "identification_method": "K_or_K_to_L",
+      "aliases": []
+    },
+    {
+      "canonical_id": "insurance_bad_faith",
+      "preferred_label": "Insurance Bad Faith",
+      "practice_area": "insurance_law",
+      "status": "active",
+      "identification_method": "K_or_K_to_L",
+      "aliases": []
+    },
+    {
+      "canonical_id": "subrogation_contribution",
+      "preferred_label": "Subrogation Contribution",
+      "practice_area": "insurance_law",
+      "status": "active",
+      "identification_method": "K_or_K_to_L",
+      "aliases": []
+    },
+    {
+      "canonical_id": "insurance_agent_broker_liability",
+      "preferred_label": "Insurance Agent Broker Liability",
+      "practice_area": "insurance_law",
+      "status": "active",
+      "identification_method": "K_or_K_to_L",
+      "aliases": []
+    },
+    {
+      "canonical_id": "insurance_regulatory_dispute",
+      "preferred_label": "Insurance Regulatory Dispute",
+      "practice_area": "insurance_law",
+      "status": "active",
+      "identification_method": "K_or_K_to_L",
+      "aliases": []
+    },
+    {
+      "canonical_id": "patent_dispute",
+      "preferred_label": "Patent Dispute",
+      "practice_area": "intellectual_property_law",
+      "status": "active",
+      "identification_method": "K_or_K_to_L",
+      "aliases": []
+    },
+    {
+      "canonical_id": "trademark_dispute",
+      "preferred_label": "Trademark Dispute",
+      "practice_area": "intellectual_property_law",
+      "status": "active",
+      "identification_method": "K_or_K_to_L",
+      "aliases": []
+    },
+    {
+      "canonical_id": "copyright_dispute",
+      "preferred_label": "Copyright Dispute",
+      "practice_area": "intellectual_property_law",
+      "status": "active",
+      "identification_method": "K_or_K_to_L",
+      "aliases": []
+    },
+    {
+      "canonical_id": "trade_secret_dispute",
+      "preferred_label": "Trade Secret Dispute",
+      "practice_area": "intellectual_property_law",
+      "status": "active",
+      "identification_method": "K_or_K_to_L",
+      "aliases": []
+    },
+    {
+      "canonical_id": "employment_discrimination",
+      "preferred_label": "Employment Discrimination",
+      "practice_area": "labor_employment_law",
+      "status": "active",
+      "identification_method": "K_or_K_to_L",
+      "aliases": []
+    },
+    {
+      "canonical_id": "employment_retaliation",
+      "preferred_label": "Employment Retaliation",
+      "practice_area": "labor_employment_law",
+      "status": "active",
+      "identification_method": "K_or_K_to_L",
+      "aliases": [
+        "title_vii_retaliation"
+      ]
+    },
+    {
+      "canonical_id": "wage_hour_dispute",
+      "preferred_label": "Wage Hour Dispute",
+      "practice_area": "labor_employment_law",
+      "status": "active",
+      "identification_method": "K_or_K_to_L",
+      "aliases": []
+    },
+    {
+      "canonical_id": "leave_or_accommodation",
+      "preferred_label": "Leave Or Accommodation",
+      "practice_area": "labor_employment_law",
+      "status": "active",
+      "identification_method": "K_or_K_to_L",
+      "aliases": []
+    },
+    {
+      "canonical_id": "foreclosure_mortgage",
+      "preferred_label": "Foreclosure Mortgage",
+      "practice_area": "real_property_law",
+      "status": "active",
+      "identification_method": "K_or_K_to_L",
+      "aliases": []
+    },
+    {
+      "canonical_id": "landlord_tenant_eviction",
+      "preferred_label": "Landlord Tenant Eviction",
+      "practice_area": "real_property_law",
+      "status": "active",
+      "identification_method": "K_or_K_to_L",
+      "aliases": []
+    },
+    {
+      "canonical_id": "title_boundary_easement",
+      "preferred_label": "Title Boundary Easement",
+      "practice_area": "real_property_law",
+      "status": "active",
+      "identification_method": "K_or_K_to_L",
+      "aliases": []
+    },
+    {
+      "canonical_id": "partition_ownership",
+      "preferred_label": "Partition Ownership",
+      "practice_area": "real_property_law",
+      "status": "active",
+      "identification_method": "K_or_K_to_L",
+      "aliases": []
+    },
+    {
+      "canonical_id": "securities_fraud",
+      "preferred_label": "Securities Fraud",
+      "practice_area": "securities_law",
+      "status": "active",
+      "identification_method": "K_or_K_to_L",
+      "aliases": []
+    },
+    {
+      "canonical_id": "securities_registration_disclosure",
+      "preferred_label": "Securities Registration Disclosure",
+      "practice_area": "securities_law",
+      "status": "active",
+      "identification_method": "K_or_K_to_L",
+      "aliases": []
+    },
+    {
+      "canonical_id": "broker_dealer_regulation",
+      "preferred_label": "Broker Dealer Regulation",
+      "practice_area": "securities_law",
+      "status": "active",
+      "identification_method": "K_or_K_to_L",
+      "aliases": []
+    },
+    {
+      "canonical_id": "shareholder_securities_action",
+      "preferred_label": "Shareholder Securities Action",
+      "practice_area": "securities_law",
+      "status": "active",
+      "identification_method": "K_or_K_to_L",
+      "aliases": []
+    },
+    {
+      "canonical_id": "tax_deficiency_procedure",
+      "preferred_label": "Tax Deficiency Procedure",
+      "practice_area": "tax_law",
+      "status": "active",
+      "identification_method": "K_or_K_to_L",
+      "aliases": []
+    },
+    {
+      "canonical_id": "tax_deduction_issue",
+      "preferred_label": "Tax Deduction Issue",
+      "practice_area": "tax_law",
+      "status": "active",
+      "identification_method": "K_or_K_to_L",
+      "aliases": []
+    },
+    {
+      "canonical_id": "tax_penalty_issue",
+      "preferred_label": "Tax Penalty Issue",
+      "practice_area": "tax_law",
+      "status": "active",
+      "identification_method": "K_or_K_to_L",
+      "aliases": []
+    },
+    {
+      "canonical_id": "innocent_spouse_relief",
+      "preferred_label": "Innocent Spouse Relief",
+      "practice_area": "tax_law",
+      "status": "active",
+      "identification_method": "K_or_K_to_L",
+      "aliases": []
+    },
+    {
+      "canonical_id": "tax_liability_dispute",
+      "preferred_label": "Tax Liability Dispute",
+      "practice_area": "tax_law",
+      "status": "active",
+      "identification_method": "K_or_K_to_L",
+      "aliases": []
+    },
+    {
+      "canonical_id": "negligence_personal_injury",
+      "preferred_label": "Negligence Personal Injury",
+      "practice_area": "tort_law",
+      "status": "active",
+      "identification_method": "K_or_K_to_L",
+      "aliases": []
+    },
+    {
+      "canonical_id": "product_liability",
+      "preferred_label": "Product Liability",
+      "practice_area": "tort_law",
+      "status": "active",
+      "identification_method": "K_or_K_to_L",
+      "aliases": []
+    },
+    {
+      "canonical_id": "medical_malpractice",
+      "preferred_label": "Medical Malpractice",
+      "practice_area": "tort_law",
+      "status": "active",
+      "identification_method": "K_or_K_to_L",
+      "aliases": []
+    },
+    {
+      "canonical_id": "defamation",
+      "preferred_label": "Defamation",
+      "practice_area": "tort_law",
+      "status": "active",
+      "identification_method": "K_or_K_to_L",
+      "aliases": []
+    },
+    {
+      "canonical_id": "will_contest",
+      "preferred_label": "Will Contest",
+      "practice_area": "trusts_estates_probate_law",
+      "status": "active",
+      "identification_method": "K_or_K_to_L",
+      "aliases": []
+    },
+    {
+      "canonical_id": "probate_administration",
+      "preferred_label": "Probate Administration",
+      "practice_area": "trusts_estates_probate_law",
+      "status": "active",
+      "identification_method": "K_or_K_to_L",
+      "aliases": []
+    },
+    {
+      "canonical_id": "intestate_succession",
+      "preferred_label": "Intestate Succession",
+      "practice_area": "trusts_estates_probate_law",
+      "status": "active",
+      "identification_method": "K_or_K_to_L",
+      "aliases": []
+    },
+    {
+      "canonical_id": "trust_administration",
+      "preferred_label": "Trust Administration",
+      "practice_area": "trusts_estates_probate_law",
+      "status": "active",
+      "identification_method": "K_or_K_to_L",
+      "aliases": []
+    },
+    {
+      "canonical_id": "trust_breach_of_fiduciary_duty",
+      "preferred_label": "Trust Breach Of Fiduciary Duty",
+      "practice_area": "trusts_estates_probate_law",
+      "status": "active",
+      "identification_method": "K_or_K_to_L",
+      "aliases": []
+    },
+    {
+      "canonical_id": "guardianship_conservatorship",
+      "preferred_label": "Guardianship Conservatorship",
+      "practice_area": "trusts_estates_probate_law",
+      "status": "active",
+      "identification_method": "K_or_K_to_L",
+      "aliases": []
+    },
+    {
+      "canonical_id": "estate_accounting",
+      "preferred_label": "Estate Accounting",
+      "practice_area": "trusts_estates_probate_law",
+      "status": "active",
+      "identification_method": "K_or_K_to_L",
+      "aliases": []
+    },
+    {
+      "canonical_id": "beneficiary_dispute",
+      "preferred_label": "Beneficiary Dispute",
+      "practice_area": "trusts_estates_probate_law",
+      "status": "active",
+      "identification_method": "K_or_K_to_L",
+      "aliases": []
+    },
+    {
+      "canonical_id": "elective_share",
+      "preferred_label": "Elective Share",
+      "practice_area": "trusts_estates_probate_law",
+      "status": "active",
+      "identification_method": "K_or_K_to_L",
+      "aliases": []
+    },
+    {
+      "canonical_id": "estate_creditor_claim",
+      "preferred_label": "Estate Creditor Claim",
+      "practice_area": "trusts_estates_probate_law",
+      "status": "active",
+      "identification_method": "K_or_K_to_L",
+      "aliases": []
+    }
+  ]
+}

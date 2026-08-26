@@ -3,6 +3,7 @@ data/courtlistener_legal_20k/legal_cases_20k.db
 data/courtlistener_legal_20k/legal_cases_20k.v2.backup.db
 data/courtlistener_legal_20k/phase1/legal_cases.db
 data/courtlistener_legal_20k/phase1/*.jsonl
+data/courtlistener_legal_20k/analytics_v1/v3_0_release/data/legal_issue_feature_full_v1_16k_final_merged.json
 
 # Local development artifacts.
 .env

@@ -1,0 +1,40 @@
+{
+  "release": "legal_bench_v3.0",
+  "created_at": "2026-08-26T17:22:38.381290+00:00",
+  "contents": {
+    "summary_json": "data/legal_issue_feature_full_v1_16k_final_merged.summary.json",
+    "distribution_report_md": "reports/LEGAL_ISSUE_FEATURE_DISTRIBUTION_ANALYSIS.md",
+    "legal_issue_catalog_en": "docs/LEGAL_ISSUE_CATALOG_en.md",
+    "legal_issue_catalog_zh": "docs/LEGAL_ISSUE_CATALOG_zh.md",
+    "feature_catalog_en": "docs/FEATURE_CATALOG_en.md",
+    "feature_catalog_zh": "docs/FEATURE_CATALOG_zh.md",
+    "final_annotation_json_xz": "data/legal_issue_feature_full_v1_16k_final_merged.json.xz"
+  },
+  "summary": {
+    "created_at": "2026-08-26T16:49:28.711504+00:00",
+    "total_jobs": 9023,
+    "merged_jobs": 9023,
+    "missing_jobs": 0,
+    "status_counts": {
+      "valid": 9023
+    },
+    "warning_counts": {},
+    "source_counts": {
+      "legal_issue_feature_full_v1_16k": 8707,
+      "legal_issue_feature_full_v1_16k_gpt54_review": 302,
+      "legal_issue_feature_full_v1_16k_gpt55_needs_review": 9,
+      "legal_issue_feature_full_v1_16k_gpt56sol_failed_final": 1,
+      "legal_issue_feature_full_v1_16k_gpt55_failed_review": 1,
+      "legal_issue_feature_full_v1_16k_gpt56sol_needs_review_final": 3
+    },
+    "manual_review_count": 0,
+    "manual_review_job_ids": []
+  },
+  "catalogs": {
+    "issue_count": 62,
+    "feature_count": 165,
+    "feature_pack_count": 47,
+    "generated_at": "2026-08-26T17:22:38.236166+00:00"
+  },
+  "restore_script": "scripts/restore_v3_0_feature_annotations.sh"
+}

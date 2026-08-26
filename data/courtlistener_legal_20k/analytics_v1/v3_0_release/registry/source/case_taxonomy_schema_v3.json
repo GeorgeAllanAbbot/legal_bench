@@ -1,0 +1,730 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "courtlistener_case_taxonomy_v3",
+  "title": "CourtListener Layered Case Taxonomy v3",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "case_id",
+    "official_case_type",
+    "practice_area",
+    "matter_types",
+    "case_types",
+    "claims_charges",
+    "legal_issues",
+    "procedural_stage",
+    "case_outcome",
+    "party_types",
+    "attributes",
+    "taxonomy_status"
+  ],
+  "properties": {
+    "case_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "official_case_type": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/officialCaseType"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "practice_area": {
+      "$ref": "#/$defs/practiceAreaAssignment"
+    },
+    "matter_types": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "enum": [
+          "apa_review",
+          "final_agency_action",
+          "exhaustion_or_timeliness",
+          "benefits_review",
+          "seaman_personal_injury",
+          "maintenance_and_cure",
+          "maritime_lien",
+          "cargo_loss",
+          "vessel_collision",
+          "limitation_of_liability",
+          "maritime_salvage",
+          "monopolization",
+          "price_fixing",
+          "market_allocation",
+          "tying_exclusive_dealing",
+          "merger_challenge",
+          "chapter_identification",
+          "automatic_stay_issue",
+          "dischargeability_issue",
+          "avoidance_action",
+          "plan_confirmation",
+          "section_1983_claim",
+          "qualified_immunity",
+          "monell_liability",
+          "attorney_fee_civil_rights",
+          "police_misconduct",
+          "prisoner_rights",
+          "conditions_of_confinement",
+          "ucc_sales",
+          "negotiable_instrument",
+          "secured_transaction",
+          "corporate_governance_dispute",
+          "shareholder_derivative_action",
+          "business_entity_dissolution",
+          "consumer_debt_collection",
+          "consumer_credit_reporting",
+          "consumer_lending",
+          "mortgage_servicing",
+          "consumer_warranty",
+          "deceptive_consumer_practices",
+          "breach_of_contract",
+          "arbitration_clause_dispute",
+          "guaranty_indemnity",
+          "excuse_of_performance",
+          "drug_offense",
+          "firearm_offense",
+          "custodial_interrogation",
+          "sentencing_guideline_dispute",
+          "special_education_idea",
+          "student_discipline",
+          "education_access_rights",
+          "school_governance",
+          "education_regulatory_dispute",
+          "environmental_review_nepa",
+          "air_pollution_regulation",
+          "water_pollution_regulation",
+          "hazardous_waste_rcra",
+          "environmental_cleanup_cercla",
+          "species_habitat_protection",
+          "custody_visitation",
+          "support_obligation",
+          "parentage_adoption",
+          "protection_order_family",
+          "termination_of_parental_rights",
+          "medicare_medicaid",
+          "provider_reimbursement",
+          "health_professions_licensing",
+          "emtala_emergency_care",
+          "health_information_privacy",
+          "healthcare_fraud_abuse",
+          "public_health_regulation",
+          "asylum_protection",
+          "removability_ground",
+          "detention_bond",
+          "naturalization_citizenship",
+          "liability_insurance_coverage",
+          "property_insurance_coverage",
+          "auto_insurance_coverage",
+          "life_insurance_benefits",
+          "health_disability_insurance",
+          "duty_to_defend_indemnify",
+          "insurance_bad_faith",
+          "subrogation_contribution",
+          "insurance_agent_broker_liability",
+          "insurance_regulatory_dispute",
+          "patent_dispute",
+          "trademark_dispute",
+          "copyright_dispute",
+          "trade_secret_dispute",
+          "employment_discrimination",
+          "employment_retaliation",
+          "wage_hour_dispute",
+          "leave_or_accommodation",
+          "foreclosure_mortgage",
+          "landlord_tenant_eviction",
+          "title_boundary_easement",
+          "partition_ownership",
+          "securities_fraud",
+          "securities_registration_disclosure",
+          "broker_dealer_regulation",
+          "shareholder_securities_action",
+          "tax_deficiency_procedure",
+          "tax_deduction_issue",
+          "tax_penalty_issue",
+          "innocent_spouse_relief",
+          "tax_liability_dispute",
+          "negligence_personal_injury",
+          "product_liability",
+          "medical_malpractice",
+          "defamation",
+          "will_contest",
+          "probate_administration",
+          "intestate_succession",
+          "trust_administration",
+          "trust_breach_of_fiduciary_duty",
+          "guardianship_conservatorship",
+          "estate_accounting",
+          "beneficiary_dispute",
+          "elective_share",
+          "estate_creditor_claim"
+        ]
+      }
+    },
+    "case_types": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "enum": [
+          "attorney_discipline",
+          "judicial_discipline",
+          "bar_admission"
+        ]
+      }
+    },
+    "claims_charges": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/claimCharge"
+      }
+    },
+    "legal_issues": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/legalIssue"
+      }
+    },
+    "procedural_stage": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "enum": [
+        "filing",
+        "pleadings",
+        "pretrial_motions",
+        "discovery",
+        "summary_judgment",
+        "trial",
+        "sentencing",
+        "appeal",
+        "remand",
+        "decision",
+        "administrative_review",
+        null
+      ]
+    },
+    "case_outcome": {
+      "$ref": "#/$defs/caseOutcome"
+    },
+    "party_types": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "enum": [
+          "individual",
+          "business_entity",
+          "government_entity",
+          "nonprofit_entity",
+          "tribal_entity",
+          "unknown"
+        ]
+      }
+    },
+    "attributes": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "standard_of_review",
+        "government_context"
+      ],
+      "properties": {
+        "standard_of_review": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "enum": [
+              "de_novo",
+              "abuse_of_discretion",
+              "clear_error",
+              "substantial_evidence",
+              "arbitrary_and_capricious",
+              "plain_error",
+              "reasonableness",
+              "other"
+            ]
+          }
+        },
+        "government_context": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "level",
+              "entity_type"
+            ],
+            "properties": {
+              "level": {
+                "type": "string",
+                "enum": [
+                  "federal",
+                  "state",
+                  "county",
+                  "municipal",
+                  "tribal",
+                  "other"
+                ]
+              },
+              "entity_type": {
+                "type": "string",
+                "enum": [
+                  "agency",
+                  "legislature",
+                  "court",
+                  "municipality",
+                  "law_enforcement",
+                  "school_district",
+                  "public_authority",
+                  "other"
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "taxonomy_status": {
+      "type": "string",
+      "enum": [
+        "classified",
+        "partially_classified",
+        "insufficient_evidence",
+        "unmapped",
+        "needs_review"
+      ]
+    }
+  },
+  "$defs": {
+    "evidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "text",
+        "role",
+        "paragraph_id"
+      ],
+      "properties": {
+        "text": {
+          "type": "string",
+          "minLength": 1
+        },
+        "role": {
+          "type": "string",
+          "enum": [
+            "case_background",
+            "party_argument",
+            "court_analysis",
+            "court_holding",
+            "procedural_history",
+            "quotation",
+            "dissent"
+          ]
+        },
+        "paragraph_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "officialCaseType": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "system",
+        "code",
+        "label",
+        "source",
+        "confidence"
+      ],
+      "properties": {
+        "system": {
+          "const": "pacer_nos"
+        },
+        "code": {
+          "type": "string",
+          "minLength": 1
+        },
+        "label": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source": {
+          "type": "string",
+          "enum": [
+            "court_metadata",
+            "docket_metadata",
+            "pacer_metadata"
+          ]
+        },
+        "confidence": {
+          "const": 1.0
+        }
+      }
+    },
+    "practiceAreaAssignment": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "primary",
+        "secondary",
+        "classification_basis",
+        "confidence",
+        "evidence"
+      ],
+      "properties": {
+        "primary": {
+          "anyOf": [
+            {
+              "type": "string",
+              "enum": [
+                "administrative_law",
+                "admiralty_maritime_law",
+                "antitrust_competition_law",
+                "bankruptcy_law",
+                "civil_rights_law",
+                "commercial_law",
+                "consumer_law",
+                "contract_law",
+                "criminal_law",
+                "education_law",
+                "environmental_law",
+                "family_law",
+                "health_law",
+                "immigration_law",
+                "insurance_law",
+                "intellectual_property_law",
+                "labor_employment_law",
+                "real_property_law",
+                "securities_law",
+                "tax_law",
+                "tort_law",
+                "trusts_estates_probate_law",
+                "other"
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "secondary": {
+          "type": "array",
+          "maxItems": 2,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "enum": [
+              "administrative_law",
+              "admiralty_maritime_law",
+              "antitrust_competition_law",
+              "bankruptcy_law",
+              "civil_rights_law",
+              "commercial_law",
+              "consumer_law",
+              "contract_law",
+              "criminal_law",
+              "education_law",
+              "environmental_law",
+              "family_law",
+              "health_law",
+              "immigration_law",
+              "insurance_law",
+              "intellectual_property_law",
+              "labor_employment_law",
+              "real_property_law",
+              "securities_law",
+              "tax_law",
+              "tort_law",
+              "trusts_estates_probate_law"
+            ]
+          }
+        },
+        "classification_basis": {
+          "type": "string",
+          "enum": [
+            "official_case_type",
+            "statutory_claim",
+            "underlying_substantive_dispute",
+            "court_analysis",
+            "caption_and_opening",
+            "llm_resolution",
+            "insufficient_evidence"
+          ]
+        },
+        "confidence": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "evidence": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/evidence"
+          }
+        }
+      }
+    },
+    "legalIssue": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "issue_id",
+        "status",
+        "outcome_general",
+        "outcome_specific",
+        "mention_confidence",
+        "adjudication_confidence",
+        "evidence"
+      ],
+      "properties": {
+        "issue_id": {
+          "type": "string",
+          "enum": [
+            "tax_deduction",
+            "insurance_coverage_trigger",
+            "insurance_policy_exclusion",
+            "insurance_duty_to_defend",
+            "insurance_duty_to_indemnify",
+            "insurance_cooperation_clause",
+            "insurance_misrepresentation_rescission",
+            "insurance_bad_faith",
+            "insurance_limit_interpretation",
+            "insurance_allocation_between_insurers",
+            "insurance_additional_insured_status",
+            "insurance_subrogation_right",
+            "insurance_waiver_estoppel",
+            "personal_jurisdiction",
+            "subject_matter_jurisdiction",
+            "removal_and_remand",
+            "standing",
+            "mootness",
+            "claim_preclusion",
+            "issue_preclusion_collateral_estoppel",
+            "class_certification",
+            "pleading_sufficiency",
+            "service_of_process",
+            "statute_of_limitations",
+            "arbitration_enforceability",
+            "attorney_client_privilege",
+            "work_product_protection",
+            "hearsay",
+            "expert_testimony",
+            "evidence_authentication",
+            "character_evidence",
+            "relevance_prejudice_balancing",
+            "confrontation_clause",
+            "harmless_error",
+            "sufficiency_of_evidence",
+            "ineffective_assistance_of_counsel",
+            "double_jeopardy",
+            "habeas_exhaustion",
+            "lesser_included_offense_instruction",
+            "qualified_immunity",
+            "supplemental_jurisdiction",
+            "plra_exhaustion",
+            "younger_abstention",
+            "rooker_feldman",
+            "judicial_immunity",
+            "weight_of_the_evidence",
+            "sentencing_reasonableness"
+          ]
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "decided",
+            "raised_not_decided",
+            "not_reached",
+            "background_only",
+            "quoted_authority",
+            "false_match"
+          ]
+        },
+        "outcome_general": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "enum": [
+            "accepted",
+            "rejected",
+            "mixed",
+            "not_reached",
+            "remanded_without_decision",
+            "procedural_only",
+            null
+          ]
+        },
+        "outcome_specific": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string"
+          }
+        },
+        "mention_confidence": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "adjudication_confidence": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "evidence": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/evidence"
+          }
+        }
+      }
+    },
+    "caseOutcome": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "disposition",
+        "prevailing_side"
+      ],
+      "properties": {
+        "disposition": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "enum": [
+              "affirmed",
+              "reversed",
+              "vacated",
+              "remanded",
+              "dismissed",
+              "granted",
+              "denied",
+              "convicted",
+              "acquitted",
+              "settled"
+            ]
+          }
+        },
+        "prevailing_side": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "enum": [
+            "appellant",
+            "appellee",
+            "plaintiff",
+            "defendant",
+            "government",
+            "mixed",
+            "unknown",
+            null
+          ]
+        }
+      }
+    },
+    "claimCharge": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "canonical_id",
+        "raw_name",
+        "raw_statute",
+        "mapping_status",
+        "case_status",
+        "confidence",
+        "evidence"
+      ],
+      "properties": {
+        "canonical_id": {
+          "anyOf": [
+            {
+              "type": "string",
+              "enum": [
+                "18_usc_922_g_1_felon_in_possession_of_firearm",
+                "18_usc_924_c_use_of_firearm_during_crime_of_violence",
+                "18_usc_1343_wire_fraud",
+                "21_usc_841_possession_with_intent_to_distribute",
+                "21_usc_841_distribution_of_controlled_substance",
+                "21_usc_846_conspiracy_to_distribute_controlled_substance",
+                "42_usc_1983_excessive_force",
+                "42_usc_1983_unlawful_search",
+                "42_usc_1983_deliberate_indifference",
+                "17_cfr_240_10b_5_securities_fraud",
+                "29_cfr_1604_11_sexual_harassment",
+                "common_law_negligence",
+                "common_law_fraud",
+                "common_law_breach_of_fiduciary_duty",
+                "common_law_defamation",
+                "common_law_trespass",
+                "common_law_unjust_enrichment",
+                "common_law_intentional_infliction_of_emotional_distress"
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "raw_name": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "raw_statute": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "mapping_status": {
+          "type": "string",
+          "enum": [
+            "mapped",
+            "unmapped_state_law",
+            "unmapped_federal",
+            "unmapped_common_law",
+            "ambiguous"
+          ]
+        },
+        "case_status": {
+          "type": "string",
+          "enum": [
+            "alleged",
+            "charged",
+            "adjudicated",
+            "dismissed",
+            "acquitted",
+            "convicted",
+            "withdrawn",
+            "unclear"
+          ]
+        },
+        "confidence": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "evidence": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/evidence"
+          }
+        }
+      }
+    }
+  }
+}

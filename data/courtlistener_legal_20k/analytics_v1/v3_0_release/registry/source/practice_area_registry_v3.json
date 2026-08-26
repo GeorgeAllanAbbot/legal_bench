@@ -1,0 +1,241 @@
+{
+  "version": "3.2.0",
+  "layer": "practice_area",
+  "question": "What substantive field governs the underlying dispute?",
+  "cardinality": {
+    "primary": "zero_or_one",
+    "secondary": "zero_to_two"
+  },
+  "entries": [
+    {
+      "canonical_id": "administrative_law",
+      "preferred_label": "Administrative Law",
+      "definition": "Agency authority, rulemaking, adjudication, or judicial review of agency action is central.",
+      "status": "active",
+      "external_mappings": {
+        "sali_lmss": null,
+        "pacer_nos_codes": []
+      }
+    },
+    {
+      "canonical_id": "admiralty_maritime_law",
+      "preferred_label": "Admiralty and Maritime Law",
+      "definition": "Maritime commerce, vessels, seamen, cargo, maritime liens, collision, salvage, or admiralty jurisdiction is central.",
+      "status": "active",
+      "external_mappings": {
+        "sali_lmss": null,
+        "pacer_nos_codes": []
+      }
+    },
+    {
+      "canonical_id": "antitrust_competition_law",
+      "preferred_label": "Antitrust and Competition Law",
+      "definition": "Monopolization, restraints of trade, price fixing, market allocation, or merger competition is central.",
+      "status": "active",
+      "external_mappings": {
+        "sali_lmss": null,
+        "pacer_nos_codes": []
+      }
+    },
+    {
+      "canonical_id": "bankruptcy_law",
+      "preferred_label": "Bankruptcy Law",
+      "definition": "Bankruptcy, reorganization, automatic stay, discharge, estate administration, or creditor priority is central.",
+      "status": "active",
+      "external_mappings": {
+        "sali_lmss": null,
+        "pacer_nos_codes": []
+      }
+    },
+    {
+      "canonical_id": "civil_rights_law",
+      "preferred_label": "Civil Rights Law",
+      "definition": "Enforcement or protection of constitutional and statutory civil rights is central.",
+      "status": "active",
+      "external_mappings": {
+        "sali_lmss": null,
+        "pacer_nos_codes": []
+      }
+    },
+    {
+      "canonical_id": "commercial_law",
+      "preferred_label": "Commercial Law",
+      "definition": "Business transactions, sales, negotiable instruments, secured transactions, or commercial regulation is central.",
+      "status": "active",
+      "external_mappings": {
+        "sali_lmss": null,
+        "pacer_nos_codes": []
+      }
+    },
+    {
+      "canonical_id": "consumer_law",
+      "preferred_label": "Consumer Law",
+      "definition": "Consumer credit, debt collection, credit reporting, deceptive practices, mortgage servicing, or consumer warranties is central.",
+      "status": "active",
+      "external_mappings": {
+        "sali_lmss": null,
+        "pacer_nos_codes": []
+      }
+    },
+    {
+      "canonical_id": "contract_law",
+      "preferred_label": "Contract Law",
+      "definition": "Contract formation, interpretation, performance, breach, or contractual remedies is central.",
+      "status": "active",
+      "external_mappings": {
+        "sali_lmss": null,
+        "pacer_nos_codes": []
+      }
+    },
+    {
+      "canonical_id": "criminal_law",
+      "preferred_label": "Criminal Law",
+      "definition": "Criminal charge, prosecution, plea, conviction, sentence, suppression, or punishment is central.",
+      "status": "active",
+      "external_mappings": {
+        "sali_lmss": null,
+        "pacer_nos_codes": []
+      }
+    },
+    {
+      "canonical_id": "education_law",
+      "preferred_label": "Education Law",
+      "definition": "Student rights, special education, school governance, discipline, access, or education regulation is central.",
+      "status": "active",
+      "external_mappings": {
+        "sali_lmss": null,
+        "pacer_nos_codes": []
+      }
+    },
+    {
+      "canonical_id": "environmental_law",
+      "preferred_label": "Environmental Law",
+      "definition": "Environmental review, pollution control, hazardous waste, cleanup liability, natural resources, or species protection is central.",
+      "status": "active",
+      "external_mappings": {
+        "sali_lmss": null,
+        "pacer_nos_codes": []
+      }
+    },
+    {
+      "canonical_id": "family_law",
+      "preferred_label": "Family Law",
+      "definition": "Marriage, divorce, custody, support, adoption, guardianship, or parental status is central.",
+      "status": "active",
+      "external_mappings": {
+        "sali_lmss": null,
+        "pacer_nos_codes": []
+      }
+    },
+    {
+      "canonical_id": "health_law",
+      "preferred_label": "Health Law",
+      "definition": "Healthcare regulation, public programs, provider reimbursement, licensing, privacy, emergency care, or healthcare fraud is central.",
+      "status": "active",
+      "external_mappings": {
+        "sali_lmss": null,
+        "pacer_nos_codes": []
+      }
+    },
+    {
+      "canonical_id": "immigration_law",
+      "preferred_label": "Immigration Law",
+      "definition": "Admission, immigration status, asylum, removal, visa, detention, or naturalization is central.",
+      "status": "active",
+      "external_mappings": {
+        "sali_lmss": null,
+        "pacer_nos_codes": []
+      }
+    },
+    {
+      "canonical_id": "insurance_law",
+      "preferred_label": "Insurance Law",
+      "definition": "Interpretation, scope, enforcement, regulation, or performance of an insurance policy or insurance relationship is central.",
+      "status": "active",
+      "external_mappings": {
+        "sali_lmss": null,
+        "pacer_nos_codes": []
+      }
+    },
+    {
+      "canonical_id": "intellectual_property_law",
+      "preferred_label": "Intellectual Property Law",
+      "definition": "Patent, trademark, copyright, trade secret, or related ownership and infringement is central.",
+      "status": "active",
+      "external_mappings": {
+        "sali_lmss": null,
+        "pacer_nos_codes": []
+      }
+    },
+    {
+      "canonical_id": "labor_employment_law",
+      "preferred_label": "Labor and Employment Law",
+      "definition": "Employment relationship, wages, workplace discrimination, retaliation, labor organization, or collective bargaining is central.",
+      "status": "active",
+      "external_mappings": {
+        "sali_lmss": null,
+        "pacer_nos_codes": []
+      }
+    },
+    {
+      "canonical_id": "real_property_law",
+      "preferred_label": "Real Property Law",
+      "definition": "Ownership, title, possession, land use, easement, mortgage, or foreclosure of real property is central.",
+      "status": "active",
+      "external_mappings": {
+        "sali_lmss": null,
+        "pacer_nos_codes": []
+      }
+    },
+    {
+      "canonical_id": "securities_law",
+      "preferred_label": "Securities Law",
+      "definition": "Securities issuance, registration, disclosure, trading, fraud, or market regulation is central.",
+      "status": "active",
+      "external_mappings": {
+        "sali_lmss": null,
+        "pacer_nos_codes": []
+      }
+    },
+    {
+      "canonical_id": "tax_law",
+      "preferred_label": "Tax Law",
+      "definition": "Tax liability, deduction, deficiency, refund, assessment, or penalty is central.",
+      "status": "active",
+      "external_mappings": {
+        "sali_lmss": null,
+        "pacer_nos_codes": []
+      }
+    },
+    {
+      "canonical_id": "tort_law",
+      "preferred_label": "Tort Law",
+      "definition": "Civil liability for negligence, intentional tort, personal injury, causation, or damages is central.",
+      "status": "active",
+      "external_mappings": {
+        "sali_lmss": null,
+        "pacer_nos_codes": []
+      }
+    },
+    {
+      "canonical_id": "trusts_estates_probate_law",
+      "preferred_label": "Trusts, Estates, and Probate Law",
+      "definition": "Wills, probate, intestate succession, estate administration, trusts, fiduciary administration, or beneficiary rights are central.",
+      "status": "active",
+      "external_mappings": {
+        "sali_lmss": null,
+        "pacer_nos_codes": []
+      }
+    },
+    {
+      "canonical_id": "other",
+      "preferred_label": "Other",
+      "definition": "The principal field cannot be represented by another approved practice area.",
+      "status": "active",
+      "external_mappings": {
+        "sali_lmss": null,
+        "pacer_nos_codes": []
+      }
+    }
+  ]
+}
