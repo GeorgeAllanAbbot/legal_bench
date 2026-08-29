@@ -1,0 +1,59 @@
+{
+  "created_at": "2026-08-29T11:14:26.873567+00:00",
+  "record_count": 12714,
+  "expected_record_count": 12714,
+  "complete": true,
+  "annotated_record_count": 12712,
+  "annotation_complete": false,
+  "missing_annotation_job_ids": [
+    "cluster_4421024::foreclosure_mortgage",
+    "cluster_9744493::partition_ownership"
+  ],
+  "annotation_source_distribution": {
+    "gpt-5.4-mini": 11201,
+    "gpt-5.4-review": 1326,
+    "gpt-5.5-review": 129,
+    "gpt-5.4-failed-retry": 20,
+    "gpt-5.6-single+human_review": 1,
+    "gpt-5.6-review": 25,
+    "gpt-5.6-failed-retry": 5,
+    "gpt-5.6-failed-retry+human_review": 2,
+    "gpt-5.6-review+human_review": 3,
+    "missing_after_retries": 2
+  },
+  "human_review_count": 6,
+  "human_review_edits": [
+    {
+      "job_id": "cluster_4529251::corporate_governance_dispute-shareholder_derivative_action",
+      "decision": "Remove placeholder none; retain declaratory_judgment."
+    },
+    {
+      "job_id": "cluster_7879216::sentencing_guideline_dispute",
+      "decision": "Delete mandatory_minimum_months numeric value."
+    },
+    {
+      "job_id": "cluster_341830::section_1983_claim-exhaustion_or_timeliness",
+      "decision": "Split consolidated-case outcomes by target."
+    },
+    {
+      "job_id": "cluster_1911452::support_obligation",
+      "decision": "Remove placeholder none; retain remand and keep fee denial separate."
+    },
+    {
+      "job_id": "cluster_2820455::sentencing_guideline_dispute-firearm_offense",
+      "decision": "Retain mandatory_minimum_months in both Matter Types."
+    },
+    {
+      "job_id": "cluster_10273199::custody_visitation-protection_order_family",
+      "decision": "Remove placeholder none; retain attorney_fees."
+    }
+  ],
+  "feature_count": 246,
+  "matter_type_count": 120,
+  "outputs": {
+    "annotations": "/home/allan/lab/rag/data/courtlistener_legal_20k/analytics_v1/final/matter_type_features_v1_1_final.jsonl",
+    "registry": "/home/allan/lab/rag/data/courtlistener_legal_20k/analytics_v1/final/matter_type_feature_registry_v1_1.json",
+    "reference_en": "/home/allan/lab/rag/data/courtlistener_legal_20k/analytics_v1/final/MATTER_TYPE_FEATURE_REFERENCE_en.md",
+    "reference_zh": "/home/allan/lab/rag/data/courtlistener_legal_20k/analytics_v1/final/MATTER_TYPE_FEATURE_REFERENCE_zh.md"
+  }
+}

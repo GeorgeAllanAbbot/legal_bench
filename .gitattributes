@@ -1,1 +1,1 @@
-data/courtlistener_legal_20k/phase1/legal_cases.db.xz.part-* filter=lfs diff=lfs merge=lfs -text
+*.jsonl.xz binary

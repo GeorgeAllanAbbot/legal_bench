@@ -1,0 +1,70 @@
+{
+  "version": "1.0.0",
+  "description": "English query templates for structured filtering, analytics, and constrained RAG over Legal Bench v3 annotations.",
+  "templates": [
+    {
+      "id": "count_by_matter_type_and_amount",
+      "query": "How many foreclosure cases awarded attorney fees over $50,000?",
+      "intent": "count_cases",
+      "filters": [
+        {"field": "matter_type", "operator": "in", "value": ["foreclosure_mortgage"]},
+        {"field": "feature.attorney_fees_usd", "operator": "gt", "value": 50000}
+      ],
+      "requires_source_text": false
+    },
+    {
+      "id": "find_cases_with_present_feature",
+      "query": "Find asylum review cases in which detention duration was mentioned.",
+      "intent": "find_cases",
+      "filters": [
+        {"field": "matter_type", "operator": "in", "value": ["asylum_protection"]},
+        {"field": "feature.detention_days", "operator": "is_present", "value": true}
+      ],
+      "requires_source_text": false
+    },
+    {
+      "id": "disposition_distribution",
+      "query": "What is the distribution of current-court dispositions in sentencing appeals?",
+      "intent": "aggregate",
+      "filters": [
+        {"field": "matter_type", "operator": "in", "value": ["sentencing_guideline_dispute"]}
+      ],
+      "group_by": ["feature.current_court_disposition"],
+      "requires_source_text": false
+    },
+    {
+      "id": "yearly_amount_trend",
+      "query": "How did reported damages awards in employment discrimination cases change by year?",
+      "intent": "aggregate",
+      "filters": [
+        {"field": "matter_type", "operator": "in", "value": ["employment_discrimination"]},
+        {"field": "feature.amount_awarded_usd", "operator": "is_present", "value": true}
+      ],
+      "group_by": ["year_filed"],
+      "metrics": [{"function": "median", "field": "feature.amount_awarded_usd"}],
+      "requires_source_text": false
+    },
+    {
+      "id": "compare_matter_types",
+      "query": "Compare median settlement amounts for product liability and medical malpractice cases.",
+      "intent": "compare",
+      "filters": [
+        {"field": "matter_type", "operator": "in", "value": ["product_liability", "medical_malpractice"]},
+        {"field": "feature.settlement_amount_usd", "operator": "is_present", "value": true}
+      ],
+      "group_by": ["matter_type"],
+      "metrics": [{"function": "median", "field": "feature.settlement_amount_usd"}],
+      "requires_source_text": false
+    },
+    {
+      "id": "structured_constraint_rag",
+      "query": "In cases where the insurer owed a duty to defend, explain the courts' policy-interpretation reasoning.",
+      "intent": "explain",
+      "semantic_query": "court reasoning for finding a duty to defend under the insurance policy",
+      "filters": [
+        {"field": "matter_type", "operator": "in", "value": ["duty_to_defend_indemnify"]}
+      ],
+      "requires_source_text": true
+    }
+  ]
+}

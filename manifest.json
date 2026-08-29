@@ -1,0 +1,43 @@
+{
+  "release": "legal-bench-v3-annotations",
+  "release_type": "annotation_only",
+  "created_at": "2026-08-29T16:35:07.653162+00:00",
+  "source_dataset": "CourtListener 20,000 Opinion Cluster sample (not redistributed)",
+  "taxonomy_version": "3.2.0",
+  "legal_issue_registry_version": "3.1-simplified",
+  "matter_type_feature_version": "1.1",
+  "artifacts": [
+    {
+      "path": "data/taxonomy/case_taxonomy_v3.jsonl.xz",
+      "record_count": 20000,
+      "uncompressed_bytes": 61998563,
+      "compressed_bytes": 6378440,
+      "sha256": "76fe254a54b7af974bbdbafce3ae4bd756ac413327ffa1702805e01cdaa81ed5"
+    },
+    {
+      "path": "data/features/matter_type_features_v1_1.jsonl.xz",
+      "record_count": 12714,
+      "uncompressed_bytes": 159901362,
+      "compressed_bytes": 11874032,
+      "sha256": "b1a15858ace306addadce9df04621d8a1213b2ae732ce0159d5d304466d752c6"
+    }
+  ],
+  "scope": {
+    "taxonomy_cases": 20000,
+    "taxonomy_cases_needing_review": 9284,
+    "feature_jobs": 12714,
+    "annotated_feature_jobs": 12712,
+    "explicit_missing_feature_jobs": 2,
+    "practice_areas": 23,
+    "matter_types": 120,
+    "legal_issues": 47,
+    "business_features": 246
+  },
+  "excluded": [
+    "opinion full text",
+    "SQLite corpus",
+    "retrieval indexes",
+    "provider logs",
+    "model credentials"
+  ]
+}

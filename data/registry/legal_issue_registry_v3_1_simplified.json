@@ -1,0 +1,1230 @@
+{
+  "version": "3.1-simplified",
+  "layer": "legal_issue",
+  "policy": [
+    "Legal Issue is not case type.",
+    "Keep only directly adjudicable issues with narrow semantics and closed outcomes.",
+    "Move broad rights, broad insurance concepts, and procedural labels to Matter Type, features, or context."
+  ],
+  "source_registry": "/home/allan/lab/rag/data/courtlistener_legal_20k/analytics_v1/taxonomy_v3/legal_issue_registry_v3.json",
+  "kept_count": 47,
+  "removed_count": 15,
+  "entries": [
+    {
+      "issue_id": "tax_deduction",
+      "preferred_label": "Tax Deduction",
+      "scope_note": "Availability, amount, or denial of a tax deduction.",
+      "exclusions": [
+        "An accounting deduction outside tax law is excluded."
+      ],
+      "namespace": "substantive_law",
+      "status": "active_strict",
+      "allowed_specific_outcomes": [
+        "allowed",
+        "disallowed",
+        "partially_allowed"
+      ],
+      "legacy_ids": [],
+      "decision_outputs": [
+        "allowed",
+        "disallowed",
+        "partially_allowed"
+      ],
+      "searchable": true
+    },
+    {
+      "issue_id": "insurance_coverage_trigger",
+      "preferred_label": "Insurance Coverage Trigger",
+      "scope_note": "Whether an event, injury, offense, claim, or loss triggers coverage.",
+      "exclusions": [
+        "An insured event mentioned only as background is insufficient."
+      ],
+      "namespace": "insurance",
+      "status": "active_strict",
+      "allowed_specific_outcomes": [
+        "triggered",
+        "not_triggered",
+        "unresolved"
+      ],
+      "legacy_ids": [],
+      "decision_outputs": [
+        "triggered",
+        "not_triggered",
+        "unresolved"
+      ],
+      "searchable": true
+    },
+    {
+      "issue_id": "insurance_policy_exclusion",
+      "preferred_label": "Insurance Policy Exclusion",
+      "scope_note": "Application, validity, or interpretation of a policy exclusion.",
+      "exclusions": [
+        "An exclusion listed but not analyzed is insufficient."
+      ],
+      "namespace": "insurance",
+      "status": "active_strict",
+      "allowed_specific_outcomes": [
+        "applies",
+        "does_not_apply",
+        "unresolved"
+      ],
+      "legacy_ids": [],
+      "decision_outputs": [
+        "applies",
+        "does_not_apply",
+        "unresolved"
+      ],
+      "searchable": true
+    },
+    {
+      "issue_id": "insurance_duty_to_defend",
+      "preferred_label": "Insurance Duty To Defend",
+      "scope_note": "Whether an insurer owes or breached a duty to defend.",
+      "exclusions": [
+        "Defense counsel participation alone is insufficient."
+      ],
+      "namespace": "insurance",
+      "status": "active_strict",
+      "allowed_specific_outcomes": [
+        "owed",
+        "not_owed",
+        "unresolved"
+      ],
+      "legacy_ids": [],
+      "decision_outputs": [
+        "owed",
+        "not_owed",
+        "unresolved"
+      ],
+      "searchable": true
+    },
+    {
+      "issue_id": "insurance_duty_to_indemnify",
+      "preferred_label": "Insurance Duty To Indemnify",
+      "scope_note": "Whether an insurer owes or breached a duty to indemnify.",
+      "exclusions": [
+        "Generic indemnity outside insurance is excluded."
+      ],
+      "namespace": "insurance",
+      "status": "active_strict",
+      "allowed_specific_outcomes": [
+        "owed",
+        "not_owed",
+        "unresolved"
+      ],
+      "legacy_ids": [],
+      "decision_outputs": [
+        "owed",
+        "not_owed",
+        "unresolved"
+      ],
+      "searchable": true
+    },
+    {
+      "issue_id": "insurance_cooperation_clause",
+      "preferred_label": "Insurance Cooperation Clause",
+      "scope_note": "Compliance with or breach of an insured's cooperation obligations.",
+      "exclusions": [
+        "Ordinary litigation cooperation is excluded."
+      ],
+      "namespace": "insurance",
+      "status": "active_strict",
+      "allowed_specific_outcomes": [
+        "complied",
+        "breached",
+        "unresolved"
+      ],
+      "legacy_ids": [],
+      "decision_outputs": [
+        "complied",
+        "breached",
+        "unresolved"
+      ],
+      "searchable": true
+    },
+    {
+      "issue_id": "insurance_misrepresentation_rescission",
+      "preferred_label": "Insurance Misrepresentation Rescission",
+      "scope_note": "Misrepresentation in insurance application or claim and policy rescission.",
+      "exclusions": [
+        "Unrelated fraud or rescission is excluded."
+      ],
+      "namespace": "insurance",
+      "status": "active_strict",
+      "allowed_specific_outcomes": [
+        "rescission_allowed",
+        "rescission_denied",
+        "unresolved"
+      ],
+      "legacy_ids": [],
+      "decision_outputs": [
+        "rescission_allowed",
+        "rescission_denied",
+        "unresolved"
+      ],
+      "searchable": true
+    },
+    {
+      "issue_id": "insurance_bad_faith",
+      "preferred_label": "Insurance Bad Faith",
+      "scope_note": "Insurer bad-faith denial, delay, settlement, or claim handling.",
+      "exclusions": [
+        "A party allegation of bad faith without court analysis is insufficient."
+      ],
+      "namespace": "insurance",
+      "status": "active_strict",
+      "allowed_specific_outcomes": [
+        "established",
+        "not_established",
+        "unresolved"
+      ],
+      "legacy_ids": [],
+      "decision_outputs": [
+        "established",
+        "not_established",
+        "unresolved"
+      ],
+      "searchable": true
+    },
+    {
+      "issue_id": "insurance_limit_interpretation",
+      "preferred_label": "Insurance Limit Interpretation",
+      "scope_note": "Interpretation or application of aggregate, per-occurrence, or other policy limits.",
+      "exclusions": [
+        "A policy amount mentioned only as fact is insufficient."
+      ],
+      "namespace": "insurance",
+      "status": "active_strict",
+      "allowed_specific_outcomes": [
+        "limit_applied",
+        "limit_not_applied",
+        "unresolved"
+      ],
+      "legacy_ids": [
+        "insurance_policy_limits"
+      ],
+      "decision_outputs": [
+        "limit_applied",
+        "limit_not_applied",
+        "unresolved"
+      ],
+      "searchable": true
+    },
+    {
+      "issue_id": "insurance_allocation_between_insurers",
+      "preferred_label": "Insurance Allocation Between Insurers",
+      "scope_note": "Priority, contribution, allocation, or exhaustion among insurers.",
+      "exclusions": [
+        "Multiple insurers named without an allocation dispute are insufficient."
+      ],
+      "namespace": "insurance",
+      "status": "active_strict",
+      "allowed_specific_outcomes": [
+        "allocation_ordered",
+        "allocation_denied",
+        "unresolved"
+      ],
+      "legacy_ids": [],
+      "decision_outputs": [
+        "allocation_ordered",
+        "allocation_denied",
+        "unresolved"
+      ],
+      "searchable": true
+    },
+    {
+      "issue_id": "insurance_additional_insured_status",
+      "preferred_label": "Insurance Additional Insured Status",
+      "scope_note": "Whether a person or entity qualifies for additional-insured coverage.",
+      "exclusions": [
+        "An additional insured listed but not disputed is insufficient."
+      ],
+      "namespace": "insurance",
+      "status": "active_strict",
+      "allowed_specific_outcomes": [
+        "qualifies",
+        "does_not_qualify",
+        "unresolved"
+      ],
+      "legacy_ids": [],
+      "decision_outputs": [
+        "qualifies",
+        "does_not_qualify",
+        "unresolved"
+      ],
+      "searchable": true
+    },
+    {
+      "issue_id": "insurance_subrogation_right",
+      "preferred_label": "Insurance Subrogation Right",
+      "scope_note": "Existence, scope, priority, or enforcement of insurer subrogation rights.",
+      "exclusions": [
+        "Payment by an insurer alone is insufficient."
+      ],
+      "namespace": "insurance",
+      "status": "active_strict",
+      "allowed_specific_outcomes": [
+        "exists",
+        "does_not_exist",
+        "unresolved"
+      ],
+      "legacy_ids": [],
+      "decision_outputs": [
+        "exists",
+        "does_not_exist",
+        "unresolved"
+      ],
+      "searchable": true
+    },
+    {
+      "issue_id": "insurance_waiver_estoppel",
+      "preferred_label": "Insurance Waiver Estoppel",
+      "scope_note": "Whether waiver or estoppel affects insurance coverage or policy defenses.",
+      "exclusions": [
+        "Waiver or estoppel outside an insurance relationship is excluded."
+      ],
+      "namespace": "insurance",
+      "status": "active_strict",
+      "allowed_specific_outcomes": [
+        "applies",
+        "does_not_apply",
+        "unresolved"
+      ],
+      "legacy_ids": [],
+      "decision_outputs": [
+        "applies",
+        "does_not_apply",
+        "unresolved"
+      ],
+      "searchable": true
+    },
+    {
+      "issue_id": "personal_jurisdiction",
+      "preferred_label": "Personal Jurisdiction",
+      "scope_note": "Whether the court may exercise personal jurisdiction over a party.",
+      "exclusions": [],
+      "namespace": "civil_procedure",
+      "status": "active_strict",
+      "allowed_specific_outcomes": [
+        "exists",
+        "absent",
+        "waived"
+      ],
+      "legacy_ids": [],
+      "decision_outputs": [
+        "exists",
+        "absent",
+        "waived"
+      ],
+      "searchable": true
+    },
+    {
+      "issue_id": "subject_matter_jurisdiction",
+      "preferred_label": "Subject Matter Jurisdiction",
+      "scope_note": "Whether the court has authority over the category of dispute.",
+      "exclusions": [],
+      "namespace": "civil_procedure",
+      "status": "active_strict",
+      "allowed_specific_outcomes": [
+        "exists",
+        "absent"
+      ],
+      "legacy_ids": [],
+      "decision_outputs": [
+        "exists",
+        "absent"
+      ],
+      "searchable": true
+    },
+    {
+      "issue_id": "removal_and_remand",
+      "preferred_label": "Removal And Remand",
+      "scope_note": "Whether removal to federal court or remand to state court is proper.",
+      "exclusions": [],
+      "namespace": "civil_procedure",
+      "status": "active_strict",
+      "allowed_specific_outcomes": [
+        "removal_proper",
+        "remand_required",
+        "remand_denied"
+      ],
+      "legacy_ids": [
+        "removal_jurisdiction"
+      ],
+      "decision_outputs": [
+        "removal_proper",
+        "remand_required",
+        "remand_denied"
+      ],
+      "searchable": true
+    },
+    {
+      "issue_id": "standing",
+      "preferred_label": "Standing",
+      "scope_note": "Whether the claimant has constitutional or prudential standing.",
+      "exclusions": [],
+      "namespace": "civil_procedure",
+      "status": "active_strict",
+      "allowed_specific_outcomes": [
+        "established",
+        "not_established"
+      ],
+      "legacy_ids": [],
+      "decision_outputs": [
+        "established",
+        "not_established"
+      ],
+      "searchable": true
+    },
+    {
+      "issue_id": "mootness",
+      "preferred_label": "Mootness",
+      "scope_note": "Whether changed circumstances eliminate a live controversy.",
+      "exclusions": [],
+      "namespace": "civil_procedure",
+      "status": "active_strict",
+      "allowed_specific_outcomes": [
+        "moot",
+        "not_moot",
+        "exception_applies"
+      ],
+      "legacy_ids": [],
+      "decision_outputs": [
+        "moot",
+        "not_moot",
+        "exception_applies"
+      ],
+      "searchable": true
+    },
+    {
+      "issue_id": "claim_preclusion",
+      "preferred_label": "Claim Preclusion",
+      "scope_note": "Whether a prior judgment bars the present claim.",
+      "exclusions": [],
+      "namespace": "civil_procedure",
+      "status": "active_strict",
+      "allowed_specific_outcomes": [
+        "applies",
+        "does_not_apply"
+      ],
+      "legacy_ids": [],
+      "decision_outputs": [
+        "applies",
+        "does_not_apply"
+      ],
+      "searchable": true
+    },
+    {
+      "issue_id": "issue_preclusion_collateral_estoppel",
+      "preferred_label": "Issue Preclusion Collateral Estoppel",
+      "scope_note": "Whether collateral estoppel or issue preclusion bars relitigation of a legal or factual issue.",
+      "exclusions": [],
+      "namespace": "civil_procedure",
+      "status": "active_strict",
+      "allowed_specific_outcomes": [
+        "applies",
+        "does_not_apply"
+      ],
+      "legacy_ids": [
+        "issue_preclusion",
+        "collateral_estoppel"
+      ],
+      "decision_outputs": [
+        "applies",
+        "does_not_apply"
+      ],
+      "searchable": true
+    },
+    {
+      "issue_id": "class_certification",
+      "preferred_label": "Class Certification",
+      "scope_note": "Whether the proposed class satisfies certification requirements.",
+      "exclusions": [],
+      "namespace": "civil_procedure",
+      "status": "active_strict",
+      "allowed_specific_outcomes": [
+        "granted",
+        "denied",
+        "vacated"
+      ],
+      "legacy_ids": [],
+      "decision_outputs": [
+        "granted",
+        "denied",
+        "vacated"
+      ],
+      "searchable": true
+    },
+    {
+      "issue_id": "pleading_sufficiency",
+      "preferred_label": "Pleading Sufficiency",
+      "scope_note": "Whether the pleading states a legally sufficient claim or defense.",
+      "exclusions": [],
+      "namespace": "civil_procedure",
+      "status": "active_strict",
+      "allowed_specific_outcomes": [
+        "sufficient",
+        "insufficient",
+        "partially_sufficient"
+      ],
+      "legacy_ids": [],
+      "decision_outputs": [
+        "sufficient",
+        "insufficient",
+        "partially_sufficient"
+      ],
+      "searchable": true
+    },
+    {
+      "issue_id": "service_of_process",
+      "preferred_label": "Service Of Process",
+      "scope_note": "Whether process was properly served.",
+      "exclusions": [],
+      "namespace": "civil_procedure",
+      "status": "active_strict",
+      "allowed_specific_outcomes": [
+        "proper",
+        "improper",
+        "waived"
+      ],
+      "legacy_ids": [],
+      "decision_outputs": [
+        "proper",
+        "improper",
+        "waived"
+      ],
+      "searchable": true
+    },
+    {
+      "issue_id": "statute_of_limitations",
+      "preferred_label": "Statute Of Limitations",
+      "scope_note": "Whether a claim or charge is time-barred.",
+      "exclusions": [],
+      "namespace": "civil_procedure",
+      "status": "active_strict",
+      "allowed_specific_outcomes": [
+        "timely",
+        "time_barred",
+        "tolled"
+      ],
+      "legacy_ids": [],
+      "decision_outputs": [
+        "timely",
+        "time_barred",
+        "tolled"
+      ],
+      "searchable": true
+    },
+    {
+      "issue_id": "arbitration_enforceability",
+      "preferred_label": "Arbitration Enforceability",
+      "scope_note": "Whether an arbitration agreement or award is enforceable.",
+      "exclusions": [],
+      "namespace": "civil_procedure",
+      "status": "active_strict",
+      "allowed_specific_outcomes": [
+        "enforceable",
+        "unenforceable",
+        "waived"
+      ],
+      "legacy_ids": [],
+      "decision_outputs": [
+        "enforceable",
+        "unenforceable",
+        "waived"
+      ],
+      "searchable": true
+    },
+    {
+      "issue_id": "attorney_client_privilege",
+      "preferred_label": "Attorney Client Privilege",
+      "scope_note": "Whether a communication is protected by attorney-client privilege.",
+      "exclusions": [],
+      "namespace": "evidence_privilege",
+      "status": "active_strict",
+      "allowed_specific_outcomes": [
+        "protected",
+        "not_protected",
+        "waived"
+      ],
+      "legacy_ids": [],
+      "decision_outputs": [
+        "protected",
+        "not_protected",
+        "waived"
+      ],
+      "searchable": true
+    },
+    {
+      "issue_id": "work_product_protection",
+      "preferred_label": "Work Product Protection",
+      "scope_note": "Whether material is protected as attorney work product.",
+      "exclusions": [],
+      "namespace": "evidence_privilege",
+      "status": "active_strict",
+      "allowed_specific_outcomes": [
+        "protected",
+        "not_protected",
+        "waived"
+      ],
+      "legacy_ids": [],
+      "decision_outputs": [
+        "protected",
+        "not_protected",
+        "waived"
+      ],
+      "searchable": true
+    },
+    {
+      "issue_id": "hearsay",
+      "preferred_label": "Hearsay",
+      "scope_note": "Whether an out-of-court statement is admissible under hearsay rules.",
+      "exclusions": [],
+      "namespace": "evidence_privilege",
+      "status": "active_strict",
+      "allowed_specific_outcomes": [
+        "admitted",
+        "excluded",
+        "exception_applies"
+      ],
+      "legacy_ids": [],
+      "decision_outputs": [
+        "admitted",
+        "excluded",
+        "exception_applies"
+      ],
+      "searchable": true
+    },
+    {
+      "issue_id": "expert_testimony",
+      "preferred_label": "Expert Testimony",
+      "scope_note": "Whether expert evidence satisfies admissibility requirements.",
+      "exclusions": [],
+      "namespace": "evidence_privilege",
+      "status": "active_strict",
+      "allowed_specific_outcomes": [
+        "admitted",
+        "excluded",
+        "limited"
+      ],
+      "legacy_ids": [],
+      "decision_outputs": [
+        "admitted",
+        "excluded",
+        "limited"
+      ],
+      "searchable": true
+    },
+    {
+      "issue_id": "evidence_authentication",
+      "preferred_label": "Evidence Authentication",
+      "scope_note": "Whether evidence has been sufficiently authenticated.",
+      "exclusions": [],
+      "namespace": "evidence_privilege",
+      "status": "active_strict",
+      "allowed_specific_outcomes": [
+        "authenticated",
+        "not_authenticated"
+      ],
+      "legacy_ids": [],
+      "decision_outputs": [
+        "authenticated",
+        "not_authenticated"
+      ],
+      "searchable": true
+    },
+    {
+      "issue_id": "character_evidence",
+      "preferred_label": "Character Evidence",
+      "scope_note": "Whether character or other-act evidence is admissible.",
+      "exclusions": [],
+      "namespace": "evidence_privilege",
+      "status": "active_strict",
+      "allowed_specific_outcomes": [
+        "admitted",
+        "excluded",
+        "limited"
+      ],
+      "legacy_ids": [],
+      "decision_outputs": [
+        "admitted",
+        "excluded",
+        "limited"
+      ],
+      "searchable": true
+    },
+    {
+      "issue_id": "relevance_prejudice_balancing",
+      "preferred_label": "Relevance Prejudice Balancing",
+      "scope_note": "Whether relevance is substantially outweighed by unfair prejudice or related concerns.",
+      "exclusions": [],
+      "namespace": "evidence_privilege",
+      "status": "active_strict",
+      "allowed_specific_outcomes": [
+        "admitted",
+        "excluded",
+        "limited"
+      ],
+      "legacy_ids": [],
+      "decision_outputs": [
+        "admitted",
+        "excluded",
+        "limited"
+      ],
+      "searchable": true
+    },
+    {
+      "issue_id": "confrontation_clause",
+      "preferred_label": "Confrontation Clause",
+      "scope_note": "Whether admission or exclusion of evidence violates confrontation rights.",
+      "exclusions": [],
+      "namespace": "evidence_privilege",
+      "status": "active_strict",
+      "allowed_specific_outcomes": [
+        "violation",
+        "no_violation"
+      ],
+      "legacy_ids": [],
+      "decision_outputs": [
+        "violation",
+        "no_violation"
+      ],
+      "searchable": true
+    },
+    {
+      "issue_id": "harmless_error",
+      "preferred_label": "Harmless Error",
+      "scope_note": "Whether an identified error warrants reversal or was harmless.",
+      "exclusions": [],
+      "namespace": "appellate_review",
+      "status": "active_strict",
+      "allowed_specific_outcomes": [
+        "harmless",
+        "prejudicial",
+        "structural"
+      ],
+      "legacy_ids": [],
+      "decision_outputs": [
+        "harmless",
+        "prejudicial",
+        "structural"
+      ],
+      "searchable": true
+    },
+    {
+      "issue_id": "sufficiency_of_evidence",
+      "preferred_label": "Sufficiency of Evidence",
+      "scope_note": "Whether the evidence, viewed under the governing legal standard, is legally sufficient to support a verdict, conviction, finding, or judgment.",
+      "definition": "Whether the evidence, viewed under the governing legal standard, is legally sufficient to support a verdict, conviction, finding, or judgment.",
+      "include_when": [
+        "The court tests whether evidence could legally support the challenged result.",
+        "The opinion applies a sufficiency standard to an adjudicated finding."
+      ],
+      "exclusions": [
+        "A challenge only to the relative weight or credibility of evidence.",
+        "Pleading sufficiency or substantial-evidence review of agency action."
+      ],
+      "confusable_with": [
+        "weight_of_the_evidence",
+        "pleading_sufficiency",
+        "administrative_substantial_evidence_review"
+      ],
+      "namespace": "evidence_and_trial",
+      "status": "active_strict",
+      "allowed_specific_outcomes": [
+        "sufficient",
+        "insufficient"
+      ],
+      "legacy_ids": [],
+      "decision_outputs": [
+        "sufficient",
+        "insufficient"
+      ],
+      "searchable": true
+    },
+    {
+      "issue_id": "ineffective_assistance_of_counsel",
+      "preferred_label": "Ineffective Assistance of Counsel",
+      "scope_note": "Whether counsel's deficient performance prejudiced a criminal defendant or post-conviction petitioner under the governing effectiveness standard.",
+      "definition": "Whether counsel's deficient performance prejudiced a criminal defendant or post-conviction petitioner under the governing effectiveness standard.",
+      "include_when": [
+        "The court evaluates deficient performance, prejudice, or an equivalent ineffective-assistance test."
+      ],
+      "exclusions": [
+        "A denial of counsel without analysis of counsel's performance.",
+        "Ordinary disagreement with litigation strategy outside an effectiveness claim."
+      ],
+      "confusable_with": [
+        "right_to_counsel"
+      ],
+      "namespace": "constitutional_criminal_procedure",
+      "status": "active_strict",
+      "allowed_specific_outcomes": [
+        "established",
+        "not_established",
+        "prejudice_not_shown"
+      ],
+      "legacy_ids": [],
+      "decision_outputs": [
+        "established",
+        "not_established",
+        "prejudice_not_shown"
+      ],
+      "searchable": true
+    },
+    {
+      "issue_id": "double_jeopardy",
+      "preferred_label": "Double Jeopardy",
+      "scope_note": "Whether a prosecution, conviction, or punishment violates the constitutional prohibition against successive prosecution or multiple punishment for the same offense.",
+      "definition": "Whether a prosecution, conviction, or punishment violates the constitutional prohibition against successive prosecution or multiple punishment for the same offense.",
+      "include_when": [
+        "The court applies double-jeopardy, merger, same-elements, or multiple-punishment analysis."
+      ],
+      "exclusions": [
+        "Generic claim preclusion or duplicate civil claims.",
+        "A lesser-included-offense issue without a double-jeopardy question."
+      ],
+      "confusable_with": [
+        "lesser_included_offense_instruction",
+        "claim_preclusion"
+      ],
+      "namespace": "constitutional_criminal_procedure",
+      "status": "active_strict",
+      "allowed_specific_outcomes": [
+        "violation",
+        "no_violation",
+        "offenses_merge"
+      ],
+      "legacy_ids": [],
+      "decision_outputs": [
+        "violation",
+        "no_violation",
+        "offenses_merge"
+      ],
+      "searchable": true
+    },
+    {
+      "issue_id": "habeas_exhaustion",
+      "preferred_label": "Habeas Exhaustion",
+      "scope_note": "Whether a habeas petitioner exhausted available state remedies before seeking federal habeas relief.",
+      "definition": "Whether a habeas petitioner exhausted available state remedies before seeking federal habeas relief.",
+      "include_when": [
+        "The court analyzes fair presentation to state courts or exhaustion of state remedies in habeas."
+      ],
+      "exclusions": [
+        "PLRA exhaustion by prisoners challenging conditions.",
+        "Generic administrative exhaustion or procedural default alone."
+      ],
+      "confusable_with": [
+        "procedural_default",
+        "plra_exhaustion",
+        "administrative_exhaustion"
+      ],
+      "namespace": "habeas_procedure",
+      "status": "active_strict",
+      "allowed_specific_outcomes": [
+        "exhausted",
+        "not_exhausted",
+        "excused"
+      ],
+      "legacy_ids": [],
+      "decision_outputs": [
+        "exhausted",
+        "not_exhausted",
+        "excused"
+      ],
+      "searchable": true
+    },
+    {
+      "issue_id": "lesser_included_offense_instruction",
+      "preferred_label": "Lesser-Included-Offense Instruction",
+      "scope_note": "Whether the jury should have been instructed on, or a conviction may rest on, a lesser included offense.",
+      "definition": "Whether the jury should have been instructed on, or a conviction may rest on, a lesser included offense.",
+      "include_when": [
+        "The court applies the legal test for entitlement to a lesser-included-offense instruction."
+      ],
+      "exclusions": [
+        "Generic jury-instruction error.",
+        "Double-jeopardy analysis based on overlapping offenses."
+      ],
+      "confusable_with": [
+        "jury_instruction_error",
+        "double_jeopardy"
+      ],
+      "namespace": "evidence_and_trial",
+      "status": "active_strict",
+      "allowed_specific_outcomes": [
+        "required",
+        "not_required",
+        "error_harmless"
+      ],
+      "legacy_ids": [],
+      "decision_outputs": [
+        "required",
+        "not_required",
+        "error_harmless"
+      ],
+      "searchable": true
+    },
+    {
+      "issue_id": "qualified_immunity",
+      "preferred_label": "Qualified Immunity",
+      "scope_note": "Whether a government official is shielded from civil liability because the asserted right was not clearly established or no constitutional violation occurred.",
+      "definition": "Whether a government official is shielded from civil liability because the asserted right was not clearly established or no constitutional violation occurred.",
+      "include_when": [
+        "The court applies the qualified-immunity framework to an individual government official."
+      ],
+      "exclusions": [
+        "Absolute judicial, prosecutorial, legislative, or sovereign immunity."
+      ],
+      "confusable_with": [
+        "judicial_immunity",
+        "sovereign_immunity",
+        "prosecutorial_immunity"
+      ],
+      "namespace": "civil_rights_procedure",
+      "status": "active_strict",
+      "allowed_specific_outcomes": [
+        "granted",
+        "denied",
+        "fact_dispute"
+      ],
+      "legacy_ids": [],
+      "decision_outputs": [
+        "granted",
+        "denied",
+        "fact_dispute"
+      ],
+      "searchable": true
+    },
+    {
+      "issue_id": "supplemental_jurisdiction",
+      "preferred_label": "Supplemental Jurisdiction",
+      "scope_note": "Whether a federal court may or should exercise jurisdiction over additional claims under the supplemental-jurisdiction doctrine.",
+      "definition": "Whether a federal court may or should exercise jurisdiction over additional claims under the supplemental-jurisdiction doctrine.",
+      "include_when": [
+        "The court applies 28 USC 1367 or the common-nucleus and discretionary-declination framework."
+      ],
+      "exclusions": [
+        "Whether original federal-question or diversity jurisdiction exists."
+      ],
+      "confusable_with": [
+        "subject_matter_jurisdiction"
+      ],
+      "namespace": "jurisdiction_and_justiciability",
+      "status": "active_strict",
+      "allowed_specific_outcomes": [
+        "exercised",
+        "declined",
+        "unavailable"
+      ],
+      "legacy_ids": [],
+      "decision_outputs": [
+        "exercised",
+        "declined",
+        "unavailable"
+      ],
+      "searchable": true
+    },
+    {
+      "issue_id": "plra_exhaustion",
+      "preferred_label": "PLRA Exhaustion",
+      "scope_note": "Whether an incarcerated plaintiff properly exhausted available administrative remedies as required by the Prison Litigation Reform Act.",
+      "definition": "Whether an incarcerated plaintiff properly exhausted available administrative remedies as required by the Prison Litigation Reform Act.",
+      "include_when": [
+        "The court applies PLRA exhaustion, availability, proper-exhaustion, or grievance-procedure rules."
+      ],
+      "exclusions": [
+        "Habeas exhaustion of state remedies.",
+        "Generic administrative exhaustion outside the PLRA."
+      ],
+      "confusable_with": [
+        "habeas_exhaustion",
+        "administrative_exhaustion"
+      ],
+      "namespace": "civil_rights_procedure",
+      "status": "active_strict",
+      "allowed_specific_outcomes": [
+        "exhausted",
+        "not_exhausted",
+        "remedy_unavailable"
+      ],
+      "legacy_ids": [],
+      "decision_outputs": [
+        "exhausted",
+        "not_exhausted",
+        "remedy_unavailable"
+      ],
+      "searchable": true
+    },
+    {
+      "issue_id": "younger_abstention",
+      "preferred_label": "Younger Abstention",
+      "scope_note": "Whether a federal court should abstain from interfering with qualifying ongoing state proceedings under Younger.",
+      "definition": "Whether a federal court should abstain from interfering with qualifying ongoing state proceedings under Younger.",
+      "include_when": [
+        "The court applies the Younger abstention requirements or exceptions."
+      ],
+      "exclusions": [
+        "Review of a completed state judgment or a generic comity reference."
+      ],
+      "confusable_with": [
+        "rooker_feldman_doctrine",
+        "subject_matter_jurisdiction"
+      ],
+      "namespace": "jurisdiction_and_justiciability",
+      "status": "active_strict",
+      "allowed_specific_outcomes": [
+        "applies",
+        "does_not_apply",
+        "exception_applies"
+      ],
+      "legacy_ids": [],
+      "decision_outputs": [
+        "applies",
+        "does_not_apply",
+        "exception_applies"
+      ],
+      "searchable": true
+    },
+    {
+      "issue_id": "rooker_feldman",
+      "preferred_label": "Rooker-Feldman Doctrine",
+      "scope_note": "Whether a federal district court lacks jurisdiction over a de facto appeal from a state-court judgment.",
+      "definition": "Whether a federal district court lacks jurisdiction over a de facto appeal from a state-court judgment.",
+      "include_when": [
+        "The court applies the Rooker-Feldman requirements to injury caused by a state judgment."
+      ],
+      "exclusions": [
+        "Ordinary preclusion, parallel proceedings, or review of executive action."
+      ],
+      "confusable_with": [
+        "claim_preclusion",
+        "younger_abstention",
+        "subject_matter_jurisdiction"
+      ],
+      "namespace": "jurisdiction_and_justiciability",
+      "status": "active_strict",
+      "allowed_specific_outcomes": [
+        "bars_jurisdiction",
+        "does_not_bar"
+      ],
+      "legacy_ids": [
+        "rooker_feldman_doctrine"
+      ],
+      "decision_outputs": [
+        "bars_jurisdiction",
+        "does_not_bar"
+      ],
+      "searchable": true
+    },
+    {
+      "issue_id": "judicial_immunity",
+      "preferred_label": "Judicial Immunity",
+      "scope_note": "Whether a judge or judicial officer has absolute immunity for conduct performed in a judicial capacity within jurisdiction.",
+      "definition": "Whether a judge or judicial officer has absolute immunity for conduct performed in a judicial capacity within jurisdiction.",
+      "include_when": [
+        "The court analyzes judicial capacity, jurisdiction, or the scope of absolute judicial immunity."
+      ],
+      "exclusions": [
+        "Qualified immunity or sovereign immunity of a government entity."
+      ],
+      "confusable_with": [
+        "qualified_immunity",
+        "sovereign_immunity"
+      ],
+      "namespace": "civil_rights_procedure",
+      "status": "active_strict",
+      "allowed_specific_outcomes": [
+        "granted",
+        "denied"
+      ],
+      "legacy_ids": [],
+      "decision_outputs": [
+        "granted",
+        "denied"
+      ],
+      "searchable": true
+    },
+    {
+      "issue_id": "weight_of_the_evidence",
+      "preferred_label": "Weight of the Evidence",
+      "scope_note": "Whether a verdict or finding is contrary to the manifest or great weight of the evidence under the applicable review standard.",
+      "definition": "Whether a verdict or finding is contrary to the manifest or great weight of the evidence under the applicable review standard.",
+      "include_when": [
+        "The court reweighs or reviews the evidentiary weight and credibility supporting a verdict or finding."
+      ],
+      "exclusions": [
+        "Whether any legally sufficient evidence supports the result."
+      ],
+      "confusable_with": [
+        "sufficiency_of_evidence"
+      ],
+      "namespace": "evidence_and_trial",
+      "status": "active_strict",
+      "allowed_specific_outcomes": [
+        "against_weight",
+        "not_against_weight"
+      ],
+      "legacy_ids": [],
+      "decision_outputs": [
+        "against_weight",
+        "not_against_weight"
+      ],
+      "searchable": true
+    },
+    {
+      "issue_id": "sentencing_reasonableness",
+      "preferred_label": "Sentencing Reasonableness",
+      "scope_note": "Whether a criminal sentence is procedurally or substantively reasonable under the governing appellate sentencing standard.",
+      "definition": "Whether a criminal sentence is procedurally or substantively reasonable under the governing appellate sentencing standard.",
+      "include_when": [
+        "The court analyzes procedural reasonableness, substantive reasonableness, or sentence excessiveness under that framework."
+      ],
+      "exclusions": [
+        "A dispute limited to calculation of a Guidelines provision.",
+        "Harmless-error analysis without a reasonableness question."
+      ],
+      "confusable_with": [
+        "sentencing_guideline_dispute",
+        "harmless_error"
+      ],
+      "namespace": "sentencing",
+      "status": "active_strict",
+      "allowed_specific_outcomes": [
+        "reasonable",
+        "procedurally_unreasonable",
+        "substantively_unreasonable"
+      ],
+      "legacy_ids": [],
+      "decision_outputs": [
+        "reasonable",
+        "procedurally_unreasonable",
+        "substantively_unreasonable"
+      ],
+      "searchable": true
+    }
+  ],
+  "removed_entries": [
+    {
+      "issue_id": "due_process",
+      "preferred_label": "Due Process",
+      "status": "deprecated_ambiguous",
+      "searchable": false,
+      "reason": "removed_from_simplified_projection; either deprecated, ambiguous, too broad, or better represented by Matter Type/features",
+      "recommended_layer": "practice_area_context_or_more_specific_legal_issue"
+    },
+    {
+      "issue_id": "equal_protection",
+      "preferred_label": "Equal Protection",
+      "status": "deprecated_ambiguous",
+      "searchable": false,
+      "reason": "removed_from_simplified_projection; either deprecated, ambiguous, too broad, or better represented by Matter Type/features",
+      "recommended_layer": "practice_area_context_or_more_specific_legal_issue"
+    },
+    {
+      "issue_id": "free_exercise_of_religion",
+      "preferred_label": "Free Exercise Of Religion",
+      "status": "deprecated_ambiguous",
+      "searchable": false,
+      "reason": "removed_from_simplified_projection; either deprecated, ambiguous, too broad, or better represented by Matter Type/features",
+      "recommended_layer": "practice_area_context_or_more_specific_legal_issue"
+    },
+    {
+      "issue_id": "free_speech",
+      "preferred_label": "Free Speech",
+      "status": "deprecated_ambiguous",
+      "searchable": false,
+      "reason": "removed_from_simplified_projection; either deprecated, ambiguous, too broad, or better represented by Matter Type/features",
+      "recommended_layer": "practice_area_context_or_more_specific_legal_issue"
+    },
+    {
+      "issue_id": "search_and_seizure",
+      "preferred_label": "Search And Seizure",
+      "status": "deprecated_ambiguous",
+      "searchable": false,
+      "reason": "removed_from_simplified_projection; either deprecated, ambiguous, too broad, or better represented by Matter Type/features",
+      "recommended_layer": "practice_area_context_or_more_specific_legal_issue"
+    },
+    {
+      "issue_id": "custodial_interrogation_self_incrimination",
+      "preferred_label": "Custodial Interrogation Self Incrimination",
+      "status": "deprecated_ambiguous",
+      "searchable": false,
+      "reason": "removed_from_simplified_projection; either deprecated, ambiguous, too broad, or better represented by Matter Type/features",
+      "recommended_layer": "practice_area_context_or_more_specific_legal_issue"
+    },
+    {
+      "issue_id": "right_to_counsel",
+      "preferred_label": "Right To Counsel",
+      "status": "deprecated_ambiguous",
+      "searchable": false,
+      "reason": "removed_from_simplified_projection; either deprecated, ambiguous, too broad, or better represented by Matter Type/features",
+      "recommended_layer": "practice_area_context_or_more_specific_legal_issue"
+    },
+    {
+      "issue_id": "insurance_policy_interpretation",
+      "preferred_label": "Insurance Policy Interpretation",
+      "status": "deprecated_ambiguous",
+      "searchable": false,
+      "reason": "removed_from_simplified_projection; either deprecated, ambiguous, too broad, or better represented by Matter Type/features",
+      "recommended_layer": "matter_type_feature_or_insurance_feature"
+    },
+    {
+      "issue_id": "insurance_notice_compliance",
+      "preferred_label": "Insurance Notice Compliance",
+      "status": "deprecated_ambiguous",
+      "searchable": false,
+      "reason": "removed_from_simplified_projection; either deprecated, ambiguous, too broad, or better represented by Matter Type/features",
+      "recommended_layer": "matter_type_feature_or_insurance_feature"
+    },
+    {
+      "issue_id": "insurance_claim_handling_duties",
+      "preferred_label": "Insurance Claim Handling Duties",
+      "status": "deprecated_ambiguous",
+      "searchable": false,
+      "reason": "removed_from_simplified_projection; either deprecated, ambiguous, too broad, or better represented by Matter Type/features",
+      "recommended_layer": "matter_type_feature_or_insurance_feature"
+    },
+    {
+      "issue_id": "venue_transfer",
+      "preferred_label": "Venue Transfer",
+      "status": "deprecated_ambiguous",
+      "searchable": false,
+      "reason": "removed_from_simplified_projection; either deprecated, ambiguous, too broad, or better represented by Matter Type/features",
+      "recommended_layer": "procedural_stage_or_case_feature"
+    },
+    {
+      "issue_id": "discovery_scope",
+      "preferred_label": "Discovery Scope",
+      "status": "deprecated_ambiguous",
+      "searchable": false,
+      "reason": "removed_from_simplified_projection; either deprecated, ambiguous, too broad, or better represented by Matter Type/features",
+      "recommended_layer": "procedural_stage_or_case_feature"
+    },
+    {
+      "issue_id": "anders_review",
+      "preferred_label": "Anders Review",
+      "status": "deprecated_ambiguous",
+      "searchable": false,
+      "reason": "removed_from_simplified_projection; either deprecated, ambiguous, too broad, or better represented by Matter Type/features",
+      "recommended_layer": "matter_type_or_proceeding_type"
+    },
+    {
+      "issue_id": "certificate_of_appealability",
+      "preferred_label": "Certificate of Appealability",
+      "status": "deprecated_ambiguous",
+      "searchable": false,
+      "reason": "removed_from_simplified_projection; either deprecated, ambiguous, too broad, or better represented by Matter Type/features",
+      "recommended_layer": "matter_type_or_proceeding_type"
+    },
+    {
+      "issue_id": "dismissal_for_failure_to_prosecute",
+      "preferred_label": "Dismissal for Failure to Prosecute",
+      "status": "deprecated_ambiguous",
+      "searchable": false,
+      "reason": "removed_from_simplified_projection; either deprecated, ambiguous, too broad, or better represented by Matter Type/features",
+      "recommended_layer": "procedural_stage_or_case_feature"
+    }
+  ]
+}

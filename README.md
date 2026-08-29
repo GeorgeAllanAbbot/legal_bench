@@ -1,71 +1,37 @@
-# Legal Bench: CourtListener Legal Dataset
+# Legal Bench v3: CourtListener Annotation Data
 
-This repository publishes the CourtListener-based legal retrieval dataset and
-the newer Legal Bench v3.0 analytical taxonomy/feature annotations.
+Legal Bench v3 is an annotation-only release for 20,000 English-language CourtListener opinion-cluster cases. It contains taxonomy projections and Matter Type analytical features, but does **not** redistribute opinion text, a SQLite corpus, embeddings, retrieval indexes, prompts, provider logs, or model credentials.
 
-## Contents
+## Annotation Layers
 
-### Phase1 SQLite Dataset
+- **Practice Area**: broad area of law, such as `criminal_law` or `tax_law`.
+- **Matter Type**: concrete case, claim, dispute, or proceeding type. This is the primary layer used to select analytical feature packs.
+- **Legal Issue**: a legal question actually addressed by the court. It is not a case-type classification.
+- **Matter Type Features**: structured facts, outcomes, dates, amounts, rates, actors, and other fields selected for a Matter Type.
 
-- `data/courtlistener_legal_20k/phase1/legal_cases.db.xz.part-*`: Git LFS
-  parts of the authoritative Phase1 SQLite database.
-- `data/courtlistener_legal_20k/phase1/SCHEMA.sql`: schema snapshot.
-- `data/courtlistener_legal_20k/phase1/DATASET_GUIDE_zh.md`: Chinese dataset
-  guide, data boundaries, SQL examples, and RAG/benchmark workflows.
-- Quality and validation reports for the published build.
-- `scripts/build_phase1_dataset.py`: Phase1 build script.
+## Files
 
-### Legal Bench v3.0 Analytical Features
+- `data/taxonomy/case_taxonomy_v3.jsonl.xz`: 20,000 case-level taxonomy projections.
+- `data/features/matter_type_features_v1_1.jsonl.xz`: 12,714 case-by-Matter-Type feature records.
+- `data/registry/`: frozen registries and schema used by this release.
+- `data/reports/`: release-level quality and coverage reports.
+- `docs/ANNOTATION_SCHEMA_en.md`: field semantics, joins, and limitations.
+- `docs/MATTER_TYPE_FEATURE_REFERENCE_en.md`: all feature keys and effective counts.
+- `data/query/`: queryable-field catalog and English Query IR templates for later RAG work.
 
-- `data/courtlistener_legal_20k/analytics_v1/v3_0_release/`: cleaned v3.0
-  release package.
-- `v3_0_release/docs/LEGAL_ISSUE_CATALOG_en.md` and
-  `v3_0_release/docs/LEGAL_ISSUE_CATALOG_zh.md`: bilingual Legal Issue
-  definitions, boundaries, and feature-pack membership.
-- `v3_0_release/docs/FEATURE_CATALOG_en.md` and
-  `v3_0_release/docs/FEATURE_CATALOG_zh.md`: bilingual analytical feature
-  definitions and inclusion mapping.
-- `v3_0_release/data/legal_issue_feature_full_v1_16k_final_merged.json.xz`:
-  compressed final merged feature annotations.
-- `v3_0_release/reports/LEGAL_ISSUE_FEATURE_DISTRIBUTION_ANALYSIS.md`:
-  result and distribution analysis.
-
-## Getting Started
-
-Install Git LFS before cloning:
+## Restore and Verify
 
 ```bash
-git lfs install
-git clone git@github.com:GeorgeAllanAbbot/legal_bench.git
-cd legal_bench
-./scripts/restore_phase1_db.sh
-sqlite3 data/courtlistener_legal_20k/phase1/legal_cases.db \
-  "SELECT COUNT(*) FROM cases;"
+./scripts/restore_annotations.sh
+python3 scripts/verify_release.py
 ```
 
-Restore the v3.0 final analytical feature JSON:
+Restored JSONL files are written under `restored/`, which is ignored by Git.
 
-```bash
-./scripts/restore_v3_0_feature_annotations.sh
-```
+## Joining to Source Cases
 
-The database is compressed and split into four Git LFS parts so each object is
-portable through the publishing environment. The restore script verifies the
-reconstructed SQLite SHA-256 before writing it to the Phase1 directory.
+Join annotations to a separately obtained CourtListener corpus by `case_id`. IDs use the local normalized form `cluster_<CourtListener cluster id>`. Feature rows also have a `job_id` in the form `<case_id>::<matter_type_id>`.
 
-The current release contains 20,000 Opinion Cluster cases and 21,755 opinion
-documents. It is an opinion-led retrieval corpus, not a complete litigation
-docket archive. See the dataset guide for field definitions, limitations, and
-provenance requirements.
+## Scope
 
-The v3.0 analytical feature layer contains 9,023 final merged Legal Issue
-feature jobs. The final validation state is 9,023 valid, 0 needs review, and 0
-failed. It covers 59.13% of cases with projected Legal Issues and is designed
-for analytical retrieval, constrained RAG, and benchmark query construction.
-
-## Source and Provenance
-
-The data is derived from CourtListener bulk legal data. Each published case
-retains source/provenance fields and a CourtListener URL for review. Downstream
-research should retain `case_id`, `document_id` where applicable, and source
-links in reported results.
+This release is suitable for retrieval filters, benchmark construction, stratified sampling, weak supervision, and structured legal analytics. The labels are model-assisted research annotations, not human gold labels or legal advice. The taxonomy projection retains 9,284 `needs_review=true` audit flags; high-confidence analytics should filter or separately report them. Two expected Matter Type feature jobs remain explicitly marked as missing after retries; see the final report.
