@@ -1,0 +1,21 @@
+{
+  "sqlite_quick_check": "ok",
+  "foreign_key_errors": 0,
+  "case_record_count": 20000,
+  "case_taxonomy_v3_count": 20000,
+  "case_matter_type_v3_count": 14156,
+  "case_legal_issue_v3_count": 16635,
+  "matter_type_feature_job_count": 12714,
+  "matter_type_feature_value_count": 415073,
+  "feature_value_status_distribution": {
+    "present": 150855,
+    "absent": 8011,
+    "uncertain": 3920,
+    "not_mentioned": 182367,
+    "not_applicable": 69920
+  },
+  "preserved_duplicate_matter_occurrences": 6,
+  "preserved_duplicate_feature_occurrences": 101,
+  "source_v2_preserved": true,
+  "integration_policy": "Append normalized v3 annotation tables; do not overwrite legacy v2 tables."
+}

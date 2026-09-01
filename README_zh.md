@@ -1,6 +1,8 @@
 # Legal Bench v3：CourtListener 标注数据
 
-Legal Bench v3 是面向 20,000 条英文 CourtListener Opinion Cluster 案例的纯标注数据发布包。仓库包含 taxonomy projection 和 Matter Type 分析特征，但**不包含**判决全文、SQLite 语料库、向量、检索索引、提示词、供应商日志或模型密钥。
+Legal Bench v3 覆盖 20,000 条英文 CourtListener Opinion Cluster 案例，同时发布精简的纯标注版本和完整集成 SQLite 版本。仓库不包含向量、检索索引、提示词、供应商日志或模型密钥。
+
+仓库现同时提供可选的**完整集成 SQLite 版本**，把 CourtListener v2 全文语料、v3 taxonomy 和 Matter Type Feature 标注合并在同一数据库。说明见 `data/integrated/README.md`，恢复命令为 `./scripts/restore_integrated_db.sh`。
 
 ## 标注层级
 

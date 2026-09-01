@@ -1,6 +1,8 @@
 # Legal Bench v3: CourtListener Annotation Data
 
-Legal Bench v3 is an annotation-only release for 20,000 English-language CourtListener opinion-cluster cases. It contains taxonomy projections and Matter Type analytical features, but does **not** redistribute opinion text, a SQLite corpus, embeddings, retrieval indexes, prompts, provider logs, or model credentials.
+Legal Bench v3 covers 20,000 English-language CourtListener opinion-cluster cases. It publishes both a compact annotation-only edition and a complete integrated SQLite edition. Embeddings, retrieval indexes, prompts, provider logs, and model credentials are not included.
+
+The repository now also publishes an optional **integrated SQLite edition** that combines the complete CourtListener v2 corpus with all v3 taxonomy and Matter Type Feature annotations. See `data/integrated/README.md` and run `./scripts/restore_integrated_db.sh`.
 
 ## Annotation Layers
 

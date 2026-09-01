@@ -1,3 +1,5 @@
 restored/
+data/integrated/legal_rag_dataset_v3.db
+data/integrated/legal_rag_dataset_v3.db.zst
 __pycache__/
 *.pyc

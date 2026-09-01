@@ -1,1 +1,2 @@
 *.jsonl.xz binary
+*.db.zst.part-* binary
