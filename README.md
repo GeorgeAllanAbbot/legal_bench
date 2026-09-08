@@ -1,39 +1,42 @@
-# Legal Bench v3: CourtListener Annotation Data
+# Legal Bench v3.1
 
-Legal Bench v3 covers 20,000 English-language CourtListener opinion-cluster cases. It publishes both a compact annotation-only edition and a complete integrated SQLite edition. Embeddings, retrieval indexes, prompts, provider logs, and model credentials are not included.
+Legal Bench v3.1 is an English U.S. case-law research dataset for retrieval, RAG, and descriptive
+legal analytics. The clean release has two primary entry points:
 
-The repository now also publishes an optional **integrated SQLite edition** that combines the complete CourtListener v2 corpus with all v3 taxonomy and Matter Type Feature annotations. See `data/integrated/README.md` and run `./scripts/restore_integrated_db.sh`.
+- `data/`: integrated SQLite corpus, opinion text, annotations, registries, and dataset docs.
+- `query/descriptive_query/`: 120 descriptive questions, hidden answers/qrels, and benchmark docs.
 
-## Annotation Layers
+## Dataset
 
-- **Practice Area**: broad area of law, such as `criminal_law` or `tax_law`.
-- **Matter Type**: concrete case, claim, dispute, or proceeding type. This is the primary layer used to select analytical feature packs.
-- **Legal Issue**: a legal question actually addressed by the court. It is not a case-type classification.
-- **Matter Type Features**: structured facts, outcomes, dates, amounts, rates, actors, and other fields selected for a Matter Type.
-
-## Files
-
-- `data/taxonomy/case_taxonomy_v3.jsonl.xz`: 20,000 case-level taxonomy projections.
-- `data/features/matter_type_features_v1_1.jsonl.xz`: 12,714 case-by-Matter-Type feature records.
-- `data/registry/`: frozen registries and schema used by this release.
-- `data/reports/`: release-level quality and coverage reports.
-- `docs/ANNOTATION_SCHEMA_en.md`: field semantics, joins, and limitations.
-- `docs/MATTER_TYPE_FEATURE_REFERENCE_en.md`: all feature keys and effective counts.
-- `data/query/`: queryable-field catalog and English Query IR templates for later RAG work.
-
-## Restore and Verify
+The restored SQLite database contains 20,000 CourtListener Opinion Cluster cases, 21,261 nonempty
+opinion texts, 440 courts, 94,314 retrieval chunks, full Matter Type projection coverage, and
+Matter Type analytical features. Restore four Zstandard parts with:
 
 ```bash
-./scripts/restore_annotations.sh
-python3 scripts/verify_release.py
+./scripts/restore_integrated_db.sh
 ```
 
-Restored JSONL files are written under `restored/`, which is ignored by Git.
+See [data/README.md](data/README.md) for source provenance, schema, field meanings, relationships,
+coverage, construction, limitations, and SQL/Python use.
 
-## Joining to Source Cases
+## Descriptive benchmark
 
-Join annotations to a separately obtained CourtListener corpus by `case_id`. IDs use the local normalized form `cluster_<CourtListener cluster id>`. Feature rows also have a `job_id` in the form `<case_id>::<matter_type_id>`.
+The benchmark contains 40 count, 40 proportion, and 40 comparison questions: 36 structured SQL
+queries and 84 structured-plus-semantic Hybrid queries. Splits are frozen at 60 development, 30
+validation, and 30 test queries. Keep `qrels_private.json` hidden from evaluated systems.
 
-## Scope
+See [query/README.md](query/README.md) for task and evaluation semantics.
 
-This release is suitable for retrieval filters, benchmark construction, stratified sampling, weak supervision, and structured legal analytics. The labels are model-assisted research annotations, not human gold labels or legal advice. The taxonomy projection retains 9,284 `needs_review=true` audit flags; high-confidence analytics should filter or separately report them. Two expected Matter Type feature jobs remain explicitly marked as missing after retries; see the final report.
+## Source and references
+
+Cases and opinions come from the CourtListener `2026-06-30` bulk snapshot maintained by the Free
+Law Project: [Bulk Legal Data](https://www.courtlistener.com/help/api/bulk-data/) and
+[CourtListener project](https://free.law/projects/courtlistener/).
+
+The local taxonomy was informed, but not defined, by U.S. Courts Nature of Suit terminology and
+SALI LMSS compatibility concepts. Benchmark research dimensions were informed by U.S. Courts,
+Federal Judicial Center, National Center for State Courts, and Bureau of Justice Statistics
+reporting practices. External references do not supply benchmark answers.
+
+This is model-assisted Silver research data, not human-gold legal annotation or legal advice.
+Run `python3 scripts/verify_release.py` before use.

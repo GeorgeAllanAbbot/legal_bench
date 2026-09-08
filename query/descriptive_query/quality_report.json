@@ -1,0 +1,1067 @@
+{
+  "version": "descriptive_v6",
+  "queries": 120,
+  "split_counts": {
+    "dev": 60,
+    "validation": 30,
+    "test": 30
+  },
+  "family_counts": {
+    "count": 40,
+    "proportion": 40,
+    "comparison": 40
+  },
+  "type_counts": {
+    "sql": 36,
+    "hybrid": 84
+  },
+  "evidence_size_buckets": {
+    "small": 54,
+    "medium": 58,
+    "large": 8
+  },
+  "positive_qrels": 9659,
+  "hard_negative_qrels": 544,
+  "unjudged_pool_pairs": 16271,
+  "qrel_counts_by_query_type": {
+    "hybrid": {
+      "positive": 6194,
+      "negative": 22,
+      "unjudged": 11638
+    },
+    "sql": {
+      "positive": 3465,
+      "negative": 522,
+      "unjudged": 4633
+    }
+  },
+  "split_distributions": {
+    "dev": {
+      "query_family": {
+        "count": 20,
+        "proportion": 20,
+        "comparison": 20
+      },
+      "query_type": {
+        "sql": 18,
+        "hybrid": 42
+      },
+      "evidence_size_bucket": {
+        "small": 28,
+        "medium": 28,
+        "large": 4
+      }
+    },
+    "validation": {
+      "query_family": {
+        "count": 10,
+        "proportion": 10,
+        "comparison": 10
+      },
+      "query_type": {
+        "sql": 9,
+        "hybrid": 21
+      },
+      "evidence_size_bucket": {
+        "small": 13,
+        "medium": 16,
+        "large": 1
+      }
+    },
+    "test": {
+      "query_family": {
+        "count": 10,
+        "proportion": 10,
+        "comparison": 10
+      },
+      "query_type": {
+        "sql": 9,
+        "hybrid": 21
+      },
+      "evidence_size_bucket": {
+        "small": 13,
+        "medium": 14,
+        "large": 3
+      }
+    }
+  },
+  "split_overlap_count": 0,
+  "split_union_matches_queries": true,
+  "public_fields": [
+    "id",
+    "query",
+    "instruction",
+    "query_family",
+    "type",
+    "difficulty",
+    "split",
+    "evidence_size_bucket",
+    "recommended_metrics",
+    "constraint_dimensions"
+  ],
+  "public_answer_or_qrel_leakage": false,
+  "queries_with_validation_errors": 0,
+  "validation_error_counts": {},
+  "validation": [
+    {
+      "id": "legal_en_descriptive_001",
+      "errors": [],
+      "positive": 17,
+      "negative": 15,
+      "unjudged": 166,
+      "bucket": "small"
+    },
+    {
+      "id": "legal_en_descriptive_002",
+      "errors": [],
+      "positive": 36,
+      "negative": 13,
+      "unjudged": 173,
+      "bucket": "small"
+    },
+    {
+      "id": "legal_en_descriptive_003",
+      "errors": [],
+      "positive": 20,
+      "negative": 22,
+      "unjudged": 172,
+      "bucket": "small"
+    },
+    {
+      "id": "legal_en_descriptive_004",
+      "errors": [],
+      "positive": 61,
+      "negative": 23,
+      "unjudged": 122,
+      "bucket": "medium"
+    },
+    {
+      "id": "legal_en_descriptive_005",
+      "errors": [],
+      "positive": 23,
+      "negative": 23,
+      "unjudged": 182,
+      "bucket": "small"
+    },
+    {
+      "id": "legal_en_descriptive_006",
+      "errors": [],
+      "positive": 40,
+      "negative": 18,
+      "unjudged": 169,
+      "bucket": "small"
+    },
+    {
+      "id": "legal_en_descriptive_007",
+      "errors": [],
+      "positive": 33,
+      "negative": 9,
+      "unjudged": 154,
+      "bucket": "small"
+    },
+    {
+      "id": "legal_en_descriptive_008",
+      "errors": [],
+      "positive": 46,
+      "negative": 15,
+      "unjudged": 185,
+      "bucket": "small"
+    },
+    {
+      "id": "legal_en_descriptive_009",
+      "errors": [],
+      "positive": 200,
+      "negative": 0,
+      "unjudged": 74,
+      "bucket": "medium"
+    },
+    {
+      "id": "legal_en_descriptive_010",
+      "errors": [],
+      "positive": 28,
+      "negative": 12,
+      "unjudged": 155,
+      "bucket": "small"
+    },
+    {
+      "id": "legal_en_descriptive_011",
+      "errors": [],
+      "positive": 53,
+      "negative": 8,
+      "unjudged": 143,
+      "bucket": "medium"
+    },
+    {
+      "id": "legal_en_descriptive_012",
+      "errors": [],
+      "positive": 52,
+      "negative": 16,
+      "unjudged": 158,
+      "bucket": "medium"
+    },
+    {
+      "id": "legal_en_descriptive_013",
+      "errors": [],
+      "positive": 191,
+      "negative": 15,
+      "unjudged": 45,
+      "bucket": "medium"
+    },
+    {
+      "id": "legal_en_descriptive_014",
+      "errors": [],
+      "positive": 350,
+      "negative": 13,
+      "unjudged": 72,
+      "bucket": "large"
+    },
+    {
+      "id": "legal_en_descriptive_015",
+      "errors": [],
+      "positive": 96,
+      "negative": 22,
+      "unjudged": 132,
+      "bucket": "medium"
+    },
+    {
+      "id": "legal_en_descriptive_016",
+      "errors": [],
+      "positive": 104,
+      "negative": 23,
+      "unjudged": 97,
+      "bucket": "medium"
+    },
+    {
+      "id": "legal_en_descriptive_017",
+      "errors": [],
+      "positive": 57,
+      "negative": 23,
+      "unjudged": 178,
+      "bucket": "medium"
+    },
+    {
+      "id": "legal_en_descriptive_018",
+      "errors": [],
+      "positive": 52,
+      "negative": 18,
+      "unjudged": 167,
+      "bucket": "medium"
+    },
+    {
+      "id": "legal_en_descriptive_019",
+      "errors": [],
+      "positive": 65,
+      "negative": 9,
+      "unjudged": 97,
+      "bucket": "medium"
+    },
+    {
+      "id": "legal_en_descriptive_020",
+      "errors": [],
+      "positive": 53,
+      "negative": 15,
+      "unjudged": 119,
+      "bucket": "medium"
+    },
+    {
+      "id": "legal_en_descriptive_021",
+      "errors": [],
+      "positive": 242,
+      "negative": 0,
+      "unjudged": 53,
+      "bucket": "large"
+    },
+    {
+      "id": "legal_en_descriptive_022",
+      "errors": [],
+      "positive": 85,
+      "negative": 12,
+      "unjudged": 82,
+      "bucket": "medium"
+    },
+    {
+      "id": "legal_en_descriptive_023",
+      "errors": [],
+      "positive": 64,
+      "negative": 8,
+      "unjudged": 96,
+      "bucket": "medium"
+    },
+    {
+      "id": "legal_en_descriptive_024",
+      "errors": [],
+      "positive": 69,
+      "negative": 16,
+      "unjudged": 143,
+      "bucket": "medium"
+    },
+    {
+      "id": "legal_en_descriptive_025",
+      "errors": [],
+      "positive": 191,
+      "negative": 15,
+      "unjudged": 77,
+      "bucket": "medium"
+    },
+    {
+      "id": "legal_en_descriptive_026",
+      "errors": [],
+      "positive": 350,
+      "negative": 13,
+      "unjudged": 82,
+      "bucket": "large"
+    },
+    {
+      "id": "legal_en_descriptive_027",
+      "errors": [],
+      "positive": 96,
+      "negative": 22,
+      "unjudged": 136,
+      "bucket": "medium"
+    },
+    {
+      "id": "legal_en_descriptive_028",
+      "errors": [],
+      "positive": 104,
+      "negative": 23,
+      "unjudged": 100,
+      "bucket": "medium"
+    },
+    {
+      "id": "legal_en_descriptive_029",
+      "errors": [],
+      "positive": 57,
+      "negative": 23,
+      "unjudged": 160,
+      "bucket": "medium"
+    },
+    {
+      "id": "legal_en_descriptive_030",
+      "errors": [],
+      "positive": 52,
+      "negative": 18,
+      "unjudged": 157,
+      "bucket": "medium"
+    },
+    {
+      "id": "legal_en_descriptive_031",
+      "errors": [],
+      "positive": 65,
+      "negative": 9,
+      "unjudged": 135,
+      "bucket": "medium"
+    },
+    {
+      "id": "legal_en_descriptive_032",
+      "errors": [],
+      "positive": 53,
+      "negative": 15,
+      "unjudged": 150,
+      "bucket": "medium"
+    },
+    {
+      "id": "legal_en_descriptive_033",
+      "errors": [],
+      "positive": 242,
+      "negative": 0,
+      "unjudged": 72,
+      "bucket": "large"
+    },
+    {
+      "id": "legal_en_descriptive_034",
+      "errors": [],
+      "positive": 85,
+      "negative": 12,
+      "unjudged": 97,
+      "bucket": "medium"
+    },
+    {
+      "id": "legal_en_descriptive_035",
+      "errors": [],
+      "positive": 64,
+      "negative": 8,
+      "unjudged": 152,
+      "bucket": "medium"
+    },
+    {
+      "id": "legal_en_descriptive_036",
+      "errors": [],
+      "positive": 69,
+      "negative": 16,
+      "unjudged": 181,
+      "bucket": "medium"
+    },
+    {
+      "id": "legal_en_descriptive_037",
+      "errors": [],
+      "positive": 25,
+      "negative": 1,
+      "unjudged": 169,
+      "bucket": "small"
+    },
+    {
+      "id": "legal_en_descriptive_038",
+      "errors": [],
+      "positive": 11,
+      "negative": 0,
+      "unjudged": 154,
+      "bucket": "small"
+    },
+    {
+      "id": "legal_en_descriptive_039",
+      "errors": [],
+      "positive": 14,
+      "negative": 0,
+      "unjudged": 156,
+      "bucket": "small"
+    },
+    {
+      "id": "legal_en_descriptive_040",
+      "errors": [],
+      "positive": 11,
+      "negative": 2,
+      "unjudged": 163,
+      "bucket": "small"
+    },
+    {
+      "id": "legal_en_descriptive_041",
+      "errors": [],
+      "positive": 20,
+      "negative": 0,
+      "unjudged": 157,
+      "bucket": "small"
+    },
+    {
+      "id": "legal_en_descriptive_042",
+      "errors": [],
+      "positive": 11,
+      "negative": 0,
+      "unjudged": 170,
+      "bucket": "small"
+    },
+    {
+      "id": "legal_en_descriptive_043",
+      "errors": [],
+      "positive": 16,
+      "negative": 0,
+      "unjudged": 150,
+      "bucket": "small"
+    },
+    {
+      "id": "legal_en_descriptive_044",
+      "errors": [],
+      "positive": 75,
+      "negative": 0,
+      "unjudged": 188,
+      "bucket": "medium"
+    },
+    {
+      "id": "legal_en_descriptive_045",
+      "errors": [],
+      "positive": 65,
+      "negative": 0,
+      "unjudged": 153,
+      "bucket": "medium"
+    },
+    {
+      "id": "legal_en_descriptive_046",
+      "errors": [],
+      "positive": 10,
+      "negative": 2,
+      "unjudged": 163,
+      "bucket": "small"
+    },
+    {
+      "id": "legal_en_descriptive_047",
+      "errors": [],
+      "positive": 150,
+      "negative": 1,
+      "unjudged": 155,
+      "bucket": "medium"
+    },
+    {
+      "id": "legal_en_descriptive_048",
+      "errors": [],
+      "positive": 31,
+      "negative": 0,
+      "unjudged": 158,
+      "bucket": "small"
+    },
+    {
+      "id": "legal_en_descriptive_049",
+      "errors": [],
+      "positive": 38,
+      "negative": 0,
+      "unjudged": 154,
+      "bucket": "small"
+    },
+    {
+      "id": "legal_en_descriptive_050",
+      "errors": [],
+      "positive": 150,
+      "negative": 1,
+      "unjudged": 171,
+      "bucket": "medium"
+    },
+    {
+      "id": "legal_en_descriptive_051",
+      "errors": [],
+      "positive": 30,
+      "negative": 2,
+      "unjudged": 184,
+      "bucket": "small"
+    },
+    {
+      "id": "legal_en_descriptive_052",
+      "errors": [],
+      "positive": 123,
+      "negative": 3,
+      "unjudged": 147,
+      "bucket": "medium"
+    },
+    {
+      "id": "legal_en_descriptive_053",
+      "errors": [],
+      "positive": 49,
+      "negative": 0,
+      "unjudged": 165,
+      "bucket": "small"
+    },
+    {
+      "id": "legal_en_descriptive_054",
+      "errors": [],
+      "positive": 15,
+      "negative": 0,
+      "unjudged": 159,
+      "bucket": "small"
+    },
+    {
+      "id": "legal_en_descriptive_055",
+      "errors": [],
+      "positive": 8,
+      "negative": 1,
+      "unjudged": 188,
+      "bucket": "small"
+    },
+    {
+      "id": "legal_en_descriptive_056",
+      "errors": [],
+      "positive": 10,
+      "negative": 0,
+      "unjudged": 194,
+      "bucket": "small"
+    },
+    {
+      "id": "legal_en_descriptive_057",
+      "errors": [],
+      "positive": 15,
+      "negative": 0,
+      "unjudged": 171,
+      "bucket": "small"
+    },
+    {
+      "id": "legal_en_descriptive_058",
+      "errors": [],
+      "positive": 14,
+      "negative": 0,
+      "unjudged": 162,
+      "bucket": "small"
+    },
+    {
+      "id": "legal_en_descriptive_059",
+      "errors": [],
+      "positive": 11,
+      "negative": 2,
+      "unjudged": 166,
+      "bucket": "small"
+    },
+    {
+      "id": "legal_en_descriptive_060",
+      "errors": [],
+      "positive": 17,
+      "negative": 0,
+      "unjudged": 145,
+      "bucket": "small"
+    },
+    {
+      "id": "legal_en_descriptive_061",
+      "errors": [],
+      "positive": 17,
+      "negative": 0,
+      "unjudged": 136,
+      "bucket": "small"
+    },
+    {
+      "id": "legal_en_descriptive_062",
+      "errors": [],
+      "positive": 56,
+      "negative": 0,
+      "unjudged": 86,
+      "bucket": "medium"
+    },
+    {
+      "id": "legal_en_descriptive_063",
+      "errors": [],
+      "positive": 53,
+      "negative": 0,
+      "unjudged": 102,
+      "bucket": "medium"
+    },
+    {
+      "id": "legal_en_descriptive_064",
+      "errors": [],
+      "positive": 11,
+      "negative": 0,
+      "unjudged": 207,
+      "bucket": "small"
+    },
+    {
+      "id": "legal_en_descriptive_065",
+      "errors": [],
+      "positive": 60,
+      "negative": 0,
+      "unjudged": 157,
+      "bucket": "medium"
+    },
+    {
+      "id": "legal_en_descriptive_066",
+      "errors": [],
+      "positive": 153,
+      "negative": 0,
+      "unjudged": 140,
+      "bucket": "medium"
+    },
+    {
+      "id": "legal_en_descriptive_067",
+      "errors": [],
+      "positive": 52,
+      "negative": 0,
+      "unjudged": 145,
+      "bucket": "medium"
+    },
+    {
+      "id": "legal_en_descriptive_068",
+      "errors": [],
+      "positive": 16,
+      "negative": 1,
+      "unjudged": 157,
+      "bucket": "small"
+    },
+    {
+      "id": "legal_en_descriptive_069",
+      "errors": [],
+      "positive": 8,
+      "negative": 0,
+      "unjudged": 180,
+      "bucket": "small"
+    },
+    {
+      "id": "legal_en_descriptive_070",
+      "errors": [],
+      "positive": 26,
+      "negative": 0,
+      "unjudged": 178,
+      "bucket": "small"
+    },
+    {
+      "id": "legal_en_descriptive_071",
+      "errors": [],
+      "positive": 152,
+      "negative": 0,
+      "unjudged": 95,
+      "bucket": "medium"
+    },
+    {
+      "id": "legal_en_descriptive_072",
+      "errors": [],
+      "positive": 133,
+      "negative": 0,
+      "unjudged": 110,
+      "bucket": "medium"
+    },
+    {
+      "id": "legal_en_descriptive_073",
+      "errors": [],
+      "positive": 106,
+      "negative": 0,
+      "unjudged": 124,
+      "bucket": "medium"
+    },
+    {
+      "id": "legal_en_descriptive_074",
+      "errors": [],
+      "positive": 90,
+      "negative": 0,
+      "unjudged": 97,
+      "bucket": "medium"
+    },
+    {
+      "id": "legal_en_descriptive_075",
+      "errors": [],
+      "positive": 82,
+      "negative": 0,
+      "unjudged": 71,
+      "bucket": "medium"
+    },
+    {
+      "id": "legal_en_descriptive_076",
+      "errors": [],
+      "positive": 108,
+      "negative": 0,
+      "unjudged": 42,
+      "bucket": "medium"
+    },
+    {
+      "id": "legal_en_descriptive_077",
+      "errors": [],
+      "positive": 123,
+      "negative": 0,
+      "unjudged": 51,
+      "bucket": "medium"
+    },
+    {
+      "id": "legal_en_descriptive_078",
+      "errors": [],
+      "positive": 21,
+      "negative": 0,
+      "unjudged": 175,
+      "bucket": "small"
+    },
+    {
+      "id": "legal_en_descriptive_079",
+      "errors": [],
+      "positive": 48,
+      "negative": 0,
+      "unjudged": 131,
+      "bucket": "small"
+    },
+    {
+      "id": "legal_en_descriptive_080",
+      "errors": [],
+      "positive": 62,
+      "negative": 0,
+      "unjudged": 122,
+      "bucket": "medium"
+    },
+    {
+      "id": "legal_en_descriptive_081",
+      "errors": [],
+      "positive": 60,
+      "negative": 0,
+      "unjudged": 119,
+      "bucket": "medium"
+    },
+    {
+      "id": "legal_en_descriptive_082",
+      "errors": [],
+      "positive": 99,
+      "negative": 0,
+      "unjudged": 143,
+      "bucket": "medium"
+    },
+    {
+      "id": "legal_en_descriptive_083",
+      "errors": [],
+      "positive": 6,
+      "negative": 1,
+      "unjudged": 152,
+      "bucket": "small"
+    },
+    {
+      "id": "legal_en_descriptive_084",
+      "errors": [],
+      "positive": 29,
+      "negative": 0,
+      "unjudged": 130,
+      "bucket": "small"
+    },
+    {
+      "id": "legal_en_descriptive_085",
+      "errors": [],
+      "positive": 3,
+      "negative": 2,
+      "unjudged": 167,
+      "bucket": "small"
+    },
+    {
+      "id": "legal_en_descriptive_086",
+      "errors": [],
+      "positive": 40,
+      "negative": 0,
+      "unjudged": 98,
+      "bucket": "small"
+    },
+    {
+      "id": "legal_en_descriptive_087",
+      "errors": [],
+      "positive": 172,
+      "negative": 0,
+      "unjudged": 69,
+      "bucket": "medium"
+    },
+    {
+      "id": "legal_en_descriptive_088",
+      "errors": [],
+      "positive": 126,
+      "negative": 0,
+      "unjudged": 83,
+      "bucket": "medium"
+    },
+    {
+      "id": "legal_en_descriptive_089",
+      "errors": [],
+      "positive": 96,
+      "negative": 0,
+      "unjudged": 93,
+      "bucket": "medium"
+    },
+    {
+      "id": "legal_en_descriptive_090",
+      "errors": [],
+      "positive": 39,
+      "negative": 0,
+      "unjudged": 121,
+      "bucket": "small"
+    },
+    {
+      "id": "legal_en_descriptive_091",
+      "errors": [],
+      "positive": 30,
+      "negative": 0,
+      "unjudged": 130,
+      "bucket": "small"
+    },
+    {
+      "id": "legal_en_descriptive_092",
+      "errors": [],
+      "positive": 35,
+      "negative": 0,
+      "unjudged": 136,
+      "bucket": "small"
+    },
+    {
+      "id": "legal_en_descriptive_093",
+      "errors": [],
+      "positive": 412,
+      "negative": 0,
+      "unjudged": 109,
+      "bucket": "large"
+    },
+    {
+      "id": "legal_en_descriptive_094",
+      "errors": [],
+      "positive": 136,
+      "negative": 0,
+      "unjudged": 103,
+      "bucket": "medium"
+    },
+    {
+      "id": "legal_en_descriptive_095",
+      "errors": [],
+      "positive": 41,
+      "negative": 0,
+      "unjudged": 133,
+      "bucket": "small"
+    },
+    {
+      "id": "legal_en_descriptive_096",
+      "errors": [],
+      "positive": 135,
+      "negative": 0,
+      "unjudged": 128,
+      "bucket": "medium"
+    },
+    {
+      "id": "legal_en_descriptive_097",
+      "errors": [],
+      "positive": 134,
+      "negative": 0,
+      "unjudged": 133,
+      "bucket": "medium"
+    },
+    {
+      "id": "legal_en_descriptive_098",
+      "errors": [],
+      "positive": 86,
+      "negative": 0,
+      "unjudged": 140,
+      "bucket": "medium"
+    },
+    {
+      "id": "legal_en_descriptive_099",
+      "errors": [],
+      "positive": 138,
+      "negative": 0,
+      "unjudged": 145,
+      "bucket": "medium"
+    },
+    {
+      "id": "legal_en_descriptive_100",
+      "errors": [],
+      "positive": 138,
+      "negative": 0,
+      "unjudged": 170,
+      "bucket": "medium"
+    },
+    {
+      "id": "legal_en_descriptive_101",
+      "errors": [],
+      "positive": 425,
+      "negative": 0,
+      "unjudged": 103,
+      "bucket": "large"
+    },
+    {
+      "id": "legal_en_descriptive_102",
+      "errors": [],
+      "positive": 178,
+      "negative": 0,
+      "unjudged": 122,
+      "bucket": "medium"
+    },
+    {
+      "id": "legal_en_descriptive_103",
+      "errors": [],
+      "positive": 334,
+      "negative": 0,
+      "unjudged": 129,
+      "bucket": "large"
+    },
+    {
+      "id": "legal_en_descriptive_104",
+      "errors": [],
+      "positive": 55,
+      "negative": 0,
+      "unjudged": 144,
+      "bucket": "medium"
+    },
+    {
+      "id": "legal_en_descriptive_105",
+      "errors": [],
+      "positive": 95,
+      "negative": 0,
+      "unjudged": 146,
+      "bucket": "medium"
+    },
+    {
+      "id": "legal_en_descriptive_106",
+      "errors": [],
+      "positive": 312,
+      "negative": 0,
+      "unjudged": 124,
+      "bucket": "large"
+    },
+    {
+      "id": "legal_en_descriptive_107",
+      "errors": [],
+      "positive": 13,
+      "negative": 0,
+      "unjudged": 147,
+      "bucket": "small"
+    },
+    {
+      "id": "legal_en_descriptive_108",
+      "errors": [],
+      "positive": 28,
+      "negative": 0,
+      "unjudged": 147,
+      "bucket": "small"
+    },
+    {
+      "id": "legal_en_descriptive_109",
+      "errors": [],
+      "positive": 28,
+      "negative": 0,
+      "unjudged": 140,
+      "bucket": "small"
+    },
+    {
+      "id": "legal_en_descriptive_110",
+      "errors": [],
+      "positive": 46,
+      "negative": 0,
+      "unjudged": 162,
+      "bucket": "small"
+    },
+    {
+      "id": "legal_en_descriptive_111",
+      "errors": [],
+      "positive": 6,
+      "negative": 1,
+      "unjudged": 160,
+      "bucket": "small"
+    },
+    {
+      "id": "legal_en_descriptive_112",
+      "errors": [],
+      "positive": 19,
+      "negative": 0,
+      "unjudged": 141,
+      "bucket": "small"
+    },
+    {
+      "id": "legal_en_descriptive_113",
+      "errors": [],
+      "positive": 3,
+      "negative": 2,
+      "unjudged": 170,
+      "bucket": "small"
+    },
+    {
+      "id": "legal_en_descriptive_114",
+      "errors": [],
+      "positive": 40,
+      "negative": 0,
+      "unjudged": 93,
+      "bucket": "small"
+    },
+    {
+      "id": "legal_en_descriptive_115",
+      "errors": [],
+      "positive": 169,
+      "negative": 0,
+      "unjudged": 71,
+      "bucket": "medium"
+    },
+    {
+      "id": "legal_en_descriptive_116",
+      "errors": [],
+      "positive": 126,
+      "negative": 0,
+      "unjudged": 92,
+      "bucket": "medium"
+    },
+    {
+      "id": "legal_en_descriptive_117",
+      "errors": [],
+      "positive": 17,
+      "negative": 0,
+      "unjudged": 148,
+      "bucket": "small"
+    },
+    {
+      "id": "legal_en_descriptive_118",
+      "errors": [],
+      "positive": 11,
+      "negative": 0,
+      "unjudged": 147,
+      "bucket": "small"
+    },
+    {
+      "id": "legal_en_descriptive_119",
+      "errors": [],
+      "positive": 23,
+      "negative": 0,
+      "unjudged": 140,
+      "bucket": "small"
+    },
+    {
+      "id": "legal_en_descriptive_120",
+      "errors": [],
+      "positive": 15,
+      "negative": 0,
+      "unjudged": 162,
+      "bucket": "small"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "uscourts_caseload_tables": {
+    "organization": "Administrative Office of the U.S. Courts",
+    "title": "Caseload Statistics Data Tables",
+    "url": "https://www.uscourts.gov/statistics-reports/caseload-statistics-data-tables",
+    "supports": "Counts and comparisons by court, jurisdiction, nature of suit or offense, disposition, and reporting period."
+  },
+  "fjc_integrated_database": {
+    "organization": "Federal Judicial Center",
+    "title": "Federal Court Cases: FJC Integrated Database 1979 to Present",
+    "url": "https://www.fjc.gov/research/federal-court-cases-fjc-integrated-database-1979-present",
+    "supports": "Multiyear analysis of federal civil, criminal, bankruptcy, and appellate cases."
+  },
+  "ncsc_state_reporting_guide": {
+    "organization": "National Center for State Courts, Court Statistics Project",
+    "title": "State Court Guide to Statistical Reporting",
+    "url": "https://www.courtstatistics.org/__data/assets/pdf_file/0031/88735/State-Court-Guide-to-Statistical-Reporting.pdf",
+    "supports": "State caseload reporting by case category, case characteristics, status, and manner of disposition."
+  },
+  "bjs_state_court_processing": {
+    "organization": "Bureau of Justice Statistics",
+    "title": "State Court Processing Statistics and National Pretrial Reporting Program",
+    "url": "https://bjs.ojp.gov/data-collection/state-court-processing-statistics-scps-and-national-pretrial-reporting-program-nprp",
+    "supports": "Criminal-case analysis from charging through adjudication, disposition, and sentencing."
+  }
+}

@@ -1,0 +1,2518 @@
+[
+  {
+    "id": "legal_en_descriptive_001",
+    "query": "How many asylum protection opinions in this dataset were decided from 2020 through 2025?",
+    "instruction": "Answer with the number of matching opinions as an integer.",
+    "query_family": "count",
+    "type": "sql",
+    "difficulty": "medium",
+    "split": "test",
+    "evidence_size_bucket": "small",
+    "recommended_metrics": [
+      "precision@10",
+      "nDCG@10",
+      "recall@50",
+      "recall@100"
+    ],
+    "constraint_dimensions": [
+      "matter_subtype",
+      "decision_year"
+    ]
+  },
+  {
+    "id": "legal_en_descriptive_002",
+    "query": "How many employment discrimination opinions in this dataset were decided at the state appellate court level?",
+    "instruction": "Answer with the number of matching opinions as an integer.",
+    "query_family": "count",
+    "type": "sql",
+    "difficulty": "medium",
+    "split": "validation",
+    "evidence_size_bucket": "small",
+    "recommended_metrics": [
+      "precision@10",
+      "nDCG@10",
+      "recall@50",
+      "recall@100"
+    ],
+    "constraint_dimensions": [
+      "matter_subtype",
+      "court_level"
+    ]
+  },
+  {
+    "id": "legal_en_descriptive_003",
+    "query": "How many medical malpractice opinions in this dataset were decided from 1980 through 1999?",
+    "instruction": "Answer with the number of matching opinions as an integer.",
+    "query_family": "count",
+    "type": "sql",
+    "difficulty": "medium",
+    "split": "dev",
+    "evidence_size_bucket": "small",
+    "recommended_metrics": [
+      "precision@10",
+      "nDCG@10",
+      "recall@50",
+      "recall@100"
+    ],
+    "constraint_dimensions": [
+      "matter_subtype",
+      "decision_year"
+    ]
+  },
+  {
+    "id": "legal_en_descriptive_004",
+    "query": "How many patent dispute opinions in this dataset were decided at the federal district court level?",
+    "instruction": "Answer with the number of matching opinions as an integer.",
+    "query_family": "count",
+    "type": "sql",
+    "difficulty": "medium",
+    "split": "validation",
+    "evidence_size_bucket": "medium",
+    "recommended_metrics": [
+      "precision@10",
+      "nDCG@10",
+      "recall@100",
+      "recall@500"
+    ],
+    "constraint_dimensions": [
+      "matter_subtype",
+      "court_level"
+    ]
+  },
+  {
+    "id": "legal_en_descriptive_005",
+    "query": "How many trademark dispute opinions in this dataset were decided from 2000 through 2014?",
+    "instruction": "Answer with the number of matching opinions as an integer.",
+    "query_family": "count",
+    "type": "sql",
+    "difficulty": "medium",
+    "split": "dev",
+    "evidence_size_bucket": "small",
+    "recommended_metrics": [
+      "precision@10",
+      "nDCG@10",
+      "recall@50",
+      "recall@100"
+    ],
+    "constraint_dimensions": [
+      "matter_subtype",
+      "decision_year"
+    ]
+  },
+  {
+    "id": "legal_en_descriptive_006",
+    "query": "How many copyright dispute opinions in this dataset were decided at the federal district court level?",
+    "instruction": "Answer with the number of matching opinions as an integer.",
+    "query_family": "count",
+    "type": "sql",
+    "difficulty": "medium",
+    "split": "dev",
+    "evidence_size_bucket": "small",
+    "recommended_metrics": [
+      "precision@10",
+      "nDCG@10",
+      "recall@50",
+      "recall@100"
+    ],
+    "constraint_dimensions": [
+      "matter_subtype",
+      "court_level"
+    ]
+  },
+  {
+    "id": "legal_en_descriptive_007",
+    "query": "How many securities fraud opinions in this dataset were decided from 2010 through 2025?",
+    "instruction": "Answer with the number of matching opinions as an integer.",
+    "query_family": "count",
+    "type": "sql",
+    "difficulty": "medium",
+    "split": "dev",
+    "evidence_size_bucket": "small",
+    "recommended_metrics": [
+      "precision@10",
+      "nDCG@10",
+      "recall@50",
+      "recall@100"
+    ],
+    "constraint_dimensions": [
+      "matter_subtype",
+      "decision_year"
+    ]
+  },
+  {
+    "id": "legal_en_descriptive_008",
+    "query": "How many divorce property division opinions in this dataset were decided at the state appellate court level?",
+    "instruction": "Answer with the number of matching opinions as an integer.",
+    "query_family": "count",
+    "type": "sql",
+    "difficulty": "medium",
+    "split": "test",
+    "evidence_size_bucket": "small",
+    "recommended_metrics": [
+      "precision@10",
+      "nDCG@10",
+      "recall@50",
+      "recall@100"
+    ],
+    "constraint_dimensions": [
+      "matter_subtype",
+      "court_level"
+    ]
+  },
+  {
+    "id": "legal_en_descriptive_009",
+    "query": "How many custody visitation opinions in this dataset were decided from 1970 through 2019?",
+    "instruction": "Answer with the number of matching opinions as an integer.",
+    "query_family": "count",
+    "type": "sql",
+    "difficulty": "medium",
+    "split": "test",
+    "evidence_size_bucket": "medium",
+    "recommended_metrics": [
+      "precision@10",
+      "nDCG@10",
+      "recall@100",
+      "recall@500"
+    ],
+    "constraint_dimensions": [
+      "matter_subtype",
+      "decision_year"
+    ]
+  },
+  {
+    "id": "legal_en_descriptive_010",
+    "query": "How many duty to defend indemnify opinions in this dataset were decided at the state appellate court level?",
+    "instruction": "Answer with the number of matching opinions as an integer.",
+    "query_family": "count",
+    "type": "sql",
+    "difficulty": "medium",
+    "split": "validation",
+    "evidence_size_bucket": "small",
+    "recommended_metrics": [
+      "precision@10",
+      "nDCG@10",
+      "recall@50",
+      "recall@100"
+    ],
+    "constraint_dimensions": [
+      "matter_subtype",
+      "court_level"
+    ]
+  },
+  {
+    "id": "legal_en_descriptive_011",
+    "query": "How many automatic stay issue opinions in this dataset were decided from 1990 through 2025?",
+    "instruction": "Answer with the number of matching opinions as an integer.",
+    "query_family": "count",
+    "type": "sql",
+    "difficulty": "medium",
+    "split": "dev",
+    "evidence_size_bucket": "medium",
+    "recommended_metrics": [
+      "precision@10",
+      "nDCG@10",
+      "recall@100",
+      "recall@500"
+    ],
+    "constraint_dimensions": [
+      "matter_subtype",
+      "decision_year"
+    ]
+  },
+  {
+    "id": "legal_en_descriptive_012",
+    "query": "How many dischargeability issue opinions in this dataset were decided at the federal bankruptcy court level?",
+    "instruction": "Answer with the number of matching opinions as an integer.",
+    "query_family": "count",
+    "type": "sql",
+    "difficulty": "medium",
+    "split": "dev",
+    "evidence_size_bucket": "medium",
+    "recommended_metrics": [
+      "precision@10",
+      "nDCG@10",
+      "recall@100",
+      "recall@500"
+    ],
+    "constraint_dimensions": [
+      "matter_subtype",
+      "court_level"
+    ]
+  },
+  {
+    "id": "legal_en_descriptive_013",
+    "query": "Among immigration proceeding opinions in this dataset, what percentage involved asylum protection?",
+    "instruction": "Answer with the percentage rounded to one decimal place.",
+    "query_family": "proportion",
+    "type": "sql",
+    "difficulty": "complex",
+    "split": "validation",
+    "evidence_size_bucket": "medium",
+    "recommended_metrics": [
+      "precision@10",
+      "nDCG@10",
+      "recall@100",
+      "recall@500"
+    ],
+    "constraint_dimensions": [
+      "parent_matter_type",
+      "matter_subtype",
+      "population_ratio"
+    ]
+  },
+  {
+    "id": "legal_en_descriptive_014",
+    "query": "Among civil rights action opinions in this dataset, what percentage involved employment discrimination?",
+    "instruction": "Answer with the percentage rounded to one decimal place.",
+    "query_family": "proportion",
+    "type": "sql",
+    "difficulty": "complex",
+    "split": "dev",
+    "evidence_size_bucket": "large",
+    "recommended_metrics": [
+      "precision@10",
+      "nDCG@10",
+      "recall@500",
+      "recall@1000",
+      "answer_accuracy"
+    ],
+    "constraint_dimensions": [
+      "parent_matter_type",
+      "matter_subtype",
+      "population_ratio"
+    ]
+  },
+  {
+    "id": "legal_en_descriptive_015",
+    "query": "Among healthcare dispute opinions in this dataset, what percentage involved medical malpractice?",
+    "instruction": "Answer with the percentage rounded to one decimal place.",
+    "query_family": "proportion",
+    "type": "sql",
+    "difficulty": "complex",
+    "split": "dev",
+    "evidence_size_bucket": "medium",
+    "recommended_metrics": [
+      "precision@10",
+      "nDCG@10",
+      "recall@100",
+      "recall@500"
+    ],
+    "constraint_dimensions": [
+      "parent_matter_type",
+      "matter_subtype",
+      "population_ratio"
+    ]
+  },
+  {
+    "id": "legal_en_descriptive_016",
+    "query": "Among intellectual property action opinions in this dataset, what percentage involved patent dispute?",
+    "instruction": "Answer with the percentage rounded to one decimal place.",
+    "query_family": "proportion",
+    "type": "sql",
+    "difficulty": "complex",
+    "split": "validation",
+    "evidence_size_bucket": "medium",
+    "recommended_metrics": [
+      "precision@10",
+      "nDCG@10",
+      "recall@100",
+      "recall@500"
+    ],
+    "constraint_dimensions": [
+      "parent_matter_type",
+      "matter_subtype",
+      "population_ratio"
+    ]
+  },
+  {
+    "id": "legal_en_descriptive_017",
+    "query": "Among intellectual property action opinions in this dataset, what percentage involved trademark dispute?",
+    "instruction": "Answer with the percentage rounded to one decimal place.",
+    "query_family": "proportion",
+    "type": "sql",
+    "difficulty": "complex",
+    "split": "dev",
+    "evidence_size_bucket": "medium",
+    "recommended_metrics": [
+      "precision@10",
+      "nDCG@10",
+      "recall@100",
+      "recall@500"
+    ],
+    "constraint_dimensions": [
+      "parent_matter_type",
+      "matter_subtype",
+      "population_ratio"
+    ]
+  },
+  {
+    "id": "legal_en_descriptive_018",
+    "query": "Among intellectual property action opinions in this dataset, what percentage involved copyright dispute?",
+    "instruction": "Answer with the percentage rounded to one decimal place.",
+    "query_family": "proportion",
+    "type": "sql",
+    "difficulty": "complex",
+    "split": "test",
+    "evidence_size_bucket": "medium",
+    "recommended_metrics": [
+      "precision@10",
+      "nDCG@10",
+      "recall@100",
+      "recall@500"
+    ],
+    "constraint_dimensions": [
+      "parent_matter_type",
+      "matter_subtype",
+      "population_ratio"
+    ]
+  },
+  {
+    "id": "legal_en_descriptive_019",
+    "query": "Among securities action opinions in this dataset, what percentage involved securities fraud?",
+    "instruction": "Answer with the percentage rounded to one decimal place.",
+    "query_family": "proportion",
+    "type": "sql",
+    "difficulty": "complex",
+    "split": "dev",
+    "evidence_size_bucket": "medium",
+    "recommended_metrics": [
+      "precision@10",
+      "nDCG@10",
+      "recall@100",
+      "recall@500"
+    ],
+    "constraint_dimensions": [
+      "parent_matter_type",
+      "matter_subtype",
+      "population_ratio"
+    ]
+  },
+  {
+    "id": "legal_en_descriptive_020",
+    "query": "Among divorce dissolution opinions in this dataset, what percentage involved divorce property division?",
+    "instruction": "Answer with the percentage rounded to one decimal place.",
+    "query_family": "proportion",
+    "type": "sql",
+    "difficulty": "complex",
+    "split": "dev",
+    "evidence_size_bucket": "medium",
+    "recommended_metrics": [
+      "precision@10",
+      "nDCG@10",
+      "recall@100",
+      "recall@500"
+    ],
+    "constraint_dimensions": [
+      "parent_matter_type",
+      "matter_subtype",
+      "population_ratio"
+    ]
+  },
+  {
+    "id": "legal_en_descriptive_021",
+    "query": "Among child custody proceeding opinions in this dataset, what percentage involved custody visitation?",
+    "instruction": "Answer with the percentage rounded to one decimal place.",
+    "query_family": "proportion",
+    "type": "sql",
+    "difficulty": "complex",
+    "split": "test",
+    "evidence_size_bucket": "large",
+    "recommended_metrics": [
+      "precision@10",
+      "nDCG@10",
+      "recall@500",
+      "recall@1000",
+      "answer_accuracy"
+    ],
+    "constraint_dimensions": [
+      "parent_matter_type",
+      "matter_subtype",
+      "population_ratio"
+    ]
+  },
+  {
+    "id": "legal_en_descriptive_022",
+    "query": "Among insurance dispute opinions in this dataset, what percentage involved duty to defend indemnify?",
+    "instruction": "Answer with the percentage rounded to one decimal place.",
+    "query_family": "proportion",
+    "type": "sql",
+    "difficulty": "complex",
+    "split": "dev",
+    "evidence_size_bucket": "medium",
+    "recommended_metrics": [
+      "precision@10",
+      "nDCG@10",
+      "recall@100",
+      "recall@500"
+    ],
+    "constraint_dimensions": [
+      "parent_matter_type",
+      "matter_subtype",
+      "population_ratio"
+    ]
+  },
+  {
+    "id": "legal_en_descriptive_023",
+    "query": "Among bankruptcy case opinions in this dataset, what percentage involved automatic stay issue?",
+    "instruction": "Answer with the percentage rounded to one decimal place.",
+    "query_family": "proportion",
+    "type": "sql",
+    "difficulty": "complex",
+    "split": "validation",
+    "evidence_size_bucket": "medium",
+    "recommended_metrics": [
+      "precision@10",
+      "nDCG@10",
+      "recall@100",
+      "recall@500"
+    ],
+    "constraint_dimensions": [
+      "parent_matter_type",
+      "matter_subtype",
+      "population_ratio"
+    ]
+  },
+  {
+    "id": "legal_en_descriptive_024",
+    "query": "Among bankruptcy case opinions in this dataset, what percentage involved dischargeability issue?",
+    "instruction": "Answer with the percentage rounded to one decimal place.",
+    "query_family": "proportion",
+    "type": "sql",
+    "difficulty": "complex",
+    "split": "test",
+    "evidence_size_bucket": "medium",
+    "recommended_metrics": [
+      "precision@10",
+      "nDCG@10",
+      "recall@100",
+      "recall@500"
+    ],
+    "constraint_dimensions": [
+      "parent_matter_type",
+      "matter_subtype",
+      "population_ratio"
+    ]
+  },
+  {
+    "id": "legal_en_descriptive_025",
+    "query": "During which of these periods did this dataset contain the largest number of opinions involving asylum protection: 1970-1989, 1990-1999, 2000-2009, 2010-2019, 2020-2025?",
+    "instruction": "Answer with one year range and the matching-opinion count; report a tie if applicable.",
+    "query_family": "comparison",
+    "type": "sql",
+    "difficulty": "complex",
+    "split": "validation",
+    "evidence_size_bucket": "medium",
+    "recommended_metrics": [
+      "precision@10",
+      "nDCG@10",
+      "recall@100",
+      "recall@500"
+    ],
+    "constraint_dimensions": [
+      "matter_subtype",
+      "decision_period",
+      "argmax"
+    ]
+  },
+  {
+    "id": "legal_en_descriptive_026",
+    "query": "During which of these periods did this dataset contain the largest number of opinions involving employment discrimination: 1970-1979, 1980-1999, 2000-2014, 2015-2025?",
+    "instruction": "Answer with one year range and the matching-opinion count; report a tie if applicable.",
+    "query_family": "comparison",
+    "type": "sql",
+    "difficulty": "complex",
+    "split": "test",
+    "evidence_size_bucket": "large",
+    "recommended_metrics": [
+      "precision@10",
+      "nDCG@10",
+      "recall@500",
+      "recall@1000",
+      "answer_accuracy"
+    ],
+    "constraint_dimensions": [
+      "matter_subtype",
+      "decision_period",
+      "argmax"
+    ]
+  },
+  {
+    "id": "legal_en_descriptive_027",
+    "query": "During which of these periods did this dataset contain the largest number of opinions involving medical malpractice: 1970-1994, 1995-2004, 2005-2014, 2015-2025?",
+    "instruction": "Answer with one year range and the matching-opinion count; report a tie if applicable.",
+    "query_family": "comparison",
+    "type": "sql",
+    "difficulty": "complex",
+    "split": "dev",
+    "evidence_size_bucket": "medium",
+    "recommended_metrics": [
+      "precision@10",
+      "nDCG@10",
+      "recall@100",
+      "recall@500"
+    ],
+    "constraint_dimensions": [
+      "matter_subtype",
+      "decision_period",
+      "argmax"
+    ]
+  },
+  {
+    "id": "legal_en_descriptive_028",
+    "query": "During which of these periods did this dataset contain the largest number of opinions involving patent dispute: 1970-1999, 2000-2004, 2005-2009, 2010-2014, 2015-2019, 2020-2025?",
+    "instruction": "Answer with one year range and the matching-opinion count; report a tie if applicable.",
+    "query_family": "comparison",
+    "type": "sql",
+    "difficulty": "complex",
+    "split": "test",
+    "evidence_size_bucket": "medium",
+    "recommended_metrics": [
+      "precision@10",
+      "nDCG@10",
+      "recall@100",
+      "recall@500"
+    ],
+    "constraint_dimensions": [
+      "matter_subtype",
+      "decision_period",
+      "argmax"
+    ]
+  },
+  {
+    "id": "legal_en_descriptive_029",
+    "query": "During which of these periods did this dataset contain the largest number of opinions involving trademark dispute: 1970-1989, 1990-1999, 2000-2009, 2010-2019, 2020-2025?",
+    "instruction": "Answer with one year range and the matching-opinion count; report a tie if applicable.",
+    "query_family": "comparison",
+    "type": "sql",
+    "difficulty": "complex",
+    "split": "test",
+    "evidence_size_bucket": "medium",
+    "recommended_metrics": [
+      "precision@10",
+      "nDCG@10",
+      "recall@100",
+      "recall@500"
+    ],
+    "constraint_dimensions": [
+      "matter_subtype",
+      "decision_period",
+      "argmax"
+    ]
+  },
+  {
+    "id": "legal_en_descriptive_030",
+    "query": "During which of these periods did this dataset contain the largest number of opinions involving copyright dispute: 1970-1979, 1980-1999, 2000-2014, 2015-2025?",
+    "instruction": "Answer with one year range and the matching-opinion count; report a tie if applicable.",
+    "query_family": "comparison",
+    "type": "sql",
+    "difficulty": "complex",
+    "split": "dev",
+    "evidence_size_bucket": "medium",
+    "recommended_metrics": [
+      "precision@10",
+      "nDCG@10",
+      "recall@100",
+      "recall@500"
+    ],
+    "constraint_dimensions": [
+      "matter_subtype",
+      "decision_period",
+      "argmax"
+    ]
+  },
+  {
+    "id": "legal_en_descriptive_031",
+    "query": "During which of these periods did this dataset contain the largest number of opinions involving securities fraud: 1970-1994, 1995-2004, 2005-2014, 2015-2025?",
+    "instruction": "Answer with one year range and the matching-opinion count; report a tie if applicable.",
+    "query_family": "comparison",
+    "type": "sql",
+    "difficulty": "complex",
+    "split": "dev",
+    "evidence_size_bucket": "medium",
+    "recommended_metrics": [
+      "precision@10",
+      "nDCG@10",
+      "recall@100",
+      "recall@500"
+    ],
+    "constraint_dimensions": [
+      "matter_subtype",
+      "decision_period",
+      "argmax"
+    ]
+  },
+  {
+    "id": "legal_en_descriptive_032",
+    "query": "During which of these periods did this dataset contain the largest number of opinions involving divorce property division: 1970-1999, 2000-2004, 2005-2009, 2010-2014, 2015-2019, 2020-2025?",
+    "instruction": "Answer with one year range and the matching-opinion count; report a tie if applicable.",
+    "query_family": "comparison",
+    "type": "sql",
+    "difficulty": "complex",
+    "split": "validation",
+    "evidence_size_bucket": "medium",
+    "recommended_metrics": [
+      "precision@10",
+      "nDCG@10",
+      "recall@100",
+      "recall@500"
+    ],
+    "constraint_dimensions": [
+      "matter_subtype",
+      "decision_period",
+      "argmax"
+    ]
+  },
+  {
+    "id": "legal_en_descriptive_033",
+    "query": "During which of these periods did this dataset contain the largest number of opinions involving custody visitation: 1970-1989, 1990-1999, 2000-2009, 2010-2019, 2020-2025?",
+    "instruction": "Answer with one year range and the matching-opinion count; report a tie if applicable.",
+    "query_family": "comparison",
+    "type": "sql",
+    "difficulty": "complex",
+    "split": "dev",
+    "evidence_size_bucket": "large",
+    "recommended_metrics": [
+      "precision@10",
+      "nDCG@10",
+      "recall@500",
+      "recall@1000",
+      "answer_accuracy"
+    ],
+    "constraint_dimensions": [
+      "matter_subtype",
+      "decision_period",
+      "argmax"
+    ]
+  },
+  {
+    "id": "legal_en_descriptive_034",
+    "query": "During which of these periods did this dataset contain the largest number of opinions involving duty to defend indemnify: 1970-1979, 1980-1999, 2000-2014, 2015-2025?",
+    "instruction": "Answer with one year range and the matching-opinion count; report a tie if applicable.",
+    "query_family": "comparison",
+    "type": "sql",
+    "difficulty": "complex",
+    "split": "validation",
+    "evidence_size_bucket": "medium",
+    "recommended_metrics": [
+      "precision@10",
+      "nDCG@10",
+      "recall@100",
+      "recall@500"
+    ],
+    "constraint_dimensions": [
+      "matter_subtype",
+      "decision_period",
+      "argmax"
+    ]
+  },
+  {
+    "id": "legal_en_descriptive_035",
+    "query": "During which of these periods did this dataset contain the largest number of opinions involving automatic stay issue: 1970-1994, 1995-2004, 2005-2014, 2015-2025?",
+    "instruction": "Answer with one year range and the matching-opinion count; report a tie if applicable.",
+    "query_family": "comparison",
+    "type": "sql",
+    "difficulty": "complex",
+    "split": "dev",
+    "evidence_size_bucket": "medium",
+    "recommended_metrics": [
+      "precision@10",
+      "nDCG@10",
+      "recall@100",
+      "recall@500"
+    ],
+    "constraint_dimensions": [
+      "matter_subtype",
+      "decision_period",
+      "argmax"
+    ]
+  },
+  {
+    "id": "legal_en_descriptive_036",
+    "query": "During which of these periods did this dataset contain the largest number of opinions involving dischargeability issue: 1970-1999, 2000-2004, 2005-2009, 2010-2014, 2015-2019, 2020-2025?",
+    "instruction": "Answer with one year range and the matching-opinion count; report a tie if applicable.",
+    "query_family": "comparison",
+    "type": "sql",
+    "difficulty": "complex",
+    "split": "dev",
+    "evidence_size_bucket": "medium",
+    "recommended_metrics": [
+      "precision@10",
+      "nDCG@10",
+      "recall@100",
+      "recall@500"
+    ],
+    "constraint_dimensions": [
+      "matter_subtype",
+      "decision_period",
+      "argmax"
+    ]
+  },
+  {
+    "id": "legal_en_descriptive_037",
+    "query": "How many sentencing guideline dispute opinions in this dataset decided from 1990 through 1999 materially involve a sentencing enhancement?",
+    "instruction": "Answer with the number of matching opinions as an integer.",
+    "query_family": "count",
+    "type": "hybrid",
+    "difficulty": "medium",
+    "split": "validation",
+    "evidence_size_bucket": "small",
+    "recommended_metrics": [
+      "precision@10",
+      "nDCG@10",
+      "recall@50",
+      "recall@100"
+    ],
+    "constraint_dimensions": [
+      "matter_type",
+      "semantic_concept"
+    ]
+  },
+  {
+    "id": "legal_en_descriptive_038",
+    "query": "How many sentencing guideline dispute opinions in this dataset decided from 1990 through 1999 materially involve a downward departure or variance?",
+    "instruction": "Answer with the number of matching opinions as an integer.",
+    "query_family": "count",
+    "type": "hybrid",
+    "difficulty": "medium",
+    "split": "dev",
+    "evidence_size_bucket": "small",
+    "recommended_metrics": [
+      "precision@10",
+      "nDCG@10",
+      "recall@50",
+      "recall@100"
+    ],
+    "constraint_dimensions": [
+      "matter_type",
+      "semantic_concept"
+    ]
+  },
+  {
+    "id": "legal_en_descriptive_039",
+    "query": "How many sentencing guideline dispute opinions in this dataset decided from 2005 through 2009 materially involve career-offender status?",
+    "instruction": "Answer with the number of matching opinions as an integer.",
+    "query_family": "count",
+    "type": "hybrid",
+    "difficulty": "medium",
+    "split": "dev",
+    "evidence_size_bucket": "small",
+    "recommended_metrics": [
+      "precision@10",
+      "nDCG@10",
+      "recall@50",
+      "recall@100"
+    ],
+    "constraint_dimensions": [
+      "matter_type",
+      "semantic_concept"
+    ]
+  },
+  {
+    "id": "legal_en_descriptive_040",
+    "query": "How many sentencing guideline dispute opinions in this dataset decided from 2000 through 2004 materially involve restitution?",
+    "instruction": "Answer with the number of matching opinions as an integer.",
+    "query_family": "count",
+    "type": "hybrid",
+    "difficulty": "medium",
+    "split": "dev",
+    "evidence_size_bucket": "small",
+    "recommended_metrics": [
+      "precision@10",
+      "nDCG@10",
+      "recall@50",
+      "recall@100"
+    ],
+    "constraint_dimensions": [
+      "matter_type",
+      "semantic_concept"
+    ]
+  },
+  {
+    "id": "legal_en_descriptive_041",
+    "query": "How many section 1983 claim opinions in this dataset decided from 2005 through 2009 materially involve qualified immunity?",
+    "instruction": "Answer with the number of matching opinions as an integer.",
+    "query_family": "count",
+    "type": "hybrid",
+    "difficulty": "medium",
+    "split": "test",
+    "evidence_size_bucket": "small",
+    "recommended_metrics": [
+      "precision@10",
+      "nDCG@10",
+      "recall@50",
+      "recall@100"
+    ],
+    "constraint_dimensions": [
+      "matter_type",
+      "semantic_concept"
+    ]
+  },
+  {
+    "id": "legal_en_descriptive_042",
+    "query": "How many section 1983 claim opinions in this dataset decided from 2015 through 2019 materially involve excessive force?",
+    "instruction": "Answer with the number of matching opinions as an integer.",
+    "query_family": "count",
+    "type": "hybrid",
+    "difficulty": "medium",
+    "split": "dev",
+    "evidence_size_bucket": "small",
+    "recommended_metrics": [
+      "precision@10",
+      "nDCG@10",
+      "recall@50",
+      "recall@100"
+    ],
+    "constraint_dimensions": [
+      "matter_type",
+      "semantic_concept"
+    ]
+  },
+  {
+    "id": "legal_en_descriptive_043",
+    "query": "How many section 1983 claim opinions in this dataset decided from 2015 through 2019 materially involve deliberate indifference?",
+    "instruction": "Answer with the number of matching opinions as an integer.",
+    "query_family": "count",
+    "type": "hybrid",
+    "difficulty": "medium",
+    "split": "dev",
+    "evidence_size_bucket": "small",
+    "recommended_metrics": [
+      "precision@10",
+      "nDCG@10",
+      "recall@50",
+      "recall@100"
+    ],
+    "constraint_dimensions": [
+      "matter_type",
+      "semantic_concept"
+    ]
+  },
+  {
+    "id": "legal_en_descriptive_044",
+    "query": "How many section 1983 claim opinions in this dataset decided from 2020 through 2025 materially involve municipal liability under Monell?",
+    "instruction": "Answer with the number of matching opinions as an integer.",
+    "query_family": "count",
+    "type": "hybrid",
+    "difficulty": "medium",
+    "split": "dev",
+    "evidence_size_bucket": "medium",
+    "recommended_metrics": [
+      "precision@10",
+      "nDCG@10",
+      "recall@100",
+      "recall@500"
+    ],
+    "constraint_dimensions": [
+      "matter_type",
+      "semantic_concept"
+    ]
+  },
+  {
+    "id": "legal_en_descriptive_045",
+    "query": "How many drug offense opinions in this dataset decided from 1980 through 1999 materially involve cocaine?",
+    "instruction": "Answer with the number of matching opinions as an integer.",
+    "query_family": "count",
+    "type": "hybrid",
+    "difficulty": "medium",
+    "split": "validation",
+    "evidence_size_bucket": "medium",
+    "recommended_metrics": [
+      "precision@10",
+      "nDCG@10",
+      "recall@100",
+      "recall@500"
+    ],
+    "constraint_dimensions": [
+      "matter_type",
+      "semantic_concept"
+    ]
+  },
+  {
+    "id": "legal_en_descriptive_046",
+    "query": "How many drug offense opinions in this dataset decided from 1980 through 1999 materially involve methamphetamine?",
+    "instruction": "Answer with the number of matching opinions as an integer.",
+    "query_family": "count",
+    "type": "hybrid",
+    "difficulty": "medium",
+    "split": "test",
+    "evidence_size_bucket": "small",
+    "recommended_metrics": [
+      "precision@10",
+      "nDCG@10",
+      "recall@50",
+      "recall@100"
+    ],
+    "constraint_dimensions": [
+      "matter_type",
+      "semantic_concept"
+    ]
+  },
+  {
+    "id": "legal_en_descriptive_047",
+    "query": "How many drug offense opinions in this dataset decided from 1990 through 2009 materially involve marijuana or cannabis?",
+    "instruction": "Answer with the number of matching opinions as an integer.",
+    "query_family": "count",
+    "type": "hybrid",
+    "difficulty": "medium",
+    "split": "validation",
+    "evidence_size_bucket": "medium",
+    "recommended_metrics": [
+      "precision@10",
+      "nDCG@10",
+      "recall@100",
+      "recall@500"
+    ],
+    "constraint_dimensions": [
+      "matter_type",
+      "semantic_concept"
+    ]
+  },
+  {
+    "id": "legal_en_descriptive_048",
+    "query": "How many drug offense opinions in this dataset decided from 2000 through 2014 materially involve a drug-distribution conspiracy?",
+    "instruction": "Answer with the number of matching opinions as an integer.",
+    "query_family": "count",
+    "type": "hybrid",
+    "difficulty": "medium",
+    "split": "validation",
+    "evidence_size_bucket": "small",
+    "recommended_metrics": [
+      "precision@10",
+      "nDCG@10",
+      "recall@50",
+      "recall@100"
+    ],
+    "constraint_dimensions": [
+      "matter_type",
+      "semantic_concept"
+    ]
+  },
+  {
+    "id": "legal_en_descriptive_049",
+    "query": "How many negligence personal injury opinions in this dataset decided from 2005 through 2019 materially involve comparative or contributory negligence?",
+    "instruction": "Answer with the number of matching opinions as an integer.",
+    "query_family": "count",
+    "type": "hybrid",
+    "difficulty": "medium",
+    "split": "dev",
+    "evidence_size_bucket": "small",
+    "recommended_metrics": [
+      "precision@10",
+      "nDCG@10",
+      "recall@50",
+      "recall@100"
+    ],
+    "constraint_dimensions": [
+      "matter_type",
+      "semantic_concept"
+    ]
+  },
+  {
+    "id": "legal_en_descriptive_050",
+    "query": "How many negligence personal injury opinions in this dataset decided from 2010 through 2025 materially involve a premises condition?",
+    "instruction": "Answer with the number of matching opinions as an integer.",
+    "query_family": "count",
+    "type": "hybrid",
+    "difficulty": "medium",
+    "split": "dev",
+    "evidence_size_bucket": "medium",
+    "recommended_metrics": [
+      "precision@10",
+      "nDCG@10",
+      "recall@100",
+      "recall@500"
+    ],
+    "constraint_dimensions": [
+      "matter_type",
+      "semantic_concept"
+    ]
+  },
+  {
+    "id": "legal_en_descriptive_051",
+    "query": "How many negligence personal injury opinions in this dataset decided from 2000 through 2019 materially involve lost wages?",
+    "instruction": "Answer with the number of matching opinions as an integer.",
+    "query_family": "count",
+    "type": "hybrid",
+    "difficulty": "medium",
+    "split": "validation",
+    "evidence_size_bucket": "small",
+    "recommended_metrics": [
+      "precision@10",
+      "nDCG@10",
+      "recall@50",
+      "recall@100"
+    ],
+    "constraint_dimensions": [
+      "matter_type",
+      "semantic_concept"
+    ]
+  },
+  {
+    "id": "legal_en_descriptive_052",
+    "query": "How many negligence personal injury opinions in this dataset decided from 1970 through 2019 materially involve pain and suffering damages?",
+    "instruction": "Answer with the number of matching opinions as an integer.",
+    "query_family": "count",
+    "type": "hybrid",
+    "difficulty": "medium",
+    "split": "dev",
+    "evidence_size_bucket": "medium",
+    "recommended_metrics": [
+      "precision@10",
+      "nDCG@10",
+      "recall@100",
+      "recall@500"
+    ],
+    "constraint_dimensions": [
+      "matter_type",
+      "semantic_concept"
+    ]
+  },
+  {
+    "id": "legal_en_descriptive_053",
+    "query": "How many breach of contract opinions in this dataset decided from 1980 through 2025 materially involve liquidated damages?",
+    "instruction": "Answer with the number of matching opinions as an integer.",
+    "query_family": "count",
+    "type": "hybrid",
+    "difficulty": "medium",
+    "split": "validation",
+    "evidence_size_bucket": "small",
+    "recommended_metrics": [
+      "precision@10",
+      "nDCG@10",
+      "recall@50",
+      "recall@100"
+    ],
+    "constraint_dimensions": [
+      "matter_type",
+      "semantic_concept"
+    ]
+  },
+  {
+    "id": "legal_en_descriptive_054",
+    "query": "How many breach of contract opinions in this dataset decided from 1990 through 2025 materially involve an arbitration clause?",
+    "instruction": "Answer with the number of matching opinions as an integer.",
+    "query_family": "count",
+    "type": "hybrid",
+    "difficulty": "medium",
+    "split": "dev",
+    "evidence_size_bucket": "small",
+    "recommended_metrics": [
+      "precision@10",
+      "nDCG@10",
+      "recall@50",
+      "recall@100"
+    ],
+    "constraint_dimensions": [
+      "matter_type",
+      "semantic_concept"
+    ]
+  },
+  {
+    "id": "legal_en_descriptive_055",
+    "query": "How many breach of contract opinions in this dataset decided from 1970 through 2025 materially involve contractual indemnification?",
+    "instruction": "Answer with the number of matching opinions as an integer.",
+    "query_family": "count",
+    "type": "hybrid",
+    "difficulty": "medium",
+    "split": "validation",
+    "evidence_size_bucket": "small",
+    "recommended_metrics": [
+      "precision@10",
+      "nDCG@10",
+      "recall@50",
+      "recall@100"
+    ],
+    "constraint_dimensions": [
+      "matter_type",
+      "semantic_concept"
+    ]
+  },
+  {
+    "id": "legal_en_descriptive_056",
+    "query": "How many breach of contract opinions in this dataset decided from 1980 through 1999 materially involve the statute of frauds?",
+    "instruction": "Answer with the number of matching opinions as an integer.",
+    "query_family": "count",
+    "type": "hybrid",
+    "difficulty": "medium",
+    "split": "dev",
+    "evidence_size_bucket": "small",
+    "recommended_metrics": [
+      "precision@10",
+      "nDCG@10",
+      "recall@50",
+      "recall@100"
+    ],
+    "constraint_dimensions": [
+      "matter_type",
+      "semantic_concept"
+    ]
+  },
+  {
+    "id": "legal_en_descriptive_057",
+    "query": "How many employment discrimination opinions in this dataset decided from 2000 through 2004 materially involve race discrimination?",
+    "instruction": "Answer with the number of matching opinions as an integer.",
+    "query_family": "count",
+    "type": "hybrid",
+    "difficulty": "medium",
+    "split": "dev",
+    "evidence_size_bucket": "small",
+    "recommended_metrics": [
+      "precision@10",
+      "nDCG@10",
+      "recall@50",
+      "recall@100"
+    ],
+    "constraint_dimensions": [
+      "matter_type",
+      "semantic_concept"
+    ]
+  },
+  {
+    "id": "legal_en_descriptive_058",
+    "query": "How many employment discrimination opinions in this dataset decided from 2000 through 2004 materially involve sex or gender discrimination?",
+    "instruction": "Answer with the number of matching opinions as an integer.",
+    "query_family": "count",
+    "type": "hybrid",
+    "difficulty": "medium",
+    "split": "test",
+    "evidence_size_bucket": "small",
+    "recommended_metrics": [
+      "precision@10",
+      "nDCG@10",
+      "recall@50",
+      "recall@100"
+    ],
+    "constraint_dimensions": [
+      "matter_type",
+      "semantic_concept"
+    ]
+  },
+  {
+    "id": "legal_en_descriptive_059",
+    "query": "How many employment discrimination opinions in this dataset decided from 2000 through 2004 materially involve disability discrimination?",
+    "instruction": "Answer with the number of matching opinions as an integer.",
+    "query_family": "count",
+    "type": "hybrid",
+    "difficulty": "medium",
+    "split": "dev",
+    "evidence_size_bucket": "small",
+    "recommended_metrics": [
+      "precision@10",
+      "nDCG@10",
+      "recall@50",
+      "recall@100"
+    ],
+    "constraint_dimensions": [
+      "matter_type",
+      "semantic_concept"
+    ]
+  },
+  {
+    "id": "legal_en_descriptive_060",
+    "query": "How many employment discrimination opinions in this dataset decided from 2010 through 2014 materially involve a hostile work environment?",
+    "instruction": "Answer with the number of matching opinions as an integer.",
+    "query_family": "count",
+    "type": "hybrid",
+    "difficulty": "medium",
+    "split": "test",
+    "evidence_size_bucket": "small",
+    "recommended_metrics": [
+      "precision@10",
+      "nDCG@10",
+      "recall@50",
+      "recall@100"
+    ],
+    "constraint_dimensions": [
+      "matter_type",
+      "semantic_concept"
+    ]
+  },
+  {
+    "id": "legal_en_descriptive_061",
+    "query": "How many asylum protection opinions in this dataset decided from 2010 through 2014 materially involve an adverse credibility determination?",
+    "instruction": "Answer with the number of matching opinions as an integer.",
+    "query_family": "count",
+    "type": "hybrid",
+    "difficulty": "medium",
+    "split": "dev",
+    "evidence_size_bucket": "small",
+    "recommended_metrics": [
+      "precision@10",
+      "nDCG@10",
+      "recall@50",
+      "recall@100"
+    ],
+    "constraint_dimensions": [
+      "matter_type",
+      "semantic_concept"
+    ]
+  },
+  {
+    "id": "legal_en_descriptive_062",
+    "query": "How many asylum protection opinions in this dataset decided from 1990 through 2009 materially involve past persecution?",
+    "instruction": "Answer with the number of matching opinions as an integer.",
+    "query_family": "count",
+    "type": "hybrid",
+    "difficulty": "medium",
+    "split": "test",
+    "evidence_size_bucket": "medium",
+    "recommended_metrics": [
+      "precision@10",
+      "nDCG@10",
+      "recall@100",
+      "recall@500"
+    ],
+    "constraint_dimensions": [
+      "matter_type",
+      "semantic_concept"
+    ]
+  },
+  {
+    "id": "legal_en_descriptive_063",
+    "query": "How many asylum protection opinions in this dataset decided from 1990 through 2009 materially involve protection under the Convention Against Torture?",
+    "instruction": "Answer with the number of matching opinions as an integer.",
+    "query_family": "count",
+    "type": "hybrid",
+    "difficulty": "medium",
+    "split": "test",
+    "evidence_size_bucket": "medium",
+    "recommended_metrics": [
+      "precision@10",
+      "nDCG@10",
+      "recall@100",
+      "recall@500"
+    ],
+    "constraint_dimensions": [
+      "matter_type",
+      "semantic_concept"
+    ]
+  },
+  {
+    "id": "legal_en_descriptive_064",
+    "query": "How many asylum protection opinions in this dataset decided from 1990 through 2009 materially involve the one-year filing deadline?",
+    "instruction": "Answer with the number of matching opinions as an integer.",
+    "query_family": "count",
+    "type": "hybrid",
+    "difficulty": "medium",
+    "split": "test",
+    "evidence_size_bucket": "small",
+    "recommended_metrics": [
+      "precision@10",
+      "nDCG@10",
+      "recall@50",
+      "recall@100"
+    ],
+    "constraint_dimensions": [
+      "matter_type",
+      "semantic_concept"
+    ]
+  },
+  {
+    "id": "legal_en_descriptive_065",
+    "query": "What percentage of negligence personal injury opinions in this dataset materially involve lost wages?",
+    "instruction": "Answer with the percentage rounded to one decimal place.",
+    "query_family": "proportion",
+    "type": "hybrid",
+    "difficulty": "medium",
+    "split": "test",
+    "evidence_size_bucket": "medium",
+    "recommended_metrics": [
+      "precision@10",
+      "nDCG@10",
+      "recall@100",
+      "recall@500"
+    ],
+    "constraint_dimensions": [
+      "matter_type",
+      "semantic_concept",
+      "population_ratio"
+    ]
+  },
+  {
+    "id": "legal_en_descriptive_066",
+    "query": "What percentage of negligence personal injury opinions in this dataset materially involve pain and suffering damages?",
+    "instruction": "Answer with the percentage rounded to one decimal place.",
+    "query_family": "proportion",
+    "type": "hybrid",
+    "difficulty": "medium",
+    "split": "dev",
+    "evidence_size_bucket": "medium",
+    "recommended_metrics": [
+      "precision@10",
+      "nDCG@10",
+      "recall@100",
+      "recall@500"
+    ],
+    "constraint_dimensions": [
+      "matter_type",
+      "semantic_concept",
+      "population_ratio"
+    ]
+  },
+  {
+    "id": "legal_en_descriptive_067",
+    "query": "What percentage of breach of contract opinions in this dataset materially involve liquidated damages?",
+    "instruction": "Answer with the percentage rounded to one decimal place.",
+    "query_family": "proportion",
+    "type": "hybrid",
+    "difficulty": "medium",
+    "split": "validation",
+    "evidence_size_bucket": "medium",
+    "recommended_metrics": [
+      "precision@10",
+      "nDCG@10",
+      "recall@100",
+      "recall@500"
+    ],
+    "constraint_dimensions": [
+      "matter_type",
+      "semantic_concept",
+      "population_ratio"
+    ]
+  },
+  {
+    "id": "legal_en_descriptive_068",
+    "query": "What percentage of breach of contract opinions in this dataset materially involve an arbitration clause?",
+    "instruction": "Answer with the percentage rounded to one decimal place.",
+    "query_family": "proportion",
+    "type": "hybrid",
+    "difficulty": "medium",
+    "split": "test",
+    "evidence_size_bucket": "small",
+    "recommended_metrics": [
+      "precision@10",
+      "nDCG@10",
+      "recall@50",
+      "recall@100"
+    ],
+    "constraint_dimensions": [
+      "matter_type",
+      "semantic_concept",
+      "population_ratio"
+    ]
+  },
+  {
+    "id": "legal_en_descriptive_069",
+    "query": "What percentage of breach of contract opinions in this dataset materially involve contractual indemnification?",
+    "instruction": "Answer with the percentage rounded to one decimal place.",
+    "query_family": "proportion",
+    "type": "hybrid",
+    "difficulty": "medium",
+    "split": "dev",
+    "evidence_size_bucket": "small",
+    "recommended_metrics": [
+      "precision@10",
+      "nDCG@10",
+      "recall@50",
+      "recall@100"
+    ],
+    "constraint_dimensions": [
+      "matter_type",
+      "semantic_concept",
+      "population_ratio"
+    ]
+  },
+  {
+    "id": "legal_en_descriptive_070",
+    "query": "What percentage of breach of contract opinions in this dataset materially involve the statute of frauds?",
+    "instruction": "Answer with the percentage rounded to one decimal place.",
+    "query_family": "proportion",
+    "type": "hybrid",
+    "difficulty": "medium",
+    "split": "dev",
+    "evidence_size_bucket": "small",
+    "recommended_metrics": [
+      "precision@10",
+      "nDCG@10",
+      "recall@50",
+      "recall@100"
+    ],
+    "constraint_dimensions": [
+      "matter_type",
+      "semantic_concept",
+      "population_ratio"
+    ]
+  },
+  {
+    "id": "legal_en_descriptive_071",
+    "query": "What percentage of employment discrimination opinions in this dataset materially involve race discrimination?",
+    "instruction": "Answer with the percentage rounded to one decimal place.",
+    "query_family": "proportion",
+    "type": "hybrid",
+    "difficulty": "medium",
+    "split": "dev",
+    "evidence_size_bucket": "medium",
+    "recommended_metrics": [
+      "precision@10",
+      "nDCG@10",
+      "recall@100",
+      "recall@500"
+    ],
+    "constraint_dimensions": [
+      "matter_type",
+      "semantic_concept",
+      "population_ratio"
+    ]
+  },
+  {
+    "id": "legal_en_descriptive_072",
+    "query": "What percentage of employment discrimination opinions in this dataset materially involve sex or gender discrimination?",
+    "instruction": "Answer with the percentage rounded to one decimal place.",
+    "query_family": "proportion",
+    "type": "hybrid",
+    "difficulty": "medium",
+    "split": "test",
+    "evidence_size_bucket": "medium",
+    "recommended_metrics": [
+      "precision@10",
+      "nDCG@10",
+      "recall@100",
+      "recall@500"
+    ],
+    "constraint_dimensions": [
+      "matter_type",
+      "semantic_concept",
+      "population_ratio"
+    ]
+  },
+  {
+    "id": "legal_en_descriptive_073",
+    "query": "What percentage of employment discrimination opinions in this dataset materially involve disability discrimination?",
+    "instruction": "Answer with the percentage rounded to one decimal place.",
+    "query_family": "proportion",
+    "type": "hybrid",
+    "difficulty": "medium",
+    "split": "validation",
+    "evidence_size_bucket": "medium",
+    "recommended_metrics": [
+      "precision@10",
+      "nDCG@10",
+      "recall@100",
+      "recall@500"
+    ],
+    "constraint_dimensions": [
+      "matter_type",
+      "semantic_concept",
+      "population_ratio"
+    ]
+  },
+  {
+    "id": "legal_en_descriptive_074",
+    "query": "What percentage of employment discrimination opinions in this dataset materially involve a hostile work environment?",
+    "instruction": "Answer with the percentage rounded to one decimal place.",
+    "query_family": "proportion",
+    "type": "hybrid",
+    "difficulty": "medium",
+    "split": "validation",
+    "evidence_size_bucket": "medium",
+    "recommended_metrics": [
+      "precision@10",
+      "nDCG@10",
+      "recall@100",
+      "recall@500"
+    ],
+    "constraint_dimensions": [
+      "matter_type",
+      "semantic_concept",
+      "population_ratio"
+    ]
+  },
+  {
+    "id": "legal_en_descriptive_075",
+    "query": "What percentage of asylum protection opinions in this dataset materially involve an adverse credibility determination?",
+    "instruction": "Answer with the percentage rounded to one decimal place.",
+    "query_family": "proportion",
+    "type": "hybrid",
+    "difficulty": "medium",
+    "split": "test",
+    "evidence_size_bucket": "medium",
+    "recommended_metrics": [
+      "precision@10",
+      "nDCG@10",
+      "recall@100",
+      "recall@500"
+    ],
+    "constraint_dimensions": [
+      "matter_type",
+      "semantic_concept",
+      "population_ratio"
+    ]
+  },
+  {
+    "id": "legal_en_descriptive_076",
+    "query": "What percentage of asylum protection opinions in this dataset materially involve past persecution?",
+    "instruction": "Answer with the percentage rounded to one decimal place.",
+    "query_family": "proportion",
+    "type": "hybrid",
+    "difficulty": "medium",
+    "split": "dev",
+    "evidence_size_bucket": "medium",
+    "recommended_metrics": [
+      "precision@10",
+      "nDCG@10",
+      "recall@100",
+      "recall@500"
+    ],
+    "constraint_dimensions": [
+      "matter_type",
+      "semantic_concept",
+      "population_ratio"
+    ]
+  },
+  {
+    "id": "legal_en_descriptive_077",
+    "query": "What percentage of asylum protection opinions in this dataset materially involve protection under the Convention Against Torture?",
+    "instruction": "Answer with the percentage rounded to one decimal place.",
+    "query_family": "proportion",
+    "type": "hybrid",
+    "difficulty": "medium",
+    "split": "validation",
+    "evidence_size_bucket": "medium",
+    "recommended_metrics": [
+      "precision@10",
+      "nDCG@10",
+      "recall@100",
+      "recall@500"
+    ],
+    "constraint_dimensions": [
+      "matter_type",
+      "semantic_concept",
+      "population_ratio"
+    ]
+  },
+  {
+    "id": "legal_en_descriptive_078",
+    "query": "What percentage of asylum protection opinions in this dataset materially involve the one-year filing deadline?",
+    "instruction": "Answer with the percentage rounded to one decimal place.",
+    "query_family": "proportion",
+    "type": "hybrid",
+    "difficulty": "medium",
+    "split": "validation",
+    "evidence_size_bucket": "small",
+    "recommended_metrics": [
+      "precision@10",
+      "nDCG@10",
+      "recall@50",
+      "recall@100"
+    ],
+    "constraint_dimensions": [
+      "matter_type",
+      "semantic_concept",
+      "population_ratio"
+    ]
+  },
+  {
+    "id": "legal_en_descriptive_079",
+    "query": "What percentage of tax liability dispute opinions in this dataset materially involve a claimed tax deduction?",
+    "instruction": "Answer with the percentage rounded to one decimal place.",
+    "query_family": "proportion",
+    "type": "hybrid",
+    "difficulty": "medium",
+    "split": "validation",
+    "evidence_size_bucket": "small",
+    "recommended_metrics": [
+      "precision@10",
+      "nDCG@10",
+      "recall@50",
+      "recall@100"
+    ],
+    "constraint_dimensions": [
+      "matter_type",
+      "semantic_concept",
+      "population_ratio"
+    ]
+  },
+  {
+    "id": "legal_en_descriptive_080",
+    "query": "What percentage of tax liability dispute opinions in this dataset materially involve a tax deficiency?",
+    "instruction": "Answer with the percentage rounded to one decimal place.",
+    "query_family": "proportion",
+    "type": "hybrid",
+    "difficulty": "medium",
+    "split": "test",
+    "evidence_size_bucket": "medium",
+    "recommended_metrics": [
+      "precision@10",
+      "nDCG@10",
+      "recall@100",
+      "recall@500"
+    ],
+    "constraint_dimensions": [
+      "matter_type",
+      "semantic_concept",
+      "population_ratio"
+    ]
+  },
+  {
+    "id": "legal_en_descriptive_081",
+    "query": "What percentage of tax liability dispute opinions in this dataset materially involve a tax penalty?",
+    "instruction": "Answer with the percentage rounded to one decimal place.",
+    "query_family": "proportion",
+    "type": "hybrid",
+    "difficulty": "medium",
+    "split": "dev",
+    "evidence_size_bucket": "medium",
+    "recommended_metrics": [
+      "precision@10",
+      "nDCG@10",
+      "recall@100",
+      "recall@500"
+    ],
+    "constraint_dimensions": [
+      "matter_type",
+      "semantic_concept",
+      "population_ratio"
+    ]
+  },
+  {
+    "id": "legal_en_descriptive_082",
+    "query": "What percentage of tax liability dispute opinions in this dataset materially involve property or asset valuation?",
+    "instruction": "Answer with the percentage rounded to one decimal place.",
+    "query_family": "proportion",
+    "type": "hybrid",
+    "difficulty": "medium",
+    "split": "dev",
+    "evidence_size_bucket": "medium",
+    "recommended_metrics": [
+      "precision@10",
+      "nDCG@10",
+      "recall@100",
+      "recall@500"
+    ],
+    "constraint_dimensions": [
+      "matter_type",
+      "semantic_concept",
+      "population_ratio"
+    ]
+  },
+  {
+    "id": "legal_en_descriptive_083",
+    "query": "What percentage of property insurance coverage opinions in this dataset materially involve the insurer's duty to defend?",
+    "instruction": "Answer with the percentage rounded to one decimal place.",
+    "query_family": "proportion",
+    "type": "hybrid",
+    "difficulty": "medium",
+    "split": "dev",
+    "evidence_size_bucket": "small",
+    "recommended_metrics": [
+      "precision@10",
+      "nDCG@10",
+      "recall@50",
+      "recall@100"
+    ],
+    "constraint_dimensions": [
+      "matter_type",
+      "semantic_concept",
+      "population_ratio"
+    ]
+  },
+  {
+    "id": "legal_en_descriptive_084",
+    "query": "What percentage of property insurance coverage opinions in this dataset materially involve a policy exclusion?",
+    "instruction": "Answer with the percentage rounded to one decimal place.",
+    "query_family": "proportion",
+    "type": "hybrid",
+    "difficulty": "medium",
+    "split": "validation",
+    "evidence_size_bucket": "small",
+    "recommended_metrics": [
+      "precision@10",
+      "nDCG@10",
+      "recall@50",
+      "recall@100"
+    ],
+    "constraint_dimensions": [
+      "matter_type",
+      "semantic_concept",
+      "population_ratio"
+    ]
+  },
+  {
+    "id": "legal_en_descriptive_085",
+    "query": "What percentage of property insurance coverage opinions in this dataset materially involve notice to the insurer?",
+    "instruction": "Answer with the percentage rounded to one decimal place.",
+    "query_family": "proportion",
+    "type": "hybrid",
+    "difficulty": "medium",
+    "split": "dev",
+    "evidence_size_bucket": "small",
+    "recommended_metrics": [
+      "precision@10",
+      "nDCG@10",
+      "recall@50",
+      "recall@100"
+    ],
+    "constraint_dimensions": [
+      "matter_type",
+      "semantic_concept",
+      "population_ratio"
+    ]
+  },
+  {
+    "id": "legal_en_descriptive_086",
+    "query": "What percentage of auto insurance coverage opinions in this dataset materially involve uninsured or underinsured motorist coverage?",
+    "instruction": "Answer with the percentage rounded to one decimal place.",
+    "query_family": "proportion",
+    "type": "hybrid",
+    "difficulty": "medium",
+    "split": "test",
+    "evidence_size_bucket": "small",
+    "recommended_metrics": [
+      "precision@10",
+      "nDCG@10",
+      "recall@50",
+      "recall@100"
+    ],
+    "constraint_dimensions": [
+      "matter_type",
+      "semantic_concept",
+      "population_ratio"
+    ]
+  },
+  {
+    "id": "legal_en_descriptive_087",
+    "query": "What percentage of custody visitation opinions in this dataset materially involve the best interests of the child?",
+    "instruction": "Answer with the percentage rounded to one decimal place.",
+    "query_family": "proportion",
+    "type": "hybrid",
+    "difficulty": "medium",
+    "split": "dev",
+    "evidence_size_bucket": "medium",
+    "recommended_metrics": [
+      "precision@10",
+      "nDCG@10",
+      "recall@100",
+      "recall@500"
+    ],
+    "constraint_dimensions": [
+      "matter_type",
+      "semantic_concept",
+      "population_ratio"
+    ]
+  },
+  {
+    "id": "legal_en_descriptive_088",
+    "query": "What percentage of support obligation opinions in this dataset materially involve child support?",
+    "instruction": "Answer with the percentage rounded to one decimal place.",
+    "query_family": "proportion",
+    "type": "hybrid",
+    "difficulty": "medium",
+    "split": "dev",
+    "evidence_size_bucket": "medium",
+    "recommended_metrics": [
+      "precision@10",
+      "nDCG@10",
+      "recall@100",
+      "recall@500"
+    ],
+    "constraint_dimensions": [
+      "matter_type",
+      "semantic_concept",
+      "population_ratio"
+    ]
+  },
+  {
+    "id": "legal_en_descriptive_089",
+    "query": "What percentage of support obligation opinions in this dataset materially involve spousal support or alimony?",
+    "instruction": "Answer with the percentage rounded to one decimal place.",
+    "query_family": "proportion",
+    "type": "hybrid",
+    "difficulty": "medium",
+    "split": "dev",
+    "evidence_size_bucket": "medium",
+    "recommended_metrics": [
+      "precision@10",
+      "nDCG@10",
+      "recall@100",
+      "recall@500"
+    ],
+    "constraint_dimensions": [
+      "matter_type",
+      "semantic_concept",
+      "population_ratio"
+    ]
+  },
+  {
+    "id": "legal_en_descriptive_090",
+    "query": "What percentage of foreclosure mortgage opinions in this dataset materially involve standing to foreclose?",
+    "instruction": "Answer with the percentage rounded to one decimal place.",
+    "query_family": "proportion",
+    "type": "hybrid",
+    "difficulty": "medium",
+    "split": "test",
+    "evidence_size_bucket": "small",
+    "recommended_metrics": [
+      "precision@10",
+      "nDCG@10",
+      "recall@50",
+      "recall@100"
+    ],
+    "constraint_dimensions": [
+      "matter_type",
+      "semantic_concept",
+      "population_ratio"
+    ]
+  },
+  {
+    "id": "legal_en_descriptive_091",
+    "query": "What percentage of divorce property division opinions in this dataset materially involve division of marital property?",
+    "instruction": "Answer with the percentage rounded to one decimal place.",
+    "query_family": "proportion",
+    "type": "hybrid",
+    "difficulty": "medium",
+    "split": "dev",
+    "evidence_size_bucket": "small",
+    "recommended_metrics": [
+      "precision@10",
+      "nDCG@10",
+      "recall@50",
+      "recall@100"
+    ],
+    "constraint_dimensions": [
+      "matter_type",
+      "semantic_concept",
+      "population_ratio"
+    ]
+  },
+  {
+    "id": "legal_en_descriptive_092",
+    "query": "What percentage of workers compensation opinions in this dataset materially involve permanent disability benefits?",
+    "instruction": "Answer with the percentage rounded to one decimal place.",
+    "query_family": "proportion",
+    "type": "hybrid",
+    "difficulty": "medium",
+    "split": "dev",
+    "evidence_size_bucket": "small",
+    "recommended_metrics": [
+      "precision@10",
+      "nDCG@10",
+      "recall@50",
+      "recall@100"
+    ],
+    "constraint_dimensions": [
+      "matter_type",
+      "semantic_concept",
+      "population_ratio"
+    ]
+  },
+  {
+    "id": "legal_en_descriptive_093",
+    "query": "Which period among 1970-1989, 1990-1999, 2000-2009, 2010-2019, 2020-2025 had the largest number of sentencing guideline dispute opinions in this dataset that materially involve a sentencing enhancement?",
+    "instruction": "Answer with the period, matching count, and any tie.",
+    "query_family": "comparison",
+    "type": "hybrid",
+    "difficulty": "complex",
+    "split": "dev",
+    "evidence_size_bucket": "large",
+    "recommended_metrics": [
+      "precision@10",
+      "nDCG@10",
+      "recall@500",
+      "recall@1000",
+      "answer_accuracy"
+    ],
+    "constraint_dimensions": [
+      "matter_type",
+      "semantic_concept",
+      "decision_period",
+      "argmax"
+    ]
+  },
+  {
+    "id": "legal_en_descriptive_094",
+    "query": "Which court level had the largest number of sentencing guideline dispute opinions in this dataset that materially involve a downward departure or variance?",
+    "instruction": "Answer with the court level, matching count, and any tie.",
+    "query_family": "comparison",
+    "type": "hybrid",
+    "difficulty": "complex",
+    "split": "test",
+    "evidence_size_bucket": "medium",
+    "recommended_metrics": [
+      "precision@10",
+      "nDCG@10",
+      "recall@100",
+      "recall@500"
+    ],
+    "constraint_dimensions": [
+      "matter_type",
+      "semantic_concept",
+      "court_level",
+      "argmax"
+    ]
+  },
+  {
+    "id": "legal_en_descriptive_095",
+    "query": "Which period among 1970-1994, 1995-2004, 2005-2014, 2015-2025 had the largest number of sentencing guideline dispute opinions in this dataset that materially involve career-offender status?",
+    "instruction": "Answer with the period, matching count, and any tie.",
+    "query_family": "comparison",
+    "type": "hybrid",
+    "difficulty": "complex",
+    "split": "dev",
+    "evidence_size_bucket": "small",
+    "recommended_metrics": [
+      "precision@10",
+      "nDCG@10",
+      "recall@50",
+      "recall@100"
+    ],
+    "constraint_dimensions": [
+      "matter_type",
+      "semantic_concept",
+      "decision_period",
+      "argmax"
+    ]
+  },
+  {
+    "id": "legal_en_descriptive_096",
+    "query": "Which court level had the largest number of sentencing guideline dispute opinions in this dataset that materially involve restitution?",
+    "instruction": "Answer with the court level, matching count, and any tie.",
+    "query_family": "comparison",
+    "type": "hybrid",
+    "difficulty": "complex",
+    "split": "validation",
+    "evidence_size_bucket": "medium",
+    "recommended_metrics": [
+      "precision@10",
+      "nDCG@10",
+      "recall@100",
+      "recall@500"
+    ],
+    "constraint_dimensions": [
+      "matter_type",
+      "semantic_concept",
+      "court_level",
+      "argmax"
+    ]
+  },
+  {
+    "id": "legal_en_descriptive_097",
+    "query": "Which period among 1970-1989, 1990-1999, 2000-2009, 2010-2019, 2020-2025 had the largest number of section 1983 claim opinions in this dataset that materially involve qualified immunity?",
+    "instruction": "Answer with the period, matching count, and any tie.",
+    "query_family": "comparison",
+    "type": "hybrid",
+    "difficulty": "complex",
+    "split": "dev",
+    "evidence_size_bucket": "medium",
+    "recommended_metrics": [
+      "precision@10",
+      "nDCG@10",
+      "recall@100",
+      "recall@500"
+    ],
+    "constraint_dimensions": [
+      "matter_type",
+      "semantic_concept",
+      "decision_period",
+      "argmax"
+    ]
+  },
+  {
+    "id": "legal_en_descriptive_098",
+    "query": "Which court level had the largest number of section 1983 claim opinions in this dataset that materially involve excessive force?",
+    "instruction": "Answer with the court level, matching count, and any tie.",
+    "query_family": "comparison",
+    "type": "hybrid",
+    "difficulty": "complex",
+    "split": "validation",
+    "evidence_size_bucket": "medium",
+    "recommended_metrics": [
+      "precision@10",
+      "nDCG@10",
+      "recall@100",
+      "recall@500"
+    ],
+    "constraint_dimensions": [
+      "matter_type",
+      "semantic_concept",
+      "court_level",
+      "argmax"
+    ]
+  },
+  {
+    "id": "legal_en_descriptive_099",
+    "query": "Which period among 1970-1994, 1995-2004, 2005-2014, 2015-2025 had the largest number of section 1983 claim opinions in this dataset that materially involve deliberate indifference?",
+    "instruction": "Answer with the period, matching count, and any tie.",
+    "query_family": "comparison",
+    "type": "hybrid",
+    "difficulty": "complex",
+    "split": "dev",
+    "evidence_size_bucket": "medium",
+    "recommended_metrics": [
+      "precision@10",
+      "nDCG@10",
+      "recall@100",
+      "recall@500"
+    ],
+    "constraint_dimensions": [
+      "matter_type",
+      "semantic_concept",
+      "decision_period",
+      "argmax"
+    ]
+  },
+  {
+    "id": "legal_en_descriptive_100",
+    "query": "Which court level had the largest number of section 1983 claim opinions in this dataset that materially involve municipal liability under Monell?",
+    "instruction": "Answer with the court level, matching count, and any tie.",
+    "query_family": "comparison",
+    "type": "hybrid",
+    "difficulty": "complex",
+    "split": "dev",
+    "evidence_size_bucket": "medium",
+    "recommended_metrics": [
+      "precision@10",
+      "nDCG@10",
+      "recall@100",
+      "recall@500"
+    ],
+    "constraint_dimensions": [
+      "matter_type",
+      "semantic_concept",
+      "court_level",
+      "argmax"
+    ]
+  },
+  {
+    "id": "legal_en_descriptive_101",
+    "query": "Which period among 1970-1989, 1990-1999, 2000-2009, 2010-2019, 2020-2025 had the largest number of drug offense opinions in this dataset that materially involve cocaine?",
+    "instruction": "Answer with the period, matching count, and any tie.",
+    "query_family": "comparison",
+    "type": "hybrid",
+    "difficulty": "complex",
+    "split": "validation",
+    "evidence_size_bucket": "large",
+    "recommended_metrics": [
+      "precision@10",
+      "nDCG@10",
+      "recall@500",
+      "recall@1000",
+      "answer_accuracy"
+    ],
+    "constraint_dimensions": [
+      "matter_type",
+      "semantic_concept",
+      "decision_period",
+      "argmax"
+    ]
+  },
+  {
+    "id": "legal_en_descriptive_102",
+    "query": "Which court level had the largest number of drug offense opinions in this dataset that materially involve methamphetamine?",
+    "instruction": "Answer with the court level, matching count, and any tie.",
+    "query_family": "comparison",
+    "type": "hybrid",
+    "difficulty": "complex",
+    "split": "test",
+    "evidence_size_bucket": "medium",
+    "recommended_metrics": [
+      "precision@10",
+      "nDCG@10",
+      "recall@100",
+      "recall@500"
+    ],
+    "constraint_dimensions": [
+      "matter_type",
+      "semantic_concept",
+      "court_level",
+      "argmax"
+    ]
+  },
+  {
+    "id": "legal_en_descriptive_103",
+    "query": "Which period among 1970-1994, 1995-2004, 2005-2014, 2015-2025 had the largest number of drug offense opinions in this dataset that materially involve marijuana or cannabis?",
+    "instruction": "Answer with the period, matching count, and any tie.",
+    "query_family": "comparison",
+    "type": "hybrid",
+    "difficulty": "complex",
+    "split": "test",
+    "evidence_size_bucket": "large",
+    "recommended_metrics": [
+      "precision@10",
+      "nDCG@10",
+      "recall@500",
+      "recall@1000",
+      "answer_accuracy"
+    ],
+    "constraint_dimensions": [
+      "matter_type",
+      "semantic_concept",
+      "decision_period",
+      "argmax"
+    ]
+  },
+  {
+    "id": "legal_en_descriptive_104",
+    "query": "Which court level had the largest number of drug offense opinions in this dataset that materially involve a drug-distribution conspiracy?",
+    "instruction": "Answer with the court level, matching count, and any tie.",
+    "query_family": "comparison",
+    "type": "hybrid",
+    "difficulty": "complex",
+    "split": "validation",
+    "evidence_size_bucket": "medium",
+    "recommended_metrics": [
+      "precision@10",
+      "nDCG@10",
+      "recall@100",
+      "recall@500"
+    ],
+    "constraint_dimensions": [
+      "matter_type",
+      "semantic_concept",
+      "court_level",
+      "argmax"
+    ]
+  },
+  {
+    "id": "legal_en_descriptive_105",
+    "query": "Which period among 1970-1989, 1990-1999, 2000-2009, 2010-2019, 2020-2025 had the largest number of negligence personal injury opinions in this dataset that materially involve comparative or contributory negligence?",
+    "instruction": "Answer with the period, matching count, and any tie.",
+    "query_family": "comparison",
+    "type": "hybrid",
+    "difficulty": "complex",
+    "split": "dev",
+    "evidence_size_bucket": "medium",
+    "recommended_metrics": [
+      "precision@10",
+      "nDCG@10",
+      "recall@100",
+      "recall@500"
+    ],
+    "constraint_dimensions": [
+      "matter_type",
+      "semantic_concept",
+      "decision_period",
+      "argmax"
+    ]
+  },
+  {
+    "id": "legal_en_descriptive_106",
+    "query": "Which court level had the largest number of negligence personal injury opinions in this dataset that materially involve a premises condition?",
+    "instruction": "Answer with the court level, matching count, and any tie.",
+    "query_family": "comparison",
+    "type": "hybrid",
+    "difficulty": "complex",
+    "split": "dev",
+    "evidence_size_bucket": "large",
+    "recommended_metrics": [
+      "precision@10",
+      "nDCG@10",
+      "recall@500",
+      "recall@1000",
+      "answer_accuracy"
+    ],
+    "constraint_dimensions": [
+      "matter_type",
+      "semantic_concept",
+      "court_level",
+      "argmax"
+    ]
+  },
+  {
+    "id": "legal_en_descriptive_107",
+    "query": "Which court level had the largest number of tax liability dispute opinions in this dataset decided from 1980 through 1999 that materially involve a claimed tax deduction?",
+    "instruction": "Answer with the court level, matching count, and any tie.",
+    "query_family": "comparison",
+    "type": "hybrid",
+    "difficulty": "complex",
+    "split": "dev",
+    "evidence_size_bucket": "small",
+    "recommended_metrics": [
+      "precision@10",
+      "nDCG@10",
+      "recall@50",
+      "recall@100"
+    ],
+    "constraint_dimensions": [
+      "matter_type",
+      "semantic_concept",
+      "court_level",
+      "argmax"
+    ]
+  },
+  {
+    "id": "legal_en_descriptive_108",
+    "query": "Which court level had the largest number of tax liability dispute opinions in this dataset decided from 1990 through 2009 that materially involve a tax deficiency?",
+    "instruction": "Answer with the court level, matching count, and any tie.",
+    "query_family": "comparison",
+    "type": "hybrid",
+    "difficulty": "complex",
+    "split": "dev",
+    "evidence_size_bucket": "small",
+    "recommended_metrics": [
+      "precision@10",
+      "nDCG@10",
+      "recall@50",
+      "recall@100"
+    ],
+    "constraint_dimensions": [
+      "matter_type",
+      "semantic_concept",
+      "court_level",
+      "argmax"
+    ]
+  },
+  {
+    "id": "legal_en_descriptive_109",
+    "query": "Which court level had the largest number of tax liability dispute opinions in this dataset decided from 2000 through 2014 that materially involve a tax penalty?",
+    "instruction": "Answer with the court level, matching count, and any tie.",
+    "query_family": "comparison",
+    "type": "hybrid",
+    "difficulty": "complex",
+    "split": "validation",
+    "evidence_size_bucket": "small",
+    "recommended_metrics": [
+      "precision@10",
+      "nDCG@10",
+      "recall@50",
+      "recall@100"
+    ],
+    "constraint_dimensions": [
+      "matter_type",
+      "semantic_concept",
+      "court_level",
+      "argmax"
+    ]
+  },
+  {
+    "id": "legal_en_descriptive_110",
+    "query": "Which court level had the largest number of tax liability dispute opinions in this dataset decided from 2005 through 2019 that materially involve property or asset valuation?",
+    "instruction": "Answer with the court level, matching count, and any tie.",
+    "query_family": "comparison",
+    "type": "hybrid",
+    "difficulty": "complex",
+    "split": "test",
+    "evidence_size_bucket": "small",
+    "recommended_metrics": [
+      "precision@10",
+      "nDCG@10",
+      "recall@50",
+      "recall@100"
+    ],
+    "constraint_dimensions": [
+      "matter_type",
+      "semantic_concept",
+      "court_level",
+      "argmax"
+    ]
+  },
+  {
+    "id": "legal_en_descriptive_111",
+    "query": "Which court level had the largest number of property insurance coverage opinions in this dataset decided from 1970 through 2025 that materially involve the insurer's duty to defend?",
+    "instruction": "Answer with the court level, matching count, and any tie.",
+    "query_family": "comparison",
+    "type": "hybrid",
+    "difficulty": "complex",
+    "split": "dev",
+    "evidence_size_bucket": "small",
+    "recommended_metrics": [
+      "precision@10",
+      "nDCG@10",
+      "recall@50",
+      "recall@100"
+    ],
+    "constraint_dimensions": [
+      "matter_type",
+      "semantic_concept",
+      "court_level",
+      "argmax"
+    ]
+  },
+  {
+    "id": "legal_en_descriptive_112",
+    "query": "Which court level had the largest number of property insurance coverage opinions in this dataset decided from 2000 through 2019 that materially involve a policy exclusion?",
+    "instruction": "Answer with the court level, matching count, and any tie.",
+    "query_family": "comparison",
+    "type": "hybrid",
+    "difficulty": "complex",
+    "split": "validation",
+    "evidence_size_bucket": "small",
+    "recommended_metrics": [
+      "precision@10",
+      "nDCG@10",
+      "recall@50",
+      "recall@100"
+    ],
+    "constraint_dimensions": [
+      "matter_type",
+      "semantic_concept",
+      "court_level",
+      "argmax"
+    ]
+  },
+  {
+    "id": "legal_en_descriptive_113",
+    "query": "Which court level had the largest number of property insurance coverage opinions in this dataset decided from 1970 through 2025 that materially involve notice to the insurer?",
+    "instruction": "Answer with the court level, matching count, and any tie.",
+    "query_family": "comparison",
+    "type": "hybrid",
+    "difficulty": "complex",
+    "split": "validation",
+    "evidence_size_bucket": "small",
+    "recommended_metrics": [
+      "precision@10",
+      "nDCG@10",
+      "recall@50",
+      "recall@100"
+    ],
+    "constraint_dimensions": [
+      "matter_type",
+      "semantic_concept",
+      "court_level",
+      "argmax"
+    ]
+  },
+  {
+    "id": "legal_en_descriptive_114",
+    "query": "Which court level had the largest number of auto insurance coverage opinions in this dataset decided from 1980 through 2025 that materially involve uninsured or underinsured motorist coverage?",
+    "instruction": "Answer with the court level, matching count, and any tie.",
+    "query_family": "comparison",
+    "type": "hybrid",
+    "difficulty": "complex",
+    "split": "dev",
+    "evidence_size_bucket": "small",
+    "recommended_metrics": [
+      "precision@10",
+      "nDCG@10",
+      "recall@50",
+      "recall@100"
+    ],
+    "constraint_dimensions": [
+      "matter_type",
+      "semantic_concept",
+      "court_level",
+      "argmax"
+    ]
+  },
+  {
+    "id": "legal_en_descriptive_115",
+    "query": "Which court level had the largest number of custody visitation opinions in this dataset decided from 1990 through 2025 that materially involve the best interests of the child?",
+    "instruction": "Answer with the court level, matching count, and any tie.",
+    "query_family": "comparison",
+    "type": "hybrid",
+    "difficulty": "complex",
+    "split": "dev",
+    "evidence_size_bucket": "medium",
+    "recommended_metrics": [
+      "precision@10",
+      "nDCG@10",
+      "recall@100",
+      "recall@500"
+    ],
+    "constraint_dimensions": [
+      "matter_type",
+      "semantic_concept",
+      "court_level",
+      "argmax"
+    ]
+  },
+  {
+    "id": "legal_en_descriptive_116",
+    "query": "Which court level had the largest number of support obligation opinions in this dataset decided from 1970 through 2025 that materially involve child support?",
+    "instruction": "Answer with the court level, matching count, and any tie.",
+    "query_family": "comparison",
+    "type": "hybrid",
+    "difficulty": "complex",
+    "split": "test",
+    "evidence_size_bucket": "medium",
+    "recommended_metrics": [
+      "precision@10",
+      "nDCG@10",
+      "recall@100",
+      "recall@500"
+    ],
+    "constraint_dimensions": [
+      "matter_type",
+      "semantic_concept",
+      "court_level",
+      "argmax"
+    ]
+  },
+  {
+    "id": "legal_en_descriptive_117",
+    "query": "Which court level had the largest number of support obligation opinions in this dataset decided from 2015 through 2019 that materially involve spousal support or alimony?",
+    "instruction": "Answer with the court level, matching count, and any tie.",
+    "query_family": "comparison",
+    "type": "hybrid",
+    "difficulty": "complex",
+    "split": "dev",
+    "evidence_size_bucket": "small",
+    "recommended_metrics": [
+      "precision@10",
+      "nDCG@10",
+      "recall@50",
+      "recall@100"
+    ],
+    "constraint_dimensions": [
+      "matter_type",
+      "semantic_concept",
+      "court_level",
+      "argmax"
+    ]
+  },
+  {
+    "id": "legal_en_descriptive_118",
+    "query": "Which court level had the largest number of foreclosure mortgage opinions in this dataset decided from 2010 through 2014 that materially involve standing to foreclose?",
+    "instruction": "Answer with the court level, matching count, and any tie.",
+    "query_family": "comparison",
+    "type": "hybrid",
+    "difficulty": "complex",
+    "split": "dev",
+    "evidence_size_bucket": "small",
+    "recommended_metrics": [
+      "precision@10",
+      "nDCG@10",
+      "recall@50",
+      "recall@100"
+    ],
+    "constraint_dimensions": [
+      "matter_type",
+      "semantic_concept",
+      "court_level",
+      "argmax"
+    ]
+  },
+  {
+    "id": "legal_en_descriptive_119",
+    "query": "Which court level had the largest number of divorce property division opinions in this dataset decided from 2000 through 2019 that materially involve division of marital property?",
+    "instruction": "Answer with the court level, matching count, and any tie.",
+    "query_family": "comparison",
+    "type": "hybrid",
+    "difficulty": "complex",
+    "split": "test",
+    "evidence_size_bucket": "small",
+    "recommended_metrics": [
+      "precision@10",
+      "nDCG@10",
+      "recall@50",
+      "recall@100"
+    ],
+    "constraint_dimensions": [
+      "matter_type",
+      "semantic_concept",
+      "court_level",
+      "argmax"
+    ]
+  },
+  {
+    "id": "legal_en_descriptive_120",
+    "query": "Which court level had the largest number of workers compensation opinions in this dataset decided from 1990 through 2009 that materially involve permanent disability benefits?",
+    "instruction": "Answer with the court level, matching count, and any tie.",
+    "query_family": "comparison",
+    "type": "hybrid",
+    "difficulty": "complex",
+    "split": "test",
+    "evidence_size_bucket": "small",
+    "recommended_metrics": [
+      "precision@10",
+      "nDCG@10",
+      "recall@50",
+      "recall@100"
+    ],
+    "constraint_dimensions": [
+      "matter_type",
+      "semantic_concept",
+      "court_level",
+      "argmax"
+    ]
+  }
+]

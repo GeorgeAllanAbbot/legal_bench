@@ -1,43 +1,270 @@
 {
-  "release": "legal-bench-v3-annotations",
-  "release_type": "annotation_only",
-  "created_at": "2026-08-29T16:35:07.653162+00:00",
-  "source_dataset": "CourtListener 20,000 Opinion Cluster sample (not redistributed)",
-  "taxonomy_version": "3.2.0",
-  "legal_issue_registry_version": "3.1-simplified",
-  "matter_type_feature_version": "1.1",
+  "release_id": "legal_bench_v3.1_descriptive_v6",
+  "release_date": "2026-09-09",
+  "source": {
+    "provider": "CourtListener / Free Law Project",
+    "bulk_snapshot": "2026-06-30",
+    "inputs": [
+      "opinion-clusters",
+      "opinions",
+      "courts",
+      "dockets"
+    ]
+  },
+  "versions": {
+    "taxonomy_projection": "3.3.0",
+    "practice_area_registry": "3.2.0",
+    "matter_type_registry": "3.2.0",
+    "legal_issue_registry": "3.1-simplified",
+    "matter_type_features": "1.1",
+    "descriptive_benchmark": "6"
+  },
+  "scope": {
+    "cases": 20000,
+    "opinions": 21261,
+    "search_documents": 94314,
+    "matter_type_case_coverage": 20000,
+    "descriptive_queries": 120
+  },
+  "release_roots": [
+    "data",
+    "query"
+  ],
   "artifacts": [
     {
-      "path": "data/taxonomy/case_taxonomy_v3.jsonl.xz",
-      "record_count": 20000,
-      "uncompressed_bytes": 61998563,
-      "compressed_bytes": 6378440,
-      "sha256": "76fe254a54b7af974bbdbafce3ae4bd756ac413327ffa1702805e01cdaa81ed5"
+      "path": ".gitattributes",
+      "bytes": 41,
+      "sha256": "43905a6ef83f0cb21ec86cdd237be161bae3aff5bdb08339efd56e330e9b5624"
     },
     {
-      "path": "data/features/matter_type_features_v1_1.jsonl.xz",
-      "record_count": 12714,
-      "uncompressed_bytes": 159901362,
-      "compressed_bytes": 11874032,
-      "sha256": "b1a15858ace306addadce9df04621d8a1213b2ae732ce0159d5d304466d752c6"
+      "path": ".gitignore",
+      "bytes": 107,
+      "sha256": "b95af08ef436b4b34e38f41bfd4c26e0a1b21802f5b2f7ec598962a1cb11bdf1"
+    },
+    {
+      "path": "README.md",
+      "bytes": 2019,
+      "sha256": "aa898d1e9e6b4b8a4c167f6f80470b36cd145a0887c61e53e46d97b4e5215597"
+    },
+    {
+      "path": "README_zh.md",
+      "bytes": 2990,
+      "sha256": "51ce256eb79b8fff7b8755e6f42b529fa47062f62df6df5e4cc4110633c5de55"
+    },
+    {
+      "path": "data/README.md",
+      "bytes": 3317,
+      "sha256": "a18b60da10155e089b130c38ae7a9a7ad5cf5620b0667b5367b9cf88e24fd4e7"
+    },
+    {
+      "path": "data/README_zh.md",
+      "bytes": 6466,
+      "sha256": "883bab68631899c6dff6e1ee0aecf3a8ab20d12a7f6bda60ff2f944795f5b2d0"
+    },
+    {
+      "path": "data/dataset/COVERAGE_REPORT.json",
+      "bytes": 11607,
+      "sha256": "057abf4cdde950387dfb5a881aa16448c60afe8a07648a297b4ae8a6c989d6a6"
+    },
+    {
+      "path": "data/dataset/FIELD_CATALOG.json",
+      "bytes": 40245,
+      "sha256": "d8c98c12b11f27f3c33b75f6d6c77712e07bd2aaad5b6e196f0f92d4711475b0"
+    },
+    {
+      "path": "data/dataset/FIELD_DICTIONARY_en.md",
+      "bytes": 4951,
+      "sha256": "d1695fa780f47b4504c3100f9c55e08b1bd2f3ab626a4cf68aa45f4b8debb65f"
+    },
+    {
+      "path": "data/dataset/FIELD_DICTIONARY_zh.md",
+      "bytes": 10338,
+      "sha256": "a5fe42f2fecb076c9375dac091fc1ee0c8590a8d13e76f3bf4b53d5e4ebb374e"
+    },
+    {
+      "path": "data/dataset/README.md",
+      "bytes": 1024,
+      "sha256": "9f8f004c25310eb43090eb0a48a0a72c6c51863d89d6f6093f0a57822c2f9aeb"
+    },
+    {
+      "path": "data/dataset/README_zh.md",
+      "bytes": 977,
+      "sha256": "cdb82f57a0a7f93af4856f68d667a9589bc51aafad7636071a8628b1838f763a"
+    },
+    {
+      "path": "data/dataset/SCHEMA.sql",
+      "bytes": 8404,
+      "sha256": "e0ccd9455e5a0e79ec038541ecab621f0ec83830264b51f420cd404de7110d8d"
+    },
+    {
+      "path": "data/dataset/legal_rag_dataset_v3.db.zst.part-00",
+      "bytes": 94371840,
+      "sha256": "34b8f23784469cbe7f6195cc853948345f2fca138d99a87b29c84135e20e506b"
+    },
+    {
+      "path": "data/dataset/legal_rag_dataset_v3.db.zst.part-01",
+      "bytes": 94371840,
+      "sha256": "365ddeac92438f46b74a56666d34bf0d3580e2cea534a3f64f6e17926eddf07b"
+    },
+    {
+      "path": "data/dataset/legal_rag_dataset_v3.db.zst.part-02",
+      "bytes": 94371840,
+      "sha256": "4ffc837c3dbdf33f34e748010a32669d6482f0aef35a345c40c04de07abcdfe0"
+    },
+    {
+      "path": "data/dataset/legal_rag_dataset_v3.db.zst.part-03",
+      "bytes": 76739490,
+      "sha256": "4c07dc04a34d2df0cd879f53c267f3fb28005a4b11324ed3d6112942af20e9d7"
+    },
+    {
+      "path": "data/dataset/manifest.json",
+      "bytes": 1640,
+      "sha256": "5ca0121c438ce64f14c1c35b70269d3212add1564d926edb00af975408eab838"
+    },
+    {
+      "path": "data/docs/ANNOTATION_SCHEMA_en.md",
+      "bytes": 2188,
+      "sha256": "8903a0e62cc9c129b2070981644c0d12319823e75d4c8509a9af30b496eaf77e"
+    },
+    {
+      "path": "data/docs/ANNOTATION_SCHEMA_zh.md",
+      "bytes": 2078,
+      "sha256": "646d77f2ff1ce055f71d5b25ca5d7ef27e1e29050ab4f42f4899b24bf7148b5e"
+    },
+    {
+      "path": "data/docs/MATTER_TYPE_FEATURE_REFERENCE_en.md",
+      "bytes": 99839,
+      "sha256": "b0a40e4c7378c26534c277fd32f50b8313f1b9aa151d7e36488fbcb6114b3a49"
+    },
+    {
+      "path": "data/docs/MATTER_TYPE_FEATURE_REFERENCE_zh.md",
+      "bytes": 98196,
+      "sha256": "002019a07b170af357ea699bb3217f250da0067a778bf69b00c7fc3fe53889a4"
+    },
+    {
+      "path": "data/docs/METHODOLOGY_AND_PROVENANCE_en.md",
+      "bytes": 2269,
+      "sha256": "d4bb77e519271a53b32987c0dfb343389377985fd02ffa326ebb6135db7d2529"
+    },
+    {
+      "path": "data/docs/METHODOLOGY_AND_PROVENANCE_zh.md",
+      "bytes": 5001,
+      "sha256": "99355eafc892e1b4c4d49bd301823c135ed96f277e57c052f5c4789f179b064b"
+    },
+    {
+      "path": "data/registry/case_taxonomy_schema_v3.json",
+      "bytes": 19308,
+      "sha256": "a171c01042439cf1653ac35fca41ee3b8af3da92e65484f12d34fa115a6078c3"
+    },
+    {
+      "path": "data/registry/legal_issue_registry_v3_1_simplified.json",
+      "bytes": 40801,
+      "sha256": "d6e0008c6343904994ae7b32003759207adf267fccf4843c8a2b0ae1f6987c99"
+    },
+    {
+      "path": "data/registry/matter_type_feature_registry_v1_1.json",
+      "bytes": 423348,
+      "sha256": "4856322037c1f0f95eb8378f19069c8434cd0d46329817a5f53b15c62d0bd329"
+    },
+    {
+      "path": "data/registry/matter_type_registry_v3.json",
+      "bytes": 29750,
+      "sha256": "660bd3e52923747dd4e6e0d085b59d73e6a3812225f92edb7959c05304f91e88"
+    },
+    {
+      "path": "data/registry/practice_area_registry_v3.json",
+      "bytes": 8222,
+      "sha256": "116e39ac02042a102fdef9ff50299c3f16d1b4618bb9a2339a2c3a2f2d9e53d8"
+    },
+    {
+      "path": "query/README.md",
+      "bytes": 1406,
+      "sha256": "5bbd2065851d60ef509b6a829767747e518040974da4012ddd40a5e11cb31402"
+    },
+    {
+      "path": "query/README_zh.md",
+      "bytes": 2679,
+      "sha256": "c1dad5ca9da28366401d75dd0af15c67abc4745dd7758044bf7ffa08eb7a56ac"
+    },
+    {
+      "path": "query/descriptive_query/COVERAGE_REPORT.json",
+      "bytes": 1485,
+      "sha256": "b0196df1d7dae8d9fdc42b84d064b655abd18687ae8635717ed6882931677837"
+    },
+    {
+      "path": "query/descriptive_query/FIELD_DICTIONARY_en.md",
+      "bytes": 1405,
+      "sha256": "1783b44335f89b22581f0b8e28181069e73d9ed2a3141d3b75b9243759523c60"
+    },
+    {
+      "path": "query/descriptive_query/FIELD_DICTIONARY_zh.md",
+      "bytes": 4694,
+      "sha256": "023801c2e10569805c04236a665613bd14acbbb6e31408410ef3562151d3c1d1"
+    },
+    {
+      "path": "query/descriptive_query/README.md",
+      "bytes": 2803,
+      "sha256": "3da01a242e33b5bd839e7bfcd98fa5c1a2a9e07f7554e2b266616d9b76b84c79"
+    },
+    {
+      "path": "query/descriptive_query/README_zh.md",
+      "bytes": 2637,
+      "sha256": "5923e007793872f2a2cc4d12d3d67a3ea25745b7a5a4f44d0e11c09967242154"
+    },
+    {
+      "path": "query/descriptive_query/authority_sources.json",
+      "bytes": 1573,
+      "sha256": "b82357a8989e449539f7a5da86ed7c75fe2eee33b8ff2c5359ac0ef3fab871a7"
+    },
+    {
+      "path": "query/descriptive_query/benchmark_full.json",
+      "bytes": 8897056,
+      "sha256": "9d535fe97ed7353debd6c46b0f9cfbca37cc77c7dbb6f32b6195c28e629d79e9"
+    },
+    {
+      "path": "query/descriptive_query/manifest.json",
+      "bytes": 1016,
+      "sha256": "63ca156f43d02e1d0956986960a306e318096a5628b0bdcf4e35e7fbd5be790e"
+    },
+    {
+      "path": "query/descriptive_query/qrels_private.json",
+      "bytes": 1830136,
+      "sha256": "ccf44e2539ee4ca02125011e4324da6dd1cd0013c83c6fdc2e0f52a1db3f0473"
+    },
+    {
+      "path": "query/descriptive_query/quality_report.json",
+      "bytes": 21657,
+      "sha256": "018cbdf3bc59365a3a6212897fe717c1f903b554414e348a372556209cdbca19"
+    },
+    {
+      "path": "query/descriptive_query/queries_public.json",
+      "bytes": 76526,
+      "sha256": "b42daf8e93d9025656dce64c3061c90da376f97e1bea3f605efb999ff3aee829"
+    },
+    {
+      "path": "query/descriptive_query/splits.json",
+      "bytes": 3896,
+      "sha256": "c742e9a8eeced5badbc4bf9c0b395b448ec36c2d5a8ae08b9c7a0ab418e34dea"
+    },
+    {
+      "path": "scripts/build_release_manifest.py",
+      "bytes": 2031,
+      "sha256": "59110361bc561d372a05491bb5704a96c74b17b2953756963d835ff23c292eda"
+    },
+    {
+      "path": "scripts/build_release_metadata.py",
+      "bytes": 9214,
+      "sha256": "8a658feee4af1a34f341c27c87accb69eea00b55044409e40890caa1a9ed1355"
+    },
+    {
+      "path": "scripts/restore_integrated_db.sh",
+      "bytes": 719,
+      "sha256": "decf98a20c31adc955975a740d969d38e96e67d0014d2be2697fd0aaf614a7bf"
+    },
+    {
+      "path": "scripts/verify_release.py",
+      "bytes": 3509,
+      "sha256": "99217fa62c165369a5a3d12f738672c90d7bdabd354f141f66f99ab045de3eb0"
     }
-  ],
-  "scope": {
-    "taxonomy_cases": 20000,
-    "taxonomy_cases_needing_review": 9284,
-    "feature_jobs": 12714,
-    "annotated_feature_jobs": 12712,
-    "explicit_missing_feature_jobs": 2,
-    "practice_areas": 23,
-    "matter_types": 120,
-    "legal_issues": 47,
-    "business_features": 246
-  },
-  "excluded": [
-    "opinion full text",
-    "SQLite corpus",
-    "retrieval indexes",
-    "provider logs",
-    "model credentials"
   ]
 }

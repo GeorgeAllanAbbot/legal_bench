@@ -1,0 +1,30 @@
+{
+  "benchmark_version": "descriptive_v6",
+  "schema_version": "descriptive_two_task_three_state_qrels_v1",
+  "source_benchmark": "internal descriptive_v5 benchmark",
+  "source_retrieval_run": "internal six-baseline pooled retrieval run",
+  "random_seed": 20260908,
+  "frozen_test_split": true,
+  "artifacts": {
+    "benchmark_full.json": {
+      "sha256": "9d535fe97ed7353debd6c46b0f9cfbca37cc77c7dbb6f32b6195c28e629d79e9",
+      "bytes": 8897056
+    },
+    "queries_public.json": {
+      "sha256": "b42daf8e93d9025656dce64c3061c90da376f97e1bea3f605efb999ff3aee829",
+      "bytes": 76526
+    },
+    "qrels_private.json": {
+      "sha256": "ccf44e2539ee4ca02125011e4324da6dd1cd0013c83c6fdc2e0f52a1db3f0473",
+      "bytes": 1830136
+    },
+    "splits.json": {
+      "sha256": "c742e9a8eeced5badbc4bf9c0b395b448ec36c2d5a8ae08b9c7a0ab418e34dea",
+      "bytes": 3896
+    },
+    "quality_report.json": {
+      "sha256": "018cbdf3bc59365a3a6212897fe717c1f903b554414e348a372556209cdbca19",
+      "bytes": 21657
+    }
+  }
+}

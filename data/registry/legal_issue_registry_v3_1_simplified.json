@@ -6,7 +6,7 @@
     "Keep only directly adjudicable issues with narrow semantics and closed outcomes.",
     "Move broad rights, broad insurance concepts, and procedural labels to Matter Type, features, or context."
   ],
-  "source_registry": "/home/allan/lab/rag/data/courtlistener_legal_20k/analytics_v1/taxonomy_v3/legal_issue_registry_v3.json",
+  "source_registry": "internal legal_issue_registry_v3 source snapshot",
   "kept_count": 47,
   "removed_count": 15,
   "entries": [

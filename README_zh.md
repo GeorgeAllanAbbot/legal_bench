@@ -1,39 +1,77 @@
-# Legal Bench v3：CourtListener 标注数据
+# Legal Bench v3.1
 
-Legal Bench v3 覆盖 20,000 条英文 CourtListener Opinion Cluster 案例，同时发布精简的纯标注版本和完整集成 SQLite 版本。仓库不包含向量、检索索引、提示词、供应商日志或模型密钥。
+Legal Bench v3.1 是一个面向法律检索、RAG 和法律统计分析的英文美国判例研究数据集。
+发布版本只保留两个主要入口：
 
-仓库现同时提供可选的**完整集成 SQLite 版本**，把 CourtListener v2 全文语料、v3 taxonomy 和 Matter Type Feature 标注合并在同一数据库。说明见 `data/integrated/README.md`，恢复命令为 `./scripts/restore_integrated_db.sh`。
-
-## 标注层级
-
-- **Practice Area（法律领域）**：案件所属的宽泛法律领域，例如 `criminal_law`、`tax_law`。
-- **Matter Type（案件/争议类型）**：具体的案件、请求、争议或程序类型，也是选择分析特征包的主要依据。
-- **Legal Issue（法律争点）**：法院实际处理的法律问题，不等同于案件类型分类。
-- **Matter Type Features（案件类型特征）**：按照 Matter Type 抽取的事实、结果、日期、金额、比例、主体及其他结构化字段。
-
-## 文件
-
-- `data/taxonomy/case_taxonomy_v3.jsonl.xz`：20,000 条 case 级 taxonomy 标注。
-- `data/features/matter_type_features_v1_1.jsonl.xz`：12,714 条 `case × Matter Type` 特征标注。
-- `data/registry/`：本版本冻结使用的 Registry 与 schema。
-- `data/reports/`：发布质量和覆盖率报告。
-- `docs/ANNOTATION_SCHEMA_zh.md`：字段含义、关联方式和限制。
-- `docs/MATTER_TYPE_FEATURE_REFERENCE_zh.md`：全部 feature key 及有效数量。
-- `data/query/`：供后续 RAG 使用的可查询字段目录和英文 Query IR 模板。
-
-## 解压与校验
-
-```bash
-./scripts/restore_annotations.sh
-python3 scripts/verify_release.py
+```text
+legal_bench/
+├── data/                         # 数据库、Opinion 正文、标注、Registry 与数据说明
+├── query/
+│   └── descriptive_query/        # 120 条描述型 Query、答案、Evidence 与说明
+├── scripts/                      # 恢复和校验脚本
+├── README.md
+├── README_zh.md
+└── manifest.json
 ```
 
-解压后的 JSONL 写入 Git 忽略的 `restored/` 目录。
+## 1. 数据库
 
-## 与原始案例关联
+`data/dataset/` 发布一个完整 SQLite 数据库，包含：
 
-通过 `case_id` 与另行获取的 CourtListener 数据关联。ID 使用标准化形式 `cluster_<CourtListener cluster id>`；feature 数据另有 `<case_id>::<matter_type_id>` 格式的 `job_id`。
+- 20,000 个 CourtListener Opinion Cluster 案例；
+- 21,261 份非空 Opinion 文书正文，其中 21,189 份达到 usable-text 标准；
+- 440 个法院和规范化 court level / jurisdiction；
+- 94,314 个检索 chunks；
+- 20,000 案例的 Matter Type projection；
+- Practice Area、保留的 Legal Issue 和 Matter Type analytical features；
+- 原始字段与 provenance，用于回溯 CourtListener 来源。
 
-## 使用范围
+数据库由 4 个小于 GitHub 单文件限制的 Zstandard 分片发布。恢复：
 
-适用于检索约束、benchmark 构建、分层抽样、弱监督和结构化法律分析。该数据属于模型辅助研究标注，不是人工 gold label，也不构成法律意见。Taxonomy projection 保留了 9,284 条 `needs_review=true` 审计标记，高置信度统计应过滤或单独报告这些记录。重试后仍有 2 个预期 Matter Type feature job 被明确记录为缺失，详情见最终报告。
+```bash
+./scripts/restore_integrated_db.sh
+```
+
+数据库字段、关系、覆盖率、来源和调用方式见 [data/README_zh.md](data/README_zh.md)。
+
+## 2. 描述型 Benchmark
+
+`query/descriptive_query/` 包含 120 条英文 Query：
+
+- Count 40 条；
+- Proportion 40 条；
+- Comparison 40 条；
+- SQL 36 条，Hybrid 84 条；
+- 固定拆分为 dev 60、validation 30、test 30。
+
+公开题面位于 `queries_public.json`；答案和 qrels 位于 `qrels_private.json`，评测前不得提供给
+被测系统。详细说明见 [query/README_zh.md](query/README_zh.md)。
+
+## 数据来源与参考
+
+案例和文书来自 CourtListener `2026-06-30` bulk snapshot。CourtListener 是 Free Law Project
+维护的开放法律数据库。本项目使用 Opinion Clusters、Opinions、Courts 和 Dockets 四类导出。
+
+- [CourtListener Bulk Legal Data](https://www.courtlistener.com/help/api/bulk-data/)
+- [Free Law Project: CourtListener](https://free.law/projects/courtlistener/)
+
+分类设计参考 U.S. Courts Nature of Suit 的案件类型表达和 SALI LMSS 的术语标准化思想，但使用
+本项目自己的实用型 closed registry。Query 设计参考 U.S. Courts、FJC、NCSC 和 BJS 的司法统计
+维度。外部参考不提供本 Benchmark 的答案。
+
+## 版本与质量边界
+
+- Dataset release：v3.1；Taxonomy projection：v3.3.0。
+- Practice Area / Matter Type Registry：v3.2.0。
+- Simplified Legal Issue Registry：v3.1-simplified。
+- Matter Type Feature：v1.1。
+- Descriptive Benchmark：v6，Silver qrels。
+
+Matter Type 覆盖率 100% 表示每案至少有一个模型辅助 projection，不代表人工 Gold 准确率。
+Hybrid Query 的 evidence 是 partial pool；`unjudged` 不得按负例处理。本数据集不构成法律意见。
+
+执行完整校验：
+
+```bash
+python3 scripts/verify_release.py
+```

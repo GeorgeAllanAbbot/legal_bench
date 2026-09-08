@@ -1,0 +1,1574 @@
+{
+  "database": "legal_rag_dataset_v3.db",
+  "tables": {
+    "annotation_registry_snapshot": {
+      "row_count": 4,
+      "columns": [
+        {
+          "position": 0,
+          "name": "registry_name",
+          "declared_type": "TEXT",
+          "not_null": false,
+          "default": null,
+          "primary_key_position": 1
+        },
+        {
+          "position": 1,
+          "name": "registry_version",
+          "declared_type": "TEXT",
+          "not_null": false,
+          "default": null,
+          "primary_key_position": 0
+        },
+        {
+          "position": 2,
+          "name": "sha256",
+          "declared_type": "TEXT",
+          "not_null": true,
+          "default": null,
+          "primary_key_position": 0
+        },
+        {
+          "position": 3,
+          "name": "content_json",
+          "declared_type": "TEXT",
+          "not_null": true,
+          "default": null,
+          "primary_key_position": 0
+        }
+      ],
+      "foreign_keys": [],
+      "indexes": [
+        "sqlite_autoindex_annotation_registry_snapshot_1"
+      ]
+    },
+    "annotation_release": {
+      "row_count": 1,
+      "columns": [
+        {
+          "position": 0,
+          "name": "release_id",
+          "declared_type": "TEXT",
+          "not_null": false,
+          "default": null,
+          "primary_key_position": 1
+        },
+        {
+          "position": 1,
+          "name": "taxonomy_version",
+          "declared_type": "TEXT",
+          "not_null": true,
+          "default": null,
+          "primary_key_position": 0
+        },
+        {
+          "position": 2,
+          "name": "feature_version",
+          "declared_type": "TEXT",
+          "not_null": true,
+          "default": null,
+          "primary_key_position": 0
+        },
+        {
+          "position": 3,
+          "name": "created_at",
+          "declared_type": "TEXT",
+          "not_null": true,
+          "default": null,
+          "primary_key_position": 0
+        },
+        {
+          "position": 4,
+          "name": "taxonomy_record_count",
+          "declared_type": "INTEGER",
+          "not_null": true,
+          "default": null,
+          "primary_key_position": 0
+        },
+        {
+          "position": 5,
+          "name": "feature_job_count",
+          "declared_type": "INTEGER",
+          "not_null": true,
+          "default": null,
+          "primary_key_position": 0
+        },
+        {
+          "position": 6,
+          "name": "metadata_json",
+          "declared_type": "TEXT",
+          "not_null": true,
+          "default": null,
+          "primary_key_position": 0
+        }
+      ],
+      "foreign_keys": [],
+      "indexes": [
+        "sqlite_autoindex_annotation_release_1"
+      ]
+    },
+    "build_state": {
+      "row_count": 1,
+      "columns": [
+        {
+          "position": 0,
+          "name": "key",
+          "declared_type": "TEXT",
+          "not_null": false,
+          "default": null,
+          "primary_key_position": 1
+        },
+        {
+          "position": 1,
+          "name": "value",
+          "declared_type": "TEXT",
+          "not_null": true,
+          "default": null,
+          "primary_key_position": 0
+        }
+      ],
+      "foreign_keys": [],
+      "indexes": [
+        "sqlite_autoindex_build_state_1"
+      ]
+    },
+    "case_features": {
+      "row_count": 20000,
+      "columns": [
+        {
+          "position": 0,
+          "name": "case_id",
+          "declared_type": "TEXT",
+          "not_null": false,
+          "default": null,
+          "primary_key_position": 1
+        },
+        {
+          "position": 1,
+          "name": "practice_area_json",
+          "declared_type": "TEXT",
+          "not_null": true,
+          "default": null,
+          "primary_key_position": 0
+        },
+        {
+          "position": 2,
+          "name": "primary_topic",
+          "declared_type": "TEXT",
+          "not_null": false,
+          "default": null,
+          "primary_key_position": 0
+        },
+        {
+          "position": 3,
+          "name": "secondary_topics_json",
+          "declared_type": "TEXT",
+          "not_null": true,
+          "default": null,
+          "primary_key_position": 0
+        },
+        {
+          "position": 4,
+          "name": "statutes_json",
+          "declared_type": "TEXT",
+          "not_null": true,
+          "default": null,
+          "primary_key_position": 0
+        },
+        {
+          "position": 5,
+          "name": "constitutional_provisions_json",
+          "declared_type": "TEXT",
+          "not_null": true,
+          "default": null,
+          "primary_key_position": 0
+        },
+        {
+          "position": 6,
+          "name": "disposition_json",
+          "declared_type": "TEXT",
+          "not_null": true,
+          "default": null,
+          "primary_key_position": 0
+        },
+        {
+          "position": 7,
+          "name": "primary_legal_issue",
+          "declared_type": "TEXT",
+          "not_null": false,
+          "default": null,
+          "primary_key_position": 0
+        },
+        {
+          "position": 8,
+          "name": "holding",
+          "declared_type": "TEXT",
+          "not_null": false,
+          "default": null,
+          "primary_key_position": 0
+        },
+        {
+          "position": 9,
+          "name": "relief_ordered_json",
+          "declared_type": "TEXT",
+          "not_null": true,
+          "default": null,
+          "primary_key_position": 0
+        },
+        {
+          "position": 10,
+          "name": "government_authority_direction",
+          "declared_type": "TEXT",
+          "not_null": false,
+          "default": null,
+          "primary_key_position": 0
+        },
+        {
+          "position": 11,
+          "name": "feature_source_json",
+          "declared_type": "TEXT",
+          "not_null": true,
+          "default": null,
+          "primary_key_position": 0
+        },
+        {
+          "position": 12,
+          "name": "confidence_json",
+          "declared_type": "TEXT",
+          "not_null": true,
+          "default": null,
+          "primary_key_position": 0
+        },
+        {
+          "position": 13,
+          "name": "evidence_spans_json",
+          "declared_type": "TEXT",
+          "not_null": true,
+          "default": null,
+          "primary_key_position": 0
+        },
+        {
+          "position": 14,
+          "name": "rule_signals_json",
+          "declared_type": "TEXT",
+          "not_null": true,
+          "default": null,
+          "primary_key_position": 0
+        }
+      ],
+      "foreign_keys": [
+        {
+          "id": 0,
+          "sequence": 0,
+          "referenced_table": "case_record",
+          "from": "case_id",
+          "to": "case_id",
+          "on_update": "NO ACTION",
+          "on_delete": "NO ACTION"
+        }
+      ],
+      "indexes": [
+        "sqlite_autoindex_case_features_1"
+      ]
+    },
+    "case_legal_issue_v3": {
+      "row_count": 16635,
+      "columns": [
+        {
+          "position": 0,
+          "name": "case_id",
+          "declared_type": "TEXT",
+          "not_null": true,
+          "default": null,
+          "primary_key_position": 1
+        },
+        {
+          "position": 1,
+          "name": "issue_id",
+          "declared_type": "TEXT",
+          "not_null": true,
+          "default": null,
+          "primary_key_position": 2
+        },
+        {
+          "position": 2,
+          "name": "issue_status",
+          "declared_type": "TEXT",
+          "not_null": false,
+          "default": null,
+          "primary_key_position": 0
+        },
+        {
+          "position": 3,
+          "name": "mention_confidence",
+          "declared_type": "REAL",
+          "not_null": false,
+          "default": null,
+          "primary_key_position": 0
+        },
+        {
+          "position": 4,
+          "name": "adjudication_confidence",
+          "declared_type": "REAL",
+          "not_null": false,
+          "default": null,
+          "primary_key_position": 0
+        },
+        {
+          "position": 5,
+          "name": "evidence_json",
+          "declared_type": "TEXT",
+          "not_null": true,
+          "default": null,
+          "primary_key_position": 0
+        }
+      ],
+      "foreign_keys": [
+        {
+          "id": 0,
+          "sequence": 0,
+          "referenced_table": "case_record",
+          "from": "case_id",
+          "to": "case_id",
+          "on_update": "NO ACTION",
+          "on_delete": "NO ACTION"
+        }
+      ],
+      "indexes": [
+        "idx_legal_issue_v3",
+        "sqlite_autoindex_case_legal_issue_v3_1"
+      ]
+    },
+    "case_matter_type_v3": {
+      "row_count": 21518,
+      "columns": [
+        {
+          "position": 0,
+          "name": "case_id",
+          "declared_type": "TEXT",
+          "not_null": true,
+          "default": null,
+          "primary_key_position": 1
+        },
+        {
+          "position": 1,
+          "name": "matter_type",
+          "declared_type": "TEXT",
+          "not_null": true,
+          "default": null,
+          "primary_key_position": 2
+        },
+        {
+          "position": 2,
+          "name": "practice_area",
+          "declared_type": "TEXT",
+          "not_null": false,
+          "default": null,
+          "primary_key_position": 0
+        },
+        {
+          "position": 3,
+          "name": "confidence",
+          "declared_type": "REAL",
+          "not_null": false,
+          "default": null,
+          "primary_key_position": 0
+        },
+        {
+          "position": 4,
+          "name": "needs_review",
+          "declared_type": "INTEGER",
+          "not_null": true,
+          "default": null,
+          "primary_key_position": 0
+        },
+        {
+          "position": 5,
+          "name": "evidence_json",
+          "declared_type": "TEXT",
+          "not_null": true,
+          "default": null,
+          "primary_key_position": 0
+        }
+      ],
+      "foreign_keys": [
+        {
+          "id": 0,
+          "sequence": 0,
+          "referenced_table": "case_record",
+          "from": "case_id",
+          "to": "case_id",
+          "on_update": "NO ACTION",
+          "on_delete": "NO ACTION"
+        }
+      ],
+      "indexes": [
+        "idx_matter_type_v3",
+        "sqlite_autoindex_case_matter_type_v3_1"
+      ]
+    },
+    "case_practice_area_v3": {
+      "row_count": 19930,
+      "columns": [
+        {
+          "position": 0,
+          "name": "case_id",
+          "declared_type": "TEXT",
+          "not_null": true,
+          "default": null,
+          "primary_key_position": 1
+        },
+        {
+          "position": 1,
+          "name": "practice_area",
+          "declared_type": "TEXT",
+          "not_null": true,
+          "default": null,
+          "primary_key_position": 2
+        },
+        {
+          "position": 2,
+          "name": "area_role",
+          "declared_type": "TEXT",
+          "not_null": true,
+          "default": null,
+          "primary_key_position": 3
+        },
+        {
+          "position": 3,
+          "name": "confidence",
+          "declared_type": "REAL",
+          "not_null": false,
+          "default": null,
+          "primary_key_position": 0
+        },
+        {
+          "position": 4,
+          "name": "evidence_json",
+          "declared_type": "TEXT",
+          "not_null": true,
+          "default": null,
+          "primary_key_position": 0
+        }
+      ],
+      "foreign_keys": [
+        {
+          "id": 0,
+          "sequence": 0,
+          "referenced_table": "case_record",
+          "from": "case_id",
+          "to": "case_id",
+          "on_update": "NO ACTION",
+          "on_delete": "NO ACTION"
+        }
+      ],
+      "indexes": [
+        "idx_practice_area_v3",
+        "sqlite_autoindex_case_practice_area_v3_1"
+      ]
+    },
+    "case_record": {
+      "row_count": 20000,
+      "columns": [
+        {
+          "position": 0,
+          "name": "case_id",
+          "declared_type": "TEXT",
+          "not_null": false,
+          "default": null,
+          "primary_key_position": 1
+        },
+        {
+          "position": 1,
+          "name": "cluster_id",
+          "declared_type": "TEXT",
+          "not_null": true,
+          "default": null,
+          "primary_key_position": 0
+        },
+        {
+          "position": 2,
+          "name": "docket_id",
+          "declared_type": "TEXT",
+          "not_null": false,
+          "default": null,
+          "primary_key_position": 0
+        },
+        {
+          "position": 3,
+          "name": "court_id",
+          "declared_type": "TEXT",
+          "not_null": false,
+          "default": null,
+          "primary_key_position": 0
+        },
+        {
+          "position": 4,
+          "name": "case_name",
+          "declared_type": "TEXT",
+          "not_null": false,
+          "default": null,
+          "primary_key_position": 0
+        },
+        {
+          "position": 5,
+          "name": "case_name_docket",
+          "declared_type": "TEXT",
+          "not_null": false,
+          "default": null,
+          "primary_key_position": 0
+        },
+        {
+          "position": 6,
+          "name": "docket_number",
+          "declared_type": "TEXT",
+          "not_null": false,
+          "default": null,
+          "primary_key_position": 0
+        },
+        {
+          "position": 7,
+          "name": "decision_date",
+          "declared_type": "TEXT",
+          "not_null": false,
+          "default": null,
+          "primary_key_position": 0
+        },
+        {
+          "position": 8,
+          "name": "decision_year",
+          "declared_type": "INTEGER",
+          "not_null": false,
+          "default": null,
+          "primary_key_position": 0
+        },
+        {
+          "position": 9,
+          "name": "citations_json",
+          "declared_type": "TEXT",
+          "not_null": true,
+          "default": null,
+          "primary_key_position": 0
+        },
+        {
+          "position": 10,
+          "name": "publication_status_raw",
+          "declared_type": "TEXT",
+          "not_null": false,
+          "default": null,
+          "primary_key_position": 0
+        },
+        {
+          "position": 11,
+          "name": "precedential_status",
+          "declared_type": "TEXT",
+          "not_null": true,
+          "default": null,
+          "primary_key_position": 0
+        },
+        {
+          "position": 12,
+          "name": "source",
+          "declared_type": "TEXT",
+          "not_null": false,
+          "default": null,
+          "primary_key_position": 0
+        },
+        {
+          "position": 13,
+          "name": "judges_raw",
+          "declared_type": "TEXT",
+          "not_null": false,
+          "default": null,
+          "primary_key_position": 0
+        },
+        {
+          "position": 14,
+          "name": "syllabus",
+          "declared_type": "TEXT",
+          "not_null": false,
+          "default": null,
+          "primary_key_position": 0
+        },
+        {
+          "position": 15,
+          "name": "posture",
+          "declared_type": "TEXT",
+          "not_null": false,
+          "default": null,
+          "primary_key_position": 0
+        },
+        {
+          "position": 16,
+          "name": "procedural_history",
+          "declared_type": "TEXT",
+          "not_null": false,
+          "default": null,
+          "primary_key_position": 0
+        },
+        {
+          "position": 17,
+          "name": "jurisdiction_type",
+          "declared_type": "TEXT",
+          "not_null": false,
+          "default": null,
+          "primary_key_position": 0
+        },
+        {
+          "position": 18,
+          "name": "court_level",
+          "declared_type": "TEXT",
+          "not_null": false,
+          "default": null,
+          "primary_key_position": 0
+        },
+        {
+          "position": 19,
+          "name": "opinion_ids_json",
+          "declared_type": "TEXT",
+          "not_null": true,
+          "default": null,
+          "primary_key_position": 0
+        },
+        {
+          "position": 20,
+          "name": "raw_json",
+          "declared_type": "TEXT",
+          "not_null": false,
+          "default": null,
+          "primary_key_position": 0
+        },
+        {
+          "position": 21,
+          "name": "provenance_json",
+          "declared_type": "TEXT",
+          "not_null": false,
+          "default": null,
+          "primary_key_position": 0
+        }
+      ],
+      "foreign_keys": [
+        {
+          "id": 0,
+          "sequence": 0,
+          "referenced_table": "dim_court",
+          "from": "court_id",
+          "to": "court_id",
+          "on_update": "NO ACTION",
+          "on_delete": "NO ACTION"
+        }
+      ],
+      "indexes": [
+        "idx_case_jurisdiction_level",
+        "idx_case_status",
+        "idx_case_date",
+        "idx_case_court",
+        "idx_case_docket",
+        "idx_case_cluster",
+        "sqlite_autoindex_case_record_2",
+        "sqlite_autoindex_case_record_1"
+      ]
+    },
+    "case_taxonomy_v3": {
+      "row_count": 20000,
+      "columns": [
+        {
+          "position": 0,
+          "name": "case_id",
+          "declared_type": "TEXT",
+          "not_null": false,
+          "default": null,
+          "primary_key_position": 1
+        },
+        {
+          "position": 1,
+          "name": "annotation_status",
+          "declared_type": "TEXT",
+          "not_null": true,
+          "default": null,
+          "primary_key_position": 0
+        },
+        {
+          "position": 2,
+          "name": "primary_practice_area",
+          "declared_type": "TEXT",
+          "not_null": false,
+          "default": null,
+          "primary_key_position": 0
+        },
+        {
+          "position": 3,
+          "name": "secondary_practice_areas_json",
+          "declared_type": "TEXT",
+          "not_null": true,
+          "default": null,
+          "primary_key_position": 0
+        },
+        {
+          "position": 4,
+          "name": "matter_types_json",
+          "declared_type": "TEXT",
+          "not_null": true,
+          "default": null,
+          "primary_key_position": 0
+        },
+        {
+          "position": 5,
+          "name": "legal_issues_json",
+          "declared_type": "TEXT",
+          "not_null": true,
+          "default": null,
+          "primary_key_position": 0
+        },
+        {
+          "position": 6,
+          "name": "unmapped_matter_types_json",
+          "declared_type": "TEXT",
+          "not_null": true,
+          "default": null,
+          "primary_key_position": 0
+        },
+        {
+          "position": 7,
+          "name": "unmapped_legal_issues_json",
+          "declared_type": "TEXT",
+          "not_null": true,
+          "default": null,
+          "primary_key_position": 0
+        },
+        {
+          "position": 8,
+          "name": "needs_review",
+          "declared_type": "INTEGER",
+          "not_null": true,
+          "default": null,
+          "primary_key_position": 0
+        },
+        {
+          "position": 9,
+          "name": "review_applied",
+          "declared_type": "INTEGER",
+          "not_null": true,
+          "default": null,
+          "primary_key_position": 0
+        },
+        {
+          "position": 10,
+          "name": "review_status",
+          "declared_type": "TEXT",
+          "not_null": false,
+          "default": null,
+          "primary_key_position": 0
+        },
+        {
+          "position": 11,
+          "name": "raw_annotation_json",
+          "declared_type": "TEXT",
+          "not_null": true,
+          "default": null,
+          "primary_key_position": 0
+        }
+      ],
+      "foreign_keys": [
+        {
+          "id": 0,
+          "sequence": 0,
+          "referenced_table": "case_record",
+          "from": "case_id",
+          "to": "case_id",
+          "on_update": "NO ACTION",
+          "on_delete": "NO ACTION"
+        }
+      ],
+      "indexes": [
+        "idx_taxonomy_v3_practice",
+        "sqlite_autoindex_case_taxonomy_v3_1"
+      ]
+    },
+    "dim_court": {
+      "row_count": 440,
+      "columns": [
+        {
+          "position": 0,
+          "name": "court_id",
+          "declared_type": "TEXT",
+          "not_null": false,
+          "default": null,
+          "primary_key_position": 1
+        },
+        {
+          "position": 1,
+          "name": "court_name",
+          "declared_type": "TEXT",
+          "not_null": false,
+          "default": null,
+          "primary_key_position": 0
+        },
+        {
+          "position": 2,
+          "name": "court_name_short",
+          "declared_type": "TEXT",
+          "not_null": false,
+          "default": null,
+          "primary_key_position": 0
+        },
+        {
+          "position": 3,
+          "name": "jurisdiction_raw",
+          "declared_type": "TEXT",
+          "not_null": false,
+          "default": null,
+          "primary_key_position": 0
+        },
+        {
+          "position": 4,
+          "name": "jurisdiction_type",
+          "declared_type": "TEXT",
+          "not_null": true,
+          "default": null,
+          "primary_key_position": 0
+        },
+        {
+          "position": 5,
+          "name": "court_level",
+          "declared_type": "TEXT",
+          "not_null": true,
+          "default": null,
+          "primary_key_position": 0
+        },
+        {
+          "position": 6,
+          "name": "circuit",
+          "declared_type": "TEXT",
+          "not_null": false,
+          "default": null,
+          "primary_key_position": 0
+        },
+        {
+          "position": 7,
+          "name": "state_code",
+          "declared_type": "TEXT",
+          "not_null": false,
+          "default": null,
+          "primary_key_position": 0
+        },
+        {
+          "position": 8,
+          "name": "is_active",
+          "declared_type": "INTEGER",
+          "not_null": false,
+          "default": null,
+          "primary_key_position": 0
+        },
+        {
+          "position": 9,
+          "name": "start_date",
+          "declared_type": "TEXT",
+          "not_null": false,
+          "default": null,
+          "primary_key_position": 0
+        },
+        {
+          "position": 10,
+          "name": "end_date",
+          "declared_type": "TEXT",
+          "not_null": false,
+          "default": null,
+          "primary_key_position": 0
+        },
+        {
+          "position": 11,
+          "name": "raw_json",
+          "declared_type": "TEXT",
+          "not_null": false,
+          "default": null,
+          "primary_key_position": 0
+        },
+        {
+          "position": 12,
+          "name": "provenance_json",
+          "declared_type": "TEXT",
+          "not_null": false,
+          "default": null,
+          "primary_key_position": 0
+        }
+      ],
+      "foreign_keys": [],
+      "indexes": [
+        "idx_dim_court_state",
+        "idx_dim_court_circuit",
+        "idx_dim_court_jurisdiction_level",
+        "sqlite_autoindex_dim_court_1"
+      ]
+    },
+    "matter_type_annotation_v1_1": {
+      "row_count": 13951,
+      "columns": [
+        {
+          "position": 0,
+          "name": "job_id",
+          "declared_type": "TEXT",
+          "not_null": true,
+          "default": null,
+          "primary_key_position": 1
+        },
+        {
+          "position": 1,
+          "name": "case_id",
+          "declared_type": "TEXT",
+          "not_null": true,
+          "default": null,
+          "primary_key_position": 0
+        },
+        {
+          "position": 2,
+          "name": "matter_type",
+          "declared_type": "TEXT",
+          "not_null": true,
+          "default": null,
+          "primary_key_position": 2
+        },
+        {
+          "position": 3,
+          "name": "matter_occurrence",
+          "declared_type": "INTEGER",
+          "not_null": true,
+          "default": null,
+          "primary_key_position": 3
+        },
+        {
+          "position": 4,
+          "name": "matter_status",
+          "declared_type": "TEXT",
+          "not_null": false,
+          "default": null,
+          "primary_key_position": 0
+        },
+        {
+          "position": 5,
+          "name": "matter_target_json",
+          "declared_type": "TEXT",
+          "not_null": true,
+          "default": null,
+          "primary_key_position": 0
+        }
+      ],
+      "foreign_keys": [
+        {
+          "id": 0,
+          "sequence": 0,
+          "referenced_table": "case_record",
+          "from": "case_id",
+          "to": "case_id",
+          "on_update": "NO ACTION",
+          "on_delete": "NO ACTION"
+        },
+        {
+          "id": 1,
+          "sequence": 0,
+          "referenced_table": "matter_type_feature_job_v1_1",
+          "from": "job_id",
+          "to": "job_id",
+          "on_update": "NO ACTION",
+          "on_delete": "NO ACTION"
+        }
+      ],
+      "indexes": [
+        "idx_feature_annotation_type",
+        "sqlite_autoindex_matter_type_annotation_v1_1_1"
+      ]
+    },
+    "matter_type_feature_job_v1_1": {
+      "row_count": 12714,
+      "columns": [
+        {
+          "position": 0,
+          "name": "job_id",
+          "declared_type": "TEXT",
+          "not_null": false,
+          "default": null,
+          "primary_key_position": 1
+        },
+        {
+          "position": 1,
+          "name": "case_id",
+          "declared_type": "TEXT",
+          "not_null": true,
+          "default": null,
+          "primary_key_position": 0
+        },
+        {
+          "position": 2,
+          "name": "case_name",
+          "declared_type": "TEXT",
+          "not_null": false,
+          "default": null,
+          "primary_key_position": 0
+        },
+        {
+          "position": 3,
+          "name": "annotation_source",
+          "declared_type": "TEXT",
+          "not_null": false,
+          "default": null,
+          "primary_key_position": 0
+        },
+        {
+          "position": 4,
+          "name": "annotation_status",
+          "declared_type": "TEXT",
+          "not_null": true,
+          "default": null,
+          "primary_key_position": 0
+        },
+        {
+          "position": 5,
+          "name": "review_history_json",
+          "declared_type": "TEXT",
+          "not_null": true,
+          "default": null,
+          "primary_key_position": 0
+        },
+        {
+          "position": 6,
+          "name": "human_review_json",
+          "declared_type": "TEXT",
+          "not_null": false,
+          "default": null,
+          "primary_key_position": 0
+        },
+        {
+          "position": 7,
+          "name": "raw_annotation_json",
+          "declared_type": "TEXT",
+          "not_null": true,
+          "default": null,
+          "primary_key_position": 0
+        }
+      ],
+      "foreign_keys": [
+        {
+          "id": 0,
+          "sequence": 0,
+          "referenced_table": "case_record",
+          "from": "case_id",
+          "to": "case_id",
+          "on_update": "NO ACTION",
+          "on_delete": "NO ACTION"
+        }
+      ],
+      "indexes": [
+        "idx_feature_job_case",
+        "sqlite_autoindex_matter_type_feature_job_v1_1_1"
+      ]
+    },
+    "matter_type_feature_value_v1_1": {
+      "row_count": 415073,
+      "columns": [
+        {
+          "position": 0,
+          "name": "job_id",
+          "declared_type": "TEXT",
+          "not_null": true,
+          "default": null,
+          "primary_key_position": 1
+        },
+        {
+          "position": 1,
+          "name": "case_id",
+          "declared_type": "TEXT",
+          "not_null": true,
+          "default": null,
+          "primary_key_position": 0
+        },
+        {
+          "position": 2,
+          "name": "matter_type",
+          "declared_type": "TEXT",
+          "not_null": true,
+          "default": null,
+          "primary_key_position": 2
+        },
+        {
+          "position": 3,
+          "name": "matter_occurrence",
+          "declared_type": "INTEGER",
+          "not_null": true,
+          "default": null,
+          "primary_key_position": 3
+        },
+        {
+          "position": 4,
+          "name": "feature_key",
+          "declared_type": "TEXT",
+          "not_null": true,
+          "default": null,
+          "primary_key_position": 4
+        },
+        {
+          "position": 5,
+          "name": "feature_occurrence",
+          "declared_type": "INTEGER",
+          "not_null": true,
+          "default": null,
+          "primary_key_position": 5
+        },
+        {
+          "position": 6,
+          "name": "value_status",
+          "declared_type": "TEXT",
+          "not_null": true,
+          "default": null,
+          "primary_key_position": 0
+        },
+        {
+          "position": 7,
+          "name": "value_json",
+          "declared_type": "TEXT",
+          "not_null": false,
+          "default": null,
+          "primary_key_position": 0
+        },
+        {
+          "position": 8,
+          "name": "value_text",
+          "declared_type": "TEXT",
+          "not_null": false,
+          "default": null,
+          "primary_key_position": 0
+        },
+        {
+          "position": 9,
+          "name": "value_number",
+          "declared_type": "REAL",
+          "not_null": false,
+          "default": null,
+          "primary_key_position": 0
+        },
+        {
+          "position": 10,
+          "name": "unit",
+          "declared_type": "TEXT",
+          "not_null": false,
+          "default": null,
+          "primary_key_position": 0
+        },
+        {
+          "position": 11,
+          "name": "confidence",
+          "declared_type": "REAL",
+          "not_null": false,
+          "default": null,
+          "primary_key_position": 0
+        },
+        {
+          "position": 12,
+          "name": "missing_reason",
+          "declared_type": "TEXT",
+          "not_null": false,
+          "default": null,
+          "primary_key_position": 0
+        },
+        {
+          "position": 13,
+          "name": "evidence_json",
+          "declared_type": "TEXT",
+          "not_null": true,
+          "default": null,
+          "primary_key_position": 0
+        }
+      ],
+      "foreign_keys": [
+        {
+          "id": 0,
+          "sequence": 0,
+          "referenced_table": "case_record",
+          "from": "case_id",
+          "to": "case_id",
+          "on_update": "NO ACTION",
+          "on_delete": "NO ACTION"
+        },
+        {
+          "id": 1,
+          "sequence": 0,
+          "referenced_table": "matter_type_feature_job_v1_1",
+          "from": "job_id",
+          "to": "job_id",
+          "on_update": "NO ACTION",
+          "on_delete": "NO ACTION"
+        }
+      ],
+      "indexes": [
+        "idx_feature_value_text",
+        "idx_feature_value_numeric",
+        "idx_feature_value_key_status",
+        "sqlite_autoindex_matter_type_feature_value_v1_1_1"
+      ]
+    },
+    "opinion_record": {
+      "row_count": 21261,
+      "columns": [
+        {
+          "position": 0,
+          "name": "opinion_id",
+          "declared_type": "TEXT",
+          "not_null": false,
+          "default": null,
+          "primary_key_position": 1
+        },
+        {
+          "position": 1,
+          "name": "cluster_id",
+          "declared_type": "TEXT",
+          "not_null": true,
+          "default": null,
+          "primary_key_position": 0
+        },
+        {
+          "position": 2,
+          "name": "opinion_type_raw",
+          "declared_type": "TEXT",
+          "not_null": false,
+          "default": null,
+          "primary_key_position": 0
+        },
+        {
+          "position": 3,
+          "name": "opinion_type",
+          "declared_type": "TEXT",
+          "not_null": true,
+          "default": null,
+          "primary_key_position": 0
+        },
+        {
+          "position": 4,
+          "name": "opinion_group",
+          "declared_type": "TEXT",
+          "not_null": true,
+          "default": null,
+          "primary_key_position": 0
+        },
+        {
+          "position": 5,
+          "name": "author_id",
+          "declared_type": "TEXT",
+          "not_null": false,
+          "default": null,
+          "primary_key_position": 0
+        },
+        {
+          "position": 6,
+          "name": "per_curiam",
+          "declared_type": "INTEGER",
+          "not_null": false,
+          "default": null,
+          "primary_key_position": 0
+        },
+        {
+          "position": 7,
+          "name": "html_with_citations",
+          "declared_type": "TEXT",
+          "not_null": false,
+          "default": null,
+          "primary_key_position": 0
+        },
+        {
+          "position": 8,
+          "name": "plain_text",
+          "declared_type": "TEXT",
+          "not_null": false,
+          "default": null,
+          "primary_key_position": 0
+        },
+        {
+          "position": 9,
+          "name": "preferred_text",
+          "declared_type": "TEXT",
+          "not_null": false,
+          "default": null,
+          "primary_key_position": 0
+        },
+        {
+          "position": 10,
+          "name": "preferred_text_source",
+          "declared_type": "TEXT",
+          "not_null": false,
+          "default": null,
+          "primary_key_position": 0
+        },
+        {
+          "position": 11,
+          "name": "text_length",
+          "declared_type": "INTEGER",
+          "not_null": true,
+          "default": null,
+          "primary_key_position": 0
+        },
+        {
+          "position": 12,
+          "name": "text_sha1",
+          "declared_type": "TEXT",
+          "not_null": false,
+          "default": null,
+          "primary_key_position": 0
+        },
+        {
+          "position": 13,
+          "name": "cited_opinion_ids_json",
+          "declared_type": "TEXT",
+          "not_null": true,
+          "default": null,
+          "primary_key_position": 0
+        },
+        {
+          "position": 14,
+          "name": "has_usable_text",
+          "declared_type": "INTEGER",
+          "not_null": true,
+          "default": null,
+          "primary_key_position": 0
+        },
+        {
+          "position": 15,
+          "name": "quality_metrics_json",
+          "declared_type": "TEXT",
+          "not_null": true,
+          "default": null,
+          "primary_key_position": 0
+        },
+        {
+          "position": 16,
+          "name": "raw_json",
+          "declared_type": "TEXT",
+          "not_null": false,
+          "default": null,
+          "primary_key_position": 0
+        },
+        {
+          "position": 17,
+          "name": "provenance_json",
+          "declared_type": "TEXT",
+          "not_null": false,
+          "default": null,
+          "primary_key_position": 0
+        }
+      ],
+      "foreign_keys": [
+        {
+          "id": 0,
+          "sequence": 0,
+          "referenced_table": "case_record",
+          "from": "cluster_id",
+          "to": "cluster_id",
+          "on_update": "NO ACTION",
+          "on_delete": "NO ACTION"
+        }
+      ],
+      "indexes": [
+        "idx_opinion_sha1",
+        "idx_opinion_group",
+        "idx_opinion_cluster",
+        "sqlite_autoindex_opinion_record_1"
+      ]
+    },
+    "search_document": {
+      "row_count": 94314,
+      "columns": [
+        {
+          "position": 0,
+          "name": "document_id",
+          "declared_type": "TEXT",
+          "not_null": false,
+          "default": null,
+          "primary_key_position": 1
+        },
+        {
+          "position": 1,
+          "name": "case_id",
+          "declared_type": "TEXT",
+          "not_null": true,
+          "default": null,
+          "primary_key_position": 0
+        },
+        {
+          "position": 2,
+          "name": "opinion_id",
+          "declared_type": "TEXT",
+          "not_null": true,
+          "default": null,
+          "primary_key_position": 0
+        },
+        {
+          "position": 3,
+          "name": "cluster_id",
+          "declared_type": "TEXT",
+          "not_null": true,
+          "default": null,
+          "primary_key_position": 0
+        },
+        {
+          "position": 4,
+          "name": "case_name",
+          "declared_type": "TEXT",
+          "not_null": false,
+          "default": null,
+          "primary_key_position": 0
+        },
+        {
+          "position": 5,
+          "name": "court_id",
+          "declared_type": "TEXT",
+          "not_null": false,
+          "default": null,
+          "primary_key_position": 0
+        },
+        {
+          "position": 6,
+          "name": "court_level",
+          "declared_type": "TEXT",
+          "not_null": false,
+          "default": null,
+          "primary_key_position": 0
+        },
+        {
+          "position": 7,
+          "name": "jurisdiction_type",
+          "declared_type": "TEXT",
+          "not_null": false,
+          "default": null,
+          "primary_key_position": 0
+        },
+        {
+          "position": 8,
+          "name": "decision_date",
+          "declared_type": "TEXT",
+          "not_null": false,
+          "default": null,
+          "primary_key_position": 0
+        },
+        {
+          "position": 9,
+          "name": "decision_year",
+          "declared_type": "INTEGER",
+          "not_null": false,
+          "default": null,
+          "primary_key_position": 0
+        },
+        {
+          "position": 10,
+          "name": "precedential_status",
+          "declared_type": "TEXT",
+          "not_null": false,
+          "default": null,
+          "primary_key_position": 0
+        },
+        {
+          "position": 11,
+          "name": "opinion_type",
+          "declared_type": "TEXT",
+          "not_null": false,
+          "default": null,
+          "primary_key_position": 0
+        },
+        {
+          "position": 12,
+          "name": "section_type",
+          "declared_type": "TEXT",
+          "not_null": true,
+          "default": null,
+          "primary_key_position": 0
+        },
+        {
+          "position": 13,
+          "name": "section_weight",
+          "declared_type": "REAL",
+          "not_null": true,
+          "default": null,
+          "primary_key_position": 0
+        },
+        {
+          "position": 14,
+          "name": "primary_topic",
+          "declared_type": "TEXT",
+          "not_null": false,
+          "default": null,
+          "primary_key_position": 0
+        },
+        {
+          "position": 15,
+          "name": "statutes_json",
+          "declared_type": "TEXT",
+          "not_null": true,
+          "default": null,
+          "primary_key_position": 0
+        },
+        {
+          "position": 16,
+          "name": "chunk_index",
+          "declared_type": "INTEGER",
+          "not_null": true,
+          "default": null,
+          "primary_key_position": 0
+        },
+        {
+          "position": 17,
+          "name": "chunk_text",
+          "declared_type": "TEXT",
+          "not_null": true,
+          "default": null,
+          "primary_key_position": 0
+        },
+        {
+          "position": 18,
+          "name": "chunk_token_count",
+          "declared_type": "INTEGER",
+          "not_null": true,
+          "default": null,
+          "primary_key_position": 0
+        },
+        {
+          "position": 19,
+          "name": "bm25_text",
+          "declared_type": "TEXT",
+          "not_null": true,
+          "default": null,
+          "primary_key_position": 0
+        },
+        {
+          "position": 20,
+          "name": "embedding_json",
+          "declared_type": "TEXT",
+          "not_null": true,
+          "default": "'[]'",
+          "primary_key_position": 0
+        }
+      ],
+      "foreign_keys": [
+        {
+          "id": 0,
+          "sequence": 0,
+          "referenced_table": "opinion_record",
+          "from": "opinion_id",
+          "to": "opinion_id",
+          "on_update": "NO ACTION",
+          "on_delete": "NO ACTION"
+        },
+        {
+          "id": 1,
+          "sequence": 0,
+          "referenced_table": "case_record",
+          "from": "case_id",
+          "to": "case_id",
+          "on_update": "NO ACTION",
+          "on_delete": "NO ACTION"
+        }
+      ],
+      "indexes": [
+        "idx_search_metadata",
+        "idx_search_opinion",
+        "idx_search_case",
+        "sqlite_autoindex_search_document_1"
+      ]
+    }
+  }
+}

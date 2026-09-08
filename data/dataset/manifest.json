@@ -1,0 +1,35 @@
+{
+  "release_id": "legal_bench_v3_1_integrated",
+  "database_file": "legal_rag_dataset_v3.db",
+  "compression": "zstd level 10",
+  "uncompressed_bytes": 3680735232,
+  "compressed_bytes": 359855010,
+  "uncompressed_sha256": "29025e4ef4c0510643d0e3a0143419f87f34d9384eebdf2a60bf1aac2dad0386",
+  "compressed_sha256": "cb73fc1167aef5167dc0113373c692e52ce5413f31e864b694fd9243f4baaff0",
+  "parts": [
+    {"name": "legal_rag_dataset_v3.db.zst.part-00", "bytes": 94371840, "sha256": "34b8f23784469cbe7f6195cc853948345f2fca138d99a87b29c84135e20e506b"},
+    {"name": "legal_rag_dataset_v3.db.zst.part-01", "bytes": 94371840, "sha256": "365ddeac92438f46b74a56666d34bf0d3580e2cea534a3f64f6e17926eddf07b"},
+    {"name": "legal_rag_dataset_v3.db.zst.part-02", "bytes": 94371840, "sha256": "4ffc837c3dbdf33f34e748010a32669d6482f0aef35a345c40c04de07abcdfe0"},
+    {"name": "legal_rag_dataset_v3.db.zst.part-03", "bytes": 76739490, "sha256": "4c07dc04a34d2df0cd879f53c267f3fb28005a4b11324ed3d6112942af20e9d7"}
+  ],
+  "counts": {
+    "cases": 20000,
+    "opinions": 21261,
+    "search_documents": 94314,
+    "case_matter_type_rows": 21518,
+    "matter_type_case_coverage": 20000,
+    "case_legal_issue_rows": 16635,
+    "feature_jobs": 12714,
+    "feature_values": 415073,
+    "present_feature_values": 150855
+  },
+  "versions": {
+    "taxonomy": "3.3.0",
+    "practice_area_registry": "3.2.0",
+    "matter_type_registry": "3.2.0",
+    "simplified_legal_issues": "3.1-simplified",
+    "matter_type_features": "1.1"
+  },
+  "source_snapshot": "CourtListener bulk data 2026-06-30",
+  "cleaning": ["removed migration-only case_matter_type_v3_2_backup table"]
+}

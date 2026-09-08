@@ -2,14 +2,14 @@
 set -euo pipefail
 
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-DATA_DIR="$ROOT/data/integrated"
+DATA_DIR="$ROOT/data/dataset"
 ARCHIVE="$DATA_DIR/legal_rag_dataset_v3.db.zst"
 DATABASE="$DATA_DIR/legal_rag_dataset_v3.db"
 
 cat "$DATA_DIR"/legal_rag_dataset_v3.db.zst.part-* > "$ARCHIVE"
-echo "27cdf5ca6aef29ac3cacf825e1bf75d8596e0200deb37ad3a37177ce59ca7b8d  $ARCHIVE" | sha256sum -c -
+echo "cb73fc1167aef5167dc0113373c692e52ce5413f31e864b694fd9243f4baaff0  $ARCHIVE" | sha256sum -c -
 zstd -d --force "$ARCHIVE" -o "$DATABASE"
-echo "9a93f7b3a0c757fd1c19524d32238914616a58380e604b44061f2711e5172c7e  $DATABASE" | sha256sum -c -
+echo "29025e4ef4c0510643d0e3a0143419f87f34d9384eebdf2a60bf1aac2dad0386  $DATABASE" | sha256sum -c -
 
 CHECK="$(sqlite3 "$DATABASE" 'PRAGMA quick_check;')"
 if [[ "$CHECK" != "ok" ]]; then

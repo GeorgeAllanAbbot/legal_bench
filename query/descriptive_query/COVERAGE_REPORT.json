@@ -1,0 +1,69 @@
+{
+  "release": "descriptive_v6",
+  "queries": 120,
+  "query_family": {
+    "count": 40,
+    "proportion": 40,
+    "comparison": 40
+  },
+  "query_type": {
+    "sql": 36,
+    "hybrid": 84
+  },
+  "difficulty": {
+    "medium": 68,
+    "complex": 52
+  },
+  "split": {
+    "test": 30,
+    "validation": 30,
+    "dev": 60
+  },
+  "evidence_size_bucket": {
+    "small": 54,
+    "medium": 58,
+    "large": 8
+  },
+  "constraint_dimension_count": {
+    "2": 40,
+    "3": 52,
+    "4": 28
+  },
+  "matter_types_referenced": [
+    "asylum_protection",
+    "auto_insurance_coverage",
+    "breach_of_contract",
+    "custody_visitation",
+    "divorce_property_division",
+    "drug_offense",
+    "employment_discrimination",
+    "foreclosure_mortgage",
+    "negligence_personal_injury",
+    "property_insurance_coverage",
+    "section_1983_claim",
+    "sentencing_guideline_dispute",
+    "support_obligation",
+    "tax_liability_dispute",
+    "workers_compensation"
+  ],
+  "qrels": {
+    "positive": 9659,
+    "negative": 544,
+    "unjudged": 16271
+  },
+  "evidence_count": {
+    "minimum": 3,
+    "maximum": 425,
+    "total_occurrences": 9659
+  },
+  "validation": {
+    "exact_duplicate_query_texts": 0,
+    "queries_without_positive_evidence": 0,
+    "queries_with_validation_errors": 0
+  },
+  "qrel_policy": {
+    "sql": "exhaustive structured projection over the frozen database",
+    "hybrid": "partially adjudicated semantic pool (Silver)",
+    "unjudged": "must not be treated as a negative"
+  }
+}
